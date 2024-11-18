@@ -1,4 +1,4 @@
-﻿<!-- <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Presentacion.WebForm2" %> -->
+﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Presentacion.WebForm2" %> 
 
 <!DOCTYPE html>
 
@@ -23,8 +23,8 @@
         <section class="loginBackground">
             <h1>Bienvenido</h1>
             <section class="dataInsertContainer">
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Contraseña">
+                <input type="text" placeholder="Nombre"/>
+                <input type="text" placeholder="Contraseña"/>
                 <button>Iniciar sesion</button>
             </section>
         </section>

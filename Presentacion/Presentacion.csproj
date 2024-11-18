@@ -67,13 +67,135 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\avatares\PetCare_Avatares\av1.png" />
+    <Content Include="assets\avatares\PetCare_Avatares\av2.png" />
+    <Content Include="assets\avatares\PetCare_Avatares\av3.png" />
+    <Content Include="assets\avatares\PetCare_Avatares\av4.png" />
+    <Content Include="assets\avatares\PetCare_Avatares\av5.png" />
+    <Content Include="assets\avatares\PetCare_Avatares\av6.png" />
+    <Content Include="assets\avatares\PetCare_Gatos\cat1.png" />
+    <Content Include="assets\avatares\PetCare_Gatos\cat2.png" />
+    <Content Include="assets\avatares\PetCare_Gatos\cat3.png" />
+    <Content Include="assets\avatares\PetCare_Gatos\cat4.png" />
+    <Content Include="assets\avatares\PetCare_Gatos\cat5.png" />
+    <Content Include="assets\avatares\PetCare_Gatos\cat6.png" />
+    <Content Include="assets\avatares\PetCare_Gatos\cat7.png" />
+    <Content Include="assets\avatares\PetCare_Gatos\cat8.png" />
+    <Content Include="assets\avatares\PetCare_Perros\dog %281%29.png" />
+    <Content Include="assets\avatares\PetCare_Perros\dog %282%29.png" />
+    <Content Include="assets\avatares\PetCare_Perros\dog %283%29.png" />
+    <Content Include="assets\avatares\PetCare_Perros\dog %284%29.png" />
+    <Content Include="assets\avatares\PetCare_Perros\dog %285%29.png" />
+    <Content Include="assets\avatares\PetCare_Perros\dog %286%29.png" />
+    <Content Include="assets\avatares\PetCare_Perros\dog %287%29.png" />
+    <Content Include="assets\avatares\PetCare_Perros\dog %288%29.png" />
+    <Content Include="assets\buttons\addButton.png" />
+    <Content Include="assets\buttons\addCat.png" />
+    <Content Include="assets\buttons\addDog.png" />
+    <Content Include="assets\buttons\alertIcon.png" />
+    <Content Include="assets\buttons\continueBlue.png" />
+    <Content Include="assets\buttons\continueYellow.png" />
+    <Content Include="assets\buttons\returnBlue.png" />
+    <Content Include="assets\buttons\returnYellow.png" />
+    <Content Include="assets\buttons\shareButton.png" />
+    <Content Include="assets\icons\Logo.png" />
+    <Content Include="assets\images %281%29.jpeg" />
+    <Content Include="assets\mobil\addCat.png" />
+    <Content Include="assets\mobil\addCompleteButton.png" />
+    <Content Include="assets\mobil\addDate.png" />
+    <Content Include="assets\mobil\addDog.png" />
+    <Content Include="assets\mobil\AnadirMascota.png" />
+    <Content Include="assets\mobil\Calendar.png" />
+    <Content Include="assets\mobil\cartillaMedica.png" />
+    <Content Include="assets\mobil\citas.png" />
+    <Content Include="assets\mobil\CrearDuenoPreview.png" />
+    <Content Include="assets\mobil\entrar.png" />
+    <Content Include="assets\mobil\events.png" />
+    <Content Include="assets\mobil\listo.png" />
+    <Content Include="assets\mobil\myInfo.png" />
+    <Content Include="assets\mobil\PetCare_AgregarCita.png" />
+    <Content Include="assets\mobil\PetCare_AnadirMascotas.png" />
+    <Content Include="assets\mobil\PetCare_Calendario.png" />
+    <Content Include="assets\mobil\PetCare_CartillaMedicaInfo.png" />
+    <Content Include="assets\mobil\PetCare_CrearDueno.png" />
+    <Content Include="assets\mobil\PetCare_CrearDueno2.png" />
+    <Content Include="assets\mobil\PetCare_Eventos.png" />
+    <Content Include="assets\mobil\PetCare_MiCartillaMedica.png" />
+    <Content Include="assets\mobil\PetCare_MiGatoAvatar.png" />
+    <Content Include="assets\mobil\PetCare_MiGatoDatos.png" />
+    <Content Include="assets\mobil\PetCare_MiPerfil.png" />
+    <Content Include="assets\mobil\PetCare_MiPerroAvatar.png" />
+    <Content Include="assets\mobil\PetCare_MiPerroDatos.png" />
+    <Content Include="assets\mobil\PetCare_MisMascotas.png" />
+    <Content Include="assets\mobil\PetCare_PantallaInicio.png" />
+    <Content Include="assets\mobil\revisionRutina.png" />
+    <Content Include="assets\mobil\vacuna.png" />
+    <Content Include="assets\mobil\VA\Basura.png" />
+    <Content Include="assets\mobil\VA\PetCareAvataresVA.png" />
+    <Content Include="assets\mobil\VA\PetCareBotonLink.png" />
+    <Content Include="assets\mobil\VA\PetCareBotonLink1.png" />
+    <Content Include="assets\mobil\VA\PetCareCampos.png" />
+    <Content Include="assets\mobil\VA\PetCareCargando.png" />
+    <Content Include="assets\mobil\VA\PetCareCartillaMedicaDatos.png" />
+    <Content Include="assets\mobil\VA\PetCareCartillaMedicaInformacion.png" />
+    <Content Include="assets\mobil\VA\PetCareGenero.png" />
+    <Content Include="assets\mobil\VA\PetCareIniciarSesionVA.png" />
+    <Content Include="assets\mobil\VA\PetCareInicioVA.png" />
+    <Content Include="assets\mobil\VA\PetCareIntenteloMasTarde.png" />
+    <Content Include="assets\mobil\VA\PetCareNoDisponible.png" />
+    <Content Include="assets\mobil\VA\PetCareNuevoUsuario1VA.png" />
+    <Content Include="assets\mobil\VA\PetCareNuevoUsuario2VA.png" />
+    <Content Include="assets\mobil\VA\PetCareNuevoUsuario3VA.png" />
     <Content Include="CSS\base.css" />
     <Content Include="CSS\login.css" />
+    <Content Include="CSS\myPets.css" />
+    <Content Include="CSS\newDogAvatar.css" />
+    <Content Include="CSS\newPetInfo.css" />
+    <Content Include="myPets.aspx" />
+    <Content Include="newDogAvatar.aspx" />
+    <Content Include="newPetGender.aspx" />
+    <Content Include="newPetInfo.aspx" />
+    <Content Include="newPetRace.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="myPets.aspx.cs">
+      <DependentUpon>myPets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myPets.aspx.designer.cs">
+      <DependentUpon>myPets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newDogAvatar.aspx.cs">
+      <DependentUpon>newDogAvatar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newDogAvatar.aspx.designer.cs">
+      <DependentUpon>newDogAvatar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newPetGender.aspx.cs">
+      <DependentUpon>newPetGender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newPetGender.aspx.designer.cs">
+      <DependentUpon>newPetGender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newPetInfo.aspx.cs">
+      <DependentUpon>newPetInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newPetInfo.aspx.designer.cs">
+      <DependentUpon>newPetInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newPetRace.aspx.cs">
+      <DependentUpon>newPetRace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newPetRace.aspx.designer.cs">
+      <DependentUpon>newPetRace.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -82,15 +204,19 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\Fuentes\TangoSans.ttf" />
+    <Content Include="assets\Fuentes\TangoSans_Bold.ttf" />
+    <Content Include="assets\Fuentes\TangoSans_BoldItalic.ttf" />
+    <Content Include="assets\Fuentes\TangoSans_Italic.ttf" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
