@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="CSS/Base.css" type="text/css"/>
+    <link rel="stylesheet" href="CSS/base.css" type="text/css"/>
     <link rel="stylesheet" href="CSS/login.css" type="text/css"/>
 </head>
 <body>
@@ -24,8 +24,15 @@
             <main class="loginContainer">
                 <img src="assets/icons/Logo.png"/>
                 <div class="LsButtons">
-                    <button id="LoginBu">Iniciar sesion</button>
-                    <button id="RegisterBu">Registrarse</button>
+                    <asp:HyperLink runat="server" NavigateUrl="~/login.aspx" CssClass="HyperLink">
+                        Iniciar sesion
+                    </asp:HyperLink>
+                    
+                    <asp:HyperLink runat="server" NavigateUrl="~/login.aspx" CssClass="HyperLink">
+                        Registrase
+                    </asp:HyperLink>
+                    
+                    
                 </div>
             </main>
         </section>

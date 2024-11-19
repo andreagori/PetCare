@@ -36,9 +36,10 @@
     justify-content: space-between;
 }
 
-.LsButtons button {
+.HyperLink {
     font-family: "Montserrat",sans-serif;
     border: white solid 1px;
+    color: white;
     border-radius: 32px;
     font-size: 32px;
     cursor: pointer;
@@ -52,6 +53,7 @@
     align-items: center;
     
     background-color: blue;
+    color: white;
     height: 50%;
     width: 50%;
 }

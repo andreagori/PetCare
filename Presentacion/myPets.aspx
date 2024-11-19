@@ -15,8 +15,9 @@
         <main class="mpPets">
             <h1>Mis mascotas</h1>
             <section>Aqui estara la lista</section>
-            <button>Agregar</button>
+            <asp:HyperLink runat="server" NavigateUrl="~/newPet/newPetGender.aspx">Agregar</asp:HyperLink>
         </main>
+
         <section class="bottom">
             <img src="assets/avatares/PetCare_Avatares/av1.png" /> User
         </section>
