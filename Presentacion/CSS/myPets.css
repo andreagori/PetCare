@@ -1,12 +1,11 @@
-﻿
-
-.mpPets{
+﻿.mpPets{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
-    width: 100vw;
+    height: 80vh;
+    width: 99vw;
     justify-content: center;
+    color: white;
 }
 
 .mpPets h1{

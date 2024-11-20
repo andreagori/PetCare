@@ -25,8 +25,8 @@
             <section class="dataInsertContainer">
                 <input type="text" placeholder="Nombre"/>
                 <input type="text" placeholder="Contraseña"/>
-                <asp:HyperLink runat="server" NavigateUrl="~/myPets.aspx" >
-                    BoTON DeSeguir
+                <asp:HyperLink runat="server" NavigateUrl="~/myPets.aspx" style="color:white;" >
+                    Continuar
                 </asp:HyperLink>
             </section>
         </section>

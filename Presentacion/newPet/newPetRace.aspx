@@ -15,7 +15,7 @@
         <main class="npBase">
             <h1>Agregar Mascota</h1>
             <a href="newDogAvatar.aspx"><img src="../assets/buttons/addDog.png" /></a>
-            <a href="newCatAvatar.aspx"><img src="../assets/buttons/addCat.png" /></a>
+            <a href="newDogAvatar.aspx"><img src="../assets/buttons/addCat.png" /></a>
         </main>
         <section class="bottom">
             <img src="../assets/avatares/PetCare_Avatares/av1.png"/> User

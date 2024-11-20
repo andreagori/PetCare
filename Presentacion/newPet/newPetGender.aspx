@@ -14,8 +14,8 @@
         <a href="../index.aspx" style="position: absolute;"><img src="../assets/buttons/returnYellow.png" /></a>
         <main class="npBase">
             <h1>Agregar Mascota</h1>
-            <a href="newPetRace.aspx">Hombre</a>
-            <a href="newPetRace.aspx">Mujer</a>
+            <a href="newPetRace.aspx" style="color:white;">Macho</a>
+            <a href="newPetRace.aspx" style="color:white;">Hembra</a>
         </main>
         <section class="bottom">
             <img src="../assets/avatares/PetCare_Avatares/av1.png" /> User
