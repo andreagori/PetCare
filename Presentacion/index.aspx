@@ -1,41 +1,83 @@
-﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Presentacion.WebForm1" %> 
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    
-    <title>PetCare</title>
-    <link rel="icon" href="assets/icons/Logo.png" type="image/png"/>
-
-    <!-- FUENTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="CSS/base.css" type="text/css"/>
-    <link rel="stylesheet" href="CSS/login.css" type="text/css"/>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <section class="loginBackground">
-            <main class="loginContainer">
-                <img src="assets/icons/Logo.png"/>
-                <div class="LsButtons">
-                    <asp:HyperLink runat="server" NavigateUrl="~/login.aspx" CssClass="HyperLink">
-                        Iniciar sesion
-                    </asp:HyperLink>
-                    
-                    <asp:HyperLink runat="server" NavigateUrl="~/login.aspx" CssClass="HyperLink">
-                        Registrase
-                    </asp:HyperLink>
-                    
-                    
-                </div>
-            </main>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Presentacion.WebForm3" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <section class="startPage">
+        <img src="assets/dogs.png"/>
+        <h1>
+            ¿Tienes una mascota, 
+            cuidas una o eres responsable de su salud?
+        </h1>
+    </section>
+    <section class="roles">
+        <h1>
+            ¿Te identificas con algún rol de estos? 
+            ¡Ve lo que tenemos para ofrecerte!
+        </h1>
+        <section class="rolesRow">
+            <section class="rolesItem">
+                <h1>Cuidador</h1>
+                <section>
+                    <p>- Calendario</p>
+                    <p>- Reportes</p>
+                    <p>- Agenda</p>
+                </section>
+            </section>
+        
+            <section class="rolesItem" style="background-color:#fea910;">
+                <h1 style="color:#fea910; border:2px solid #fea910;">Dueño</h1>
+                <section>
+                    <p>- Agenda</p>
+                    <p>- Cartilla Medica</p>
+                    <p>- Cartel búsqueda</p>
+                </section>
+            </section>
+        
+            <section class="rolesItem" style="background-color:#37b5ff;">
+                <h1 style="color:#37b5ff; border:2px solid #37b5ff;" >Veterinario</h1>
+                <section>
+                    <p>- Cartilla Médica</p>
+                    <p>- Reporte Cita</p>
+                    <p>- Seguimiento</p>
+                </section>
+            </section>
         </section>
-    </form>
-</body>
-</html>
+    </section>
+
+    <section class="section2">
+        <h1>Beneficios</h1>
+        <img src="assets/banner.png"/>
+    </section>
+
+    <section class="startButtons">
+        <h1>Inicia en PetCare</h1>
+        <section class="ButtonsRow">
+            <button style="background-color:#37b5ff;">Iniciar Sesion</button>
+            <button style="background-color:#fea910;">Registrarse</button>
+        </section>
+    </section>
+
+
+    <h1 class="aboutUs">Sobre nosotros</h1>
+    <footer class="Footer">
+        <section>
+            <h1>¿Quienes Somos?</h1>
+            <p>Cuatro alumnos de 5to semestre</p>
+        </section>
+        
+        <section>
+            <h1>¿Por Qué?</h1>
+            <p>
+                Desarrollar un proyecto final que involucre ambientes de 
+                programación visual y base de datos.
+            </p>
+        </section>
+        
+        <section>
+            <h1>Acerca</h1>
+            <p>Idea pensada como dueños de mascotas</p>
+        </section>
+    </footer>
+
+</asp:Content>
+    
