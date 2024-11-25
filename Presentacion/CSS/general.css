@@ -54,6 +54,17 @@
     height: auto;
 }
 
+.Footer2{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    
+    background-color: #fff62a;
+    
+    width: 100vw;
+    height: 10vh;
+}
+
 .Footer section{
     display: flex;
     flex-direction: column;

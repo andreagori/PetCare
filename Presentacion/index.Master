@@ -11,6 +11,7 @@
     
     <link rel="stylesheet" href="CSS/general.css" type="text/css" />
     <link rel="stylesheet" href="CSS/startPage.css"/>
+    <link rel="stylesheet" href="CSS/logginMain.css"/>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,7 @@
         <header class="TopBar">
             <img src="assets/icons/Logo2.png"/>
             <section>
-                <a>Iniciar sesion</a>
+                <a href="loggin.aspx">Iniciar sesion</a>
                 <a>Registrar</a>
             </section>
         </header>

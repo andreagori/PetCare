@@ -1,0 +1,51 @@
+﻿.logginMain{
+    display: flex;
+    flex-direction: column;
+    
+    height: 80vh;
+    width: 100%;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logginMain h1{
+    text-align: center;
+    margin: 0;
+    font-size: 42px;
+}
+
+.logginMain section{
+    display: flex;
+    flex-direction: column;
+
+    align-items: start;
+    justify-content: start;
+
+    width: 30%;
+}
+
+.logginMain section h3{
+    font-size: 20px;
+    margin: 0;
+    color: #38b6ff;
+}
+
+.logginMain input{
+    width: 100%;
+    padding: 2%;
+    
+    border-radius: 32px;
+    border: none;
+    
+    background-color: #f5f6f3;
+}
+
+.logginMain button{
+    width: 30%;
+    color: white;
+    font-size: 22px;
+    border-radius: 32px;
+    border: solid 2px white;
+    padding: 1%;
+}
