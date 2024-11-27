@@ -10,16 +10,19 @@
         </div>
 
 
-        <section>
+        <section >
             <a>Agregar mascota</a>
         </section>
 
         <section>
-            <h3>Actividades programadas</h3>
-            <h4>Fecha seleccionada</h4>
+            <div class="DateTitle">
+                <h3>Actividades programadas</h3>
+                <h4>Fecha seleccionada</h4>
+            </div>
             <input placeholder="Actividad" />
         </section>
 
+        <a style="background-color:#008cff;">Agregar</a>
     </main>
     <footer class="Footer2">
 

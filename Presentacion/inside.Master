@@ -28,7 +28,7 @@
                 <a href="myPets.aspx">Mis mascotas</a>
                 <a href="calendar.aspx">Calendario</a>
                 <a>Cartilla Medica</a>
-                <a>Historial</a>
+                <a href="myHistory.aspx" >Historial</a>
             </section>
             
             <a class="TopIcon">

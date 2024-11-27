@@ -17,7 +17,7 @@
                 <input placeHolder="Contraseña" type="password"/>
             </section>
             <a href="index.aspx" style="background-color:#38b6ff;">Recuperar contraseña</a>
-            <a href="index.aspx" style="background-color:#fea910;">Listo</a>
+            <a href="myPets.aspx" style="background-color:#fea910;">Listo</a>
         </main>
     <footer class="Footer2">
         
