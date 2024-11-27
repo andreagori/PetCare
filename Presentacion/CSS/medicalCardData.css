@@ -1,0 +1,108 @@
+﻿.quoteMain{
+    display: flex;
+    flex-direction: column;
+    
+    height: 80vh;
+    width: 100%;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quoteMain h1{
+    text-align: center;
+    margin: 0;
+    font-size: 42px;
+}
+
+.quoteMain section{
+    display: flex;
+    flex-direction: column;
+
+    align-items: start;
+    justify-content: start;
+
+    width: 30%;
+    
+}
+
+.quoteMain h3{
+    font-size: 20px;
+    margin: 0;
+    color: #38b6ff;
+}
+
+.quoteMain input{
+    width: 100%;
+    padding: 2%;
+    padding-right: 0;
+    
+    border-radius: 32px;
+    border: none;
+    
+    background-color: #f5f6f3;
+}
+
+.quoteRow{
+    display: grid;
+    
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 5%;
+    width: 30%;
+}
+
+.quoteRow h3{
+    margin: 0;
+}
+
+.quoteRow input{
+    padding: 3%;
+}
+
+.quoteBirthdateRow{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 5%;
+    
+    width: 30%;
+}
+
+.quoteBirthdateRow :first-child{
+    grid-column:1  / span 3;
+}
+
+.quoteBirthdateRow input{
+    padding: 8%;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+
+    align-items: start;
+    justify-content: start;
+
+    width: 30%;
+    height: 30%;
+}
+
+.description input{
+    height: 80%;
+}
+
+.quoteButton{    
+    max-width: 20%;
+    max-height: 10%;
+
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    
+    border-radius: 32px;
+    border: solid 2px white;
+    
+    text-decoration: none;
+    padding: 1%;
+}

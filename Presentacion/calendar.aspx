@@ -4,25 +4,29 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main class="calendar">
+        
         <div>
-            <h1>Mi</h1>
-            <h1>Calendario</h1>
+            <h1 style="color: #fea910;">Mi</h1>
+            <h1 style="color: #38b6ff;">Calendario</h1>
         </div>
 
 
-        <section >
-            <a>Agregar mascota</a>
+        <section class="calendarSec">
+            <p>Agregar mascota</p>
         </section>
 
-        <section>
-            <div class="DateTitle">
+        <section class="description">
+            <section class="DateTitle">
                 <h3>Actividades programadas</h3>
                 <h4>Fecha seleccionada</h4>
+            </section>
+            <div>
+                <a>Actv1</a>
+                <a>Actv2</a>
             </div>
-            <input placeholder="Actividad" />
         </section>
 
-        <a style="background-color:#008cff;">Agregar</a>
+        <a class="calendarButton" style="background-color:#008cff;" href="addToCalendar.aspx">Agregar</a>
     </main>
     <footer class="Footer2">
 

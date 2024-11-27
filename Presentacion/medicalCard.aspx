@@ -49,7 +49,7 @@
             </a>
         </section>
 
-        <a class="medicalButton" style="background-color:#008cff;">Agregar</a>
+        <a class="medicalButton" style="background-color:#008cff;" href="addQuote.aspx">Agregar</a>
     </main>
     <footer class="Footer2">
 

@@ -13,7 +13,7 @@
     
     <link rel="stylesheet" href="CSS/general.css" type="text/css" />
     <link rel="stylesheet" href="CSS/startPage.css"/>
-    <link rel="stylesheet" href="CSS/logginMain.css"/>
+    <link rel="stylesheet" href="CSS/loginMain.css"/>
     <link rel="stylesheet" href="CSS/myData.css"/>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">

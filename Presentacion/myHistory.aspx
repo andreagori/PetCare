@@ -13,7 +13,7 @@
             <p>- Paseo</p>
         </section>
 
-        <a style="background-color:#008cff;">Agregar</a>
+        <a style="background-color:#008cff;">Exportar</a>
     </main>
     <footer class="Footer2">
 

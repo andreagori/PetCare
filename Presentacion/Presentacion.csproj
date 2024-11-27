@@ -67,6 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addMedicalData.aspx" />
+    <Content Include="addQuote.aspx" />
+    <Content Include="addToCalendar.aspx" />
     <Content Include="assets\avatares\PetCare_Avatares\av1.png" />
     <Content Include="assets\avatares\PetCare_Avatares\av2.png" />
     <Content Include="assets\avatares\PetCare_Avatares\av3.png" />
@@ -150,8 +153,9 @@
     <Content Include="CSS\calendar.css" />
     <Content Include="CSS\general.css" />
     <Content Include="CSS\inside.css" />
-    <Content Include="CSS\logginMain.css" />
+    <Content Include="CSS\loginMain.css" />
     <Content Include="CSS\medicalCard.css" />
+    <Content Include="CSS\medicalCardData.css" />
     <Content Include="CSS\myData.css" />
     <Content Include="CSS\myHistory.css" />
     <Content Include="CSS\myPets.css" />
@@ -166,6 +170,27 @@
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addMedicalData.aspx.cs">
+      <DependentUpon>addMedicalData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addMedicalData.aspx.designer.cs">
+      <DependentUpon>addMedicalData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addQuote.aspx.cs">
+      <DependentUpon>addQuote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addQuote.aspx.designer.cs">
+      <DependentUpon>addQuote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addToCalendar.aspx.cs">
+      <DependentUpon>addToCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addToCalendar.aspx.designer.cs">
+      <DependentUpon>addToCalendar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="calendar.aspx.cs">
       <DependentUpon>calendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
