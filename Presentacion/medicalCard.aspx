@@ -3,22 +3,53 @@
     <link rel="stylesheet" href="CSS/medicalCard.css" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <main class="history">
+    <main class="medical">
         <div>
             <h1>Mis</h1>
             <h1>Citas Medicas</h1>
         </div>
 
-        <h1>Citas registradas</h1>
-        <section class="historyData">
+        <section class="medicalList">
             <a>
                 <h3>Rutina</h3>
-                <h3>Fecha</h3>
+                <h4>Fecha</h4>
+                <p>DEONIOASNDOIWNDONIDIONQASKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOLNDKLNSWNDANIDIOANDOIWWUIDBABUIDAWBDIAWBDNDIOASHDHASIOD</p>
+            </a>
+            <a>
+                <h3>Rutina</h3>
+                <h4>Fecha</h4>
+                <p>Descripcion</p>
+            </a>
+            <a>
+                <h3>Rutina</h3>
+                <h4>Fecha</h4>
+                <p>Descripcion</p>
+            </a>
+            <a>
+                <h3>Rutina</h3>
+                <h4>Fecha</h4>
+                <p>Descripcion</p>
+            </a>
+            <a>
+                <h3>Rutina</h3>
+                <h4>Fecha</h4>
+                <p>Descripcion</p>
+            </a><a>
+                <h3>Rutina</h3>
+                <h4>Fecha</h4>
+                <p>Descripcion</p>
+            </a><a>
+                <h3>Rutina</h3>
+                <h4>Fecha</h4>
+                <p>Descripcion</p>
+            </a><a>
+                <h3>Rutina</h3>
+                <h4>Fecha</h4>
                 <p>Descripcion</p>
             </a>
         </section>
 
-        <a style="background-color:#008cff;">Agregar</a>
+        <a class="medicalButton" style="background-color:#008cff;">Agregar</a>
     </main>
     <footer class="Footer2">
 
