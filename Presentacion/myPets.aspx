@@ -8,8 +8,13 @@
             <h1>Mis</h1>
             <h1>Mascotas</h1>
         </div>
-        <section>
-            <p>Agrega una mascota</p>
+        <section class="myPetsIcons">
+            <a class="myPetsItem">
+                <img src="assets/avatares/PetCare_Gatos/cat7.png"/>
+            </a>
+            <a class="myPetsItem">
+                <img src="assets/avatares/PetCare_Perros/dog (2).png"/>
+            </a>
         </section>
 
         <a style="background-color:#fea910;" href="addPetBreed.aspx">Agregar</a>
