@@ -162,12 +162,14 @@
     <Content Include="CSS\medicalCardData.css" />
     <Content Include="CSS\myData.css" />
     <Content Include="CSS\myHistory.css" />
+    <Content Include="CSS\myPetActions.css" />
     <Content Include="CSS\myPets.css" />
     <Content Include="CSS\startPage.css" />
     <Content Include="login.aspx" />
     <Content Include="medicalCard.aspx" />
     <Content Include="myData.aspx" />
     <Content Include="myHistory.aspx" />
+    <Content Include="myPetActions.aspx" />
     <Content Include="myPets.aspx" />
     <Content Include="register.aspx" />
     <Content Include="Web.config" />
@@ -250,6 +252,13 @@
     </Compile>
     <Compile Include="myHistory.aspx.designer.cs">
       <DependentUpon>myHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myPetActions.aspx.cs">
+      <DependentUpon>myPetActions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myPetActions.aspx.designer.cs">
+      <DependentUpon>myPetActions.aspx</DependentUpon>
     </Compile>
     <Compile Include="myPets.aspx.cs">
       <DependentUpon>myPets.aspx</DependentUpon>

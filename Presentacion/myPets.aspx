@@ -9,10 +9,10 @@
             <h1>Mascotas</h1>
         </div>
         <section class="myPetsIcons">
-            <a class="myPetsItem">
+            <a class="myPetsItem" href="myPetActions.aspx">
                 <img src="assets/avatares/PetCare_Gatos/cat7.png"/>
             </a>
-            <a class="myPetsItem">
+            <a class="myPetsItem" href="myPetActions.aspx">
                 <img src="assets/avatares/PetCare_Perros/dog (2).png"/>
             </a>
         </section>
