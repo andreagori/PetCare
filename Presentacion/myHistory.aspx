@@ -6,11 +6,11 @@
     <main class="history">
         <div>
             <h1>Mi</h1>
-            <h1>Calendario</h1>
+            <h1>Historial</h1>
         </div>
 
         <section class="historyData">
-            <p>Paseo</p>
+            <p>- Paseo</p>
         </section>
 
         <a style="background-color:#008cff;">Agregar</a>
