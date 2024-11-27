@@ -52,8 +52,12 @@
     <section class="startButtons">
         <h1>Inicia en PetCare</h1>
         <section class="ButtonsRow">
-            <button style="background-color:#37b5ff;">Iniciar Sesion</button>
-            <button style="background-color:#fea910;">Registrarse</button>
+            
+            <asp:Button CssClass="ButtonsRowItem" runat="server" 
+                OnClick="goToLogin" Text="Iniciar sesion" style="background-color:#37b5ff;"/>
+            <asp:Button CssClass="ButtonsRowItem" runat="server" 
+                OnClick="goToRegister" Text="Registrarse" style="background-color:#fea910;"/>
+            
         </section>
     </section>
 

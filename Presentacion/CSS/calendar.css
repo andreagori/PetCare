@@ -1,57 +1,56 @@
-﻿.logginMain{
+﻿.calendar {
     display: flex;
     flex-direction: column;
-    
     height: 80vh;
     width: 100%;
-
     justify-content: space-around;
     align-items: center;
 }
 
-.logginMain h1{
+.calendar h1 {
     text-align: center;
     margin: 0;
     font-size: 42px;
 }
 
-.logginMain section{
-    display: flex;
-    flex-direction: column;
-
-    align-items: start;
-    justify-content: start;
-
-    width: 30%;
+.calendar div :first-child{
+    color: #fea910;
 }
 
-.logginMain section h3{
-    font-size: 20px;
-    margin: 0;
+.calendar div :last-child{
     color: #38b6ff;
 }
 
-.logginMain input{
+.calendar section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 30%;
+}
+
+    .calendar section h3 {
+        font-size: 20px;
+        margin: 0;
+        color: #38b6ff;
+    }
+
+.calendar input {
     width: 100%;
     padding: 2%;
-    
     border-radius: 32px;
     border: none;
-    
     background-color: #f5f6f3;
 }
 
-.logginMain a {    
+.calendar a {
     max-width: 20%;
     max-height: 10%;
-
     color: white;
     font-size: 22px;
     font-weight: 600;
-    
     border-radius: 32px;
     border: solid 2px white;
-    
     text-decoration: none;
     padding: 1%;
 }

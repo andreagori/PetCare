@@ -6,12 +6,15 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>PetCare</title>
+    
+    <link rel="icon" href="assets/icons/Logo.png" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     
     <link rel="stylesheet" href="CSS/general.css" type="text/css" />
     <link rel="stylesheet" href="CSS/startPage.css"/>
     <link rel="stylesheet" href="CSS/logginMain.css"/>
+    <link rel="stylesheet" href="CSS/myData.css"/>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +24,12 @@
 <body>
     <form id="form1" runat="server">
         <header class="TopBar">
-            <img src="assets/icons/Logo2.png"/>
+             <a href="index.aspx">
+                 <img src="assets/icons/Logo2.png"/>
+             </a>
             <section>
-                <a href="loggin.aspx">Iniciar sesion</a>
-                <a>Registrar</a>
+                <a href="login.aspx">Iniciar sesion</a>
+                <a href="register.aspx">Registrar</a>
             </section>
         </header>
         <div>

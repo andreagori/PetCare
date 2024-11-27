@@ -7,11 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace Presentacion
 {
-    public partial class newPetRace : System.Web.UI.Page
+    public partial class loggin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void goToIndex(object sender, EventArgs e)
+        {
+            Response.Redirect("~/index.aspx");
         }
     }
 }

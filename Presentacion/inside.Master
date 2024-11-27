@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="inside.master.cs" Inherits="Presentacion.inside" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>PetCare</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    
+    </asp:ContentPlaceHolder>
+
+    <link rel="icon" href="assets/icons/Logo.png" />
+
+    <link rel="stylesheet" href="CSS/inside.css" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="TopBarGrid">
+            <a href="index.aspx" class="TopLogo">
+                <img src="assets/icons/Logo2.png"/>
+            </a>
+            <section>
+                <a href="myPets.aspx">Mis mascotas</a>
+                <a href="calendar.aspx">Calendario</a>
+                <a>Cartilla Medica</a>
+                <a>Historial</a>
+            </section>
+            
+            <a class="TopIcon">
+                <img src="assets/avatares/PetCare_Avatares/av6.png" />
+            </a>
+        </header>
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        
+    </form>
+</body>
+</html>

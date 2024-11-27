@@ -13,5 +13,15 @@ namespace Presentacion
         {
 
         }
+
+        protected void goToLogin(object sender, EventArgs e)
+        {
+            Response.Redirect("~/login.aspx");
+        }
+        
+        protected void goToRegister(object sender, EventArgs e)
+        {
+            Response.Redirect("~/register.aspx");
+        }
     }
 }

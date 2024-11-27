@@ -1,4 +1,4 @@
-﻿<%@ Page Title="PetCare" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeBehind="loggin.aspx.cs" Inherits="Presentacion.loggin" %>
+﻿<%@ Page Title="PetCare" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Presentacion.loggin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -16,8 +16,8 @@
                 <h3>Contraseña</h3>
                 <input placeHolder="Contraseña" type="password"/>
             </section>
-            <button style="background-color:#38b6ff;">Recuperar contraseña</button>
-            <button style="background-color:#fea910;">Listo</button>
+            <a href="index.aspx" style="background-color:#38b6ff;">Recuperar contraseña</a>
+            <a href="index.aspx" style="background-color:#fea910;">Listo</a>
         </main>
     <footer class="Footer2">
         

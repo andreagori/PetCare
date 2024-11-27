@@ -146,83 +146,58 @@
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario1VA.png" />
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario2VA.png" />
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario3VA.png" />
+    <Content Include="calendar.aspx" />
+    <Content Include="CSS\calendar.css" />
     <Content Include="CSS\general.css" />
+    <Content Include="CSS\inside.css" />
     <Content Include="CSS\logginMain.css" />
-    <Content Include="CSS\prev\base.css" />
-    <Content Include="CSS\prev\login.css" />
-    <Content Include="CSS\prev\myPets.css" />
-    <Content Include="CSS\prev\newDogAvatar.css" />
-    <Content Include="CSS\prev\newPetInfo.css" />
+    <Content Include="CSS\myData.css" />
+    <Content Include="CSS\myPets.css" />
     <Content Include="CSS\startPage.css" />
-    <Content Include="loggin.aspx" />
-    <Content Include="prevPage\myPets.aspx" />
-    <Content Include="prevPage\newPet\newDogAvatar.aspx" />
-    <Content Include="prevPage\newPet\newPetGender.aspx" />
-    <Content Include="prevPage\newPet\newPetInfo.aspx" />
-    <Content Include="prevPage\newPet\newPetRace.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="myData.aspx" />
+    <Content Include="myPets.aspx" />
+    <Content Include="register.aspx" />
     <Content Include="Web.config" />
-    <Content Include="prevPage\index.aspx" />
-    <Content Include="prevPage\login.aspx" />
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="loggin.aspx.cs">
-      <DependentUpon>loggin.aspx</DependentUpon>
+    <Compile Include="calendar.aspx.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="loggin.aspx.designer.cs">
-      <DependentUpon>loggin.aspx</DependentUpon>
+    <Compile Include="calendar.aspx.designer.cs">
+      <DependentUpon>calendar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="prevPage\myPets.aspx.cs">
+    <Compile Include="inside.Master.cs">
+      <DependentUpon>inside.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inside.Master.designer.cs">
+      <DependentUpon>inside.Master</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myData.aspx.cs">
+      <DependentUpon>myData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myData.aspx.designer.cs">
+      <DependentUpon>myData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myPets.aspx.cs">
       <DependentUpon>myPets.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="prevPage\myPets.aspx.designer.cs">
+    <Compile Include="myPets.aspx.designer.cs">
       <DependentUpon>myPets.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="prevPage\newPet\newDogAvatar.aspx.cs">
-      <DependentUpon>newDogAvatar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="prevPage\newPet\newDogAvatar.aspx.designer.cs">
-      <DependentUpon>newDogAvatar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="prevPage\newPet\newPetGender.aspx.cs">
-      <DependentUpon>newPetGender.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="prevPage\newPet\newPetGender.aspx.designer.cs">
-      <DependentUpon>newPetGender.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="prevPage\newPet\newPetInfo.aspx.cs">
-      <DependentUpon>newPetInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="prevPage\newPet\newPetInfo.aspx.designer.cs">
-      <DependentUpon>newPetInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="prevPage\newPet\newPetRace.aspx.cs">
-      <DependentUpon>newPetRace.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="prevPage\newPet\newPetRace.aspx.designer.cs">
-      <DependentUpon>newPetRace.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="prevPage\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="prevPage\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="prevPage\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="prevPage\login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="index.Master.cs">
       <DependentUpon>index.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,12 +212,20 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\Fuentes\TangoSans.ttf" />
     <Content Include="assets\Fuentes\TangoSans_Bold.ttf" />
     <Content Include="assets\Fuentes\TangoSans_BoldItalic.ttf" />
     <Content Include="assets\Fuentes\TangoSans_Italic.ttf" />
+    <Content Include="inside.Master" />
     <None Include="packages.config" />
     <Content Include="index.Master" />
   </ItemGroup>

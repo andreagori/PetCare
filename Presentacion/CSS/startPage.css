@@ -142,7 +142,7 @@
     width: 80%;
 }
 
-.ButtonsRow button{
+.ButtonsRowItem {
     font-family: "Quicksand", sans-serif;
     
     background-color: red;

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Presentacion
 {
-    public partial class newPetInfo : System.Web.UI.Page
+    public partial class myData : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

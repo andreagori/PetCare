@@ -1,57 +1,54 @@
-﻿.logginMain{
+﻿.myPets {
     display: flex;
     flex-direction: column;
-    
     height: 80vh;
     width: 100%;
-
     justify-content: space-around;
     align-items: center;
 }
 
-.logginMain h1{
+.myPets h1 {
     text-align: center;
     margin: 0;
     font-size: 42px;
 }
 
-.logginMain section{
-    display: flex;
-    flex-direction: column;
-
-    align-items: start;
-    justify-content: start;
-
-    width: 30%;
+.myPets div :first-child{
+    color: #fea910;
 }
 
-.logginMain section h3{
-    font-size: 20px;
-    margin: 0;
+.myPets div :last-child{
     color: #38b6ff;
 }
 
-.logginMain input{
+.myPets section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+
+.myPets input {
     width: 100%;
     padding: 2%;
-    
     border-radius: 32px;
     border: none;
-    
     background-color: #f5f6f3;
 }
 
-.logginMain a {    
+.myPets a {
     max-width: 20%;
     max-height: 10%;
-
+    
     color: white;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 900;
+    text-decoration: none;
     
     border-radius: 32px;
     border: solid 2px white;
     
-    text-decoration: none;
     padding: 1%;
 }
