@@ -12,7 +12,7 @@
             <p>Agrega una mascota</p>
         </section>
 
-        <a style="background-color:#fea910;">Agregar</a>
+        <a style="background-color:#fea910;" href="addPetBreed.aspx">Agregar</a>
     </main>
 
     <footer class="Footer2">

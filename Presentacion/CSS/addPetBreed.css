@@ -1,0 +1,14 @@
+﻿.addPetMain {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.addPetMain h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 42px;
+}

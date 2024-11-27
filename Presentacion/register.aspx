@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <main class="loginMain">
+    <main class="loginMain">
         <div>
             <h1 style="color:#fea910;">Nuevo</h1>
             <h1 style="color:#38b6ff;">Usuario</h1>

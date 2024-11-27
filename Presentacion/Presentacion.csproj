@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="addMedicalData.aspx" />
+    <Content Include="addPetBreed.aspx" />
+    <Content Include="addPetData.aspx" />
     <Content Include="addQuote.aspx" />
     <Content Include="addToCalendar.aspx" />
     <Content Include="assets\avatares\PetCare_Avatares\av1.png" />
@@ -150,6 +152,8 @@
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario2VA.png" />
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario3VA.png" />
     <Content Include="calendar.aspx" />
+    <Content Include="CSS\addPetBreed.css" />
+    <Content Include="CSS\addPetData.css" />
     <Content Include="CSS\calendar.css" />
     <Content Include="CSS\general.css" />
     <Content Include="CSS\inside.css" />
@@ -176,6 +180,20 @@
     </Compile>
     <Compile Include="addMedicalData.aspx.designer.cs">
       <DependentUpon>addMedicalData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addPetBreed.aspx.cs">
+      <DependentUpon>addPetBreed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addPetBreed.aspx.designer.cs">
+      <DependentUpon>addPetBreed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addPetData.aspx.cs">
+      <DependentUpon>addPetData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addPetData.aspx.designer.cs">
+      <DependentUpon>addPetData.aspx</DependentUpon>
     </Compile>
     <Compile Include="addQuote.aspx.cs">
       <DependentUpon>addQuote.aspx</DependentUpon>
