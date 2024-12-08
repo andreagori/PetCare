@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class E_Pet
+    public class E_Pet
     {
         private int _idPet;
         private int _idOwner;

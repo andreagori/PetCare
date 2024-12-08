@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class E_Date
+    public class E_Date
     {
         private int _idDate;
         private int _idPet;
