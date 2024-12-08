@@ -218,12 +218,12 @@
     <Compile Include="calendar.aspx.designer.cs">
       <DependentUpon>calendar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="inside.Master.cs">
-      <DependentUpon>inside.Master</DependentUpon>
+    <Compile Include="home.Master.cs">
+      <DependentUpon>home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="inside.Master.designer.cs">
-      <DependentUpon>inside.Master</DependentUpon>
+    <Compile Include="home.Master.designer.cs">
+      <DependentUpon>home.Master</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -295,7 +295,7 @@
     <Content Include="assets\Fuentes\TangoSans_Bold.ttf" />
     <Content Include="assets\Fuentes\TangoSans_BoldItalic.ttf" />
     <Content Include="assets\Fuentes\TangoSans_Italic.ttf" />
-    <Content Include="inside.Master" />
+    <Content Include="home.Master" />
     <None Include="packages.config" />
     <Content Include="index.Master" />
   </ItemGroup>

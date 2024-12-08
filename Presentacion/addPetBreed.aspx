@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/inside.Master" AutoEventWireup="true" CodeBehind="addPetBreed.aspx.cs" Inherits="Presentacion.addPetBreed" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="addPetBreed.aspx.cs" Inherits="Presentacion.addPetBreed" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="CSS/addPetBreed.css" type="text/css" />
 </asp:Content>
