@@ -10,7 +10,7 @@
 
         <section>
             <h3>Nombre</h3>
-            <input type="text"/>
+            <asp:TextBox  ID="TBName" runat="server" ></asp:TextBox>
         </section>
         <section>
             <h3>Nombre de usuario</h3>

@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main class="pet">
-        <h1>Thomas</h1>
+        <asp:Label ID="LbNamePet" runat="server" Visible="true">a</asp:Label>
 
         <section class="petGrid">
             <a>Mi info</a>

@@ -8,13 +8,16 @@
             <h1>Mis</h1>
             <h1>Mascotas</h1>
         </div>
+        
         <section class="myPetsIcons">
-            <a class="myPetsItem" href="myPetActions.aspx">
-                <img src="assets/avatares/PetCare_Gatos/cat7.png"/>
-            </a>
-            <a class="myPetsItem" href="myPetActions.aspx">
-                <img src="assets/avatares/PetCare_Perros/dog (2).png"/>
-            </a>
+            <asp:Repeater ID="rpPets" runat="server">
+                <ItemTemplate>
+                    <a class="myPetsItem" href="myPetActions.aspx?petId=<%# Eval("IdPet") %>&NamePet=<%# HttpUtility.UrlEncode(Eval("NamePet").ToString()) %>">
+                        <img src='<%# Eval("PhotoPet") %>'/>
+                    </a>
+                <p><%# Eval("NamePet") %></p>
+                </ItemTemplate>
+            </asp:Repeater>
         </section>
 
         <a style="background-color:#fea910;" href="addPetBreed.aspx">Agregar</a>

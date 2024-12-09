@@ -7,17 +7,19 @@
                 <h1 style="color:#fea910;">Iniciar</h1>
                 <h1 style="color:#38b6ff;">Sesion</h1>
             </div>
-
+            <asp:Label ID="lblErrorMessage" runat="server" ForeColor="Red" Visible="False"></asp:Label>
             <section>
                 <h3>Usuario</h3>
-                <input placeHolder="Usuario"/>
+
+                <asp:TextBox ID="TBEmail" runat="server" placeholder="Usuario"></asp:TextBox>
+
             </section>
             <section>
                 <h3>Contraseña</h3>
-                <input placeHolder="Contraseña" type="password"/>
+                <asp:TextBox ID="TBPassword" runat="server" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
             </section>
             <a href="index.aspx" style="background-color:#38b6ff;">Recuperar contraseña</a>
-            <a href="myPets.aspx" style="background-color:#fea910;">Listo</a>
+            <asp:Button onclick="btnLogin" style="background-color:#fea910;" Text="Listo" runat="server"></asp:Button>
         </main>
     <footer class="Footer2">
         

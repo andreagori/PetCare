@@ -13,6 +13,14 @@
     font-size: 42px;
 }
 
+.myPetsIcons p {
+    margin-top: 5px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
 .myPets div :first-child{
     color: #fea910;
 }
