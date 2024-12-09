@@ -7,7 +7,7 @@ using Datos;
 using Entidades;
 namespace Negocios
 {
-    internal class N_Owner
+    public class N_Owner
     {
         readonly D_Owner ActualOwner = new D_Owner();
 
@@ -50,7 +50,21 @@ namespace Negocios
             return message;
         }
 
-        public E_Owner Login => ActualOwner.LoginAndGetOwner();
+        public E_Owner Login (String Email, String Password)
+        {
+            if(string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
+            {
+                throw new ArgumentException("El email y la contraseña son obligatorios");
+            }
+
+            E_Owner owner = ActualOwner.LoginAndGetOwner(Email, Password);
+            if (owner == null)
+            {
+                throw new ArgumentException("El email o la contraseña son incorrectos");
+            }
+
+            return owner;
+        }
 
         public List<E_Pet> GetOwnerPets(int idOwner)
         {

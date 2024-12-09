@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entidades;
 
 namespace Presentacion
 {
@@ -11,7 +12,14 @@ namespace Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Owner"] == null)
+            {
+                Response.Redirect("~/login.aspx");
+            }
+            else
+            {
+                E_Owner owner = (E_Owner)Session["Owner"];
+            }
         }
     }
 }
