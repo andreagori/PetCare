@@ -12,8 +12,8 @@
         <main class="mcMain">
             <section>
                 <h3>Nombre</h3>
-                <ItemTemplate class="rowInfo">
-                    <input placeholder="Thomas" type="text">
+                <ItemTemplate class="rowInfo" runat="server">
+                    <asp:Label runat="server" ID="nameIn"></asp:Label>
                 </ItemTemplate>
             </section>
             
@@ -21,14 +21,14 @@
                 <div>
                     <h3>Raza</h3>
                     <ItemTemplate class="rowInfo">
-                        <input placeholder="Golden" type="text">
+                        <asp:Label runat="server" ID="breed"></asp:Label>
                     </ItemTemplate>
                 </div>
                 
                 <div>
                     <h3>Genero</h3>
                     <ItemTemplate class="rowInfo">
-                        <input placeholder="Macho" type="text">
+                        <asp:Label runat="server" ID="sex"></asp:Label>
                     </ItemTemplate>
                 </div>
             </section>
@@ -36,27 +36,21 @@
             <section class="mcMainBirth">
                 <h3>Fecha de nacimiento</h3>
                 <ItemTemplate class="rowInfo">
-                    <input placeholder="18" type="number">
-                </ItemTemplate>
-                <ItemTemplate class="rowInfo">
-                    <input  placeholder="10" type="number">
-                </ItemTemplate>
-                <ItemTemplate class="rowInfo">
-                    <input placeholder="2004" type="number">
+                    <asp:Label runat="server" ID="day"></asp:Label>
                 </ItemTemplate>
             </section>
             
             <section>
                 <h3>Peso</h3>
                 <ItemTemplate class="rowInfo">
-                    <input placeholder="52" type="number">
+                    <asp:Label runat="server" ID="weight"></asp:Label>
                 </ItemTemplate>
             </section>
 
             <section>
                 <h3>padecimientos</h3>
                 <ItemTemplate class="row">
-                    <input type="text" placeholder="Cadena de testo">
+                    <asp:Label runat="server" ID="illiness"></asp:Label>
                 </ItemTemplate>
             </section>
         </main>

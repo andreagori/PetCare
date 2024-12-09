@@ -10,7 +10,7 @@
 
         <section class="petGrid">
             <asp:HyperLink ID="wantedPosterLink" runat="server" Text="Cartel de busqueda"  />
-            <a href="medicalCard.aspx">Cartilla Medica</a>
+            <asp:HyperLink ID="medicalCardLink" runat="server" Text="Medical card"  />
             <a href="calendar.aspx">Calendario</a>
             <a href="myHistory.aspx?IdPet=<%# Eval("IdPet") %>">Historial</a>
         </section>

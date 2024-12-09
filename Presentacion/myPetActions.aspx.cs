@@ -22,6 +22,7 @@ namespace Presentacion
                 // Almacenar el IdPet en la sesión
                 Session["IdPet"] = newId;
                 wantedPosterLink.NavigateUrl = "wantedPoster.aspx?IdPet=" + newId + "&NamePet="+name;
+                medicalCardLink.NavigateUrl = "medicalCard.aspx?IdPet=" + newId + "&NamePet="+name;
             }
             else
             {
