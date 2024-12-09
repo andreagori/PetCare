@@ -12,17 +12,19 @@
             <section class="loginMain-input">
                 <h3>Nombre</h3>
                 <asp:TextBox ID="TBName" runat="server" placeholder="Nombre"></asp:TextBox>
-                <h3>Nombre de usuario</h3>
-                <asp:TextBox ID="TBUsername" runat="server" placeholder="Nombre de usuario"></asp:TextBox>
                 <h3>Correo</h3>
                 <asp:TextBox ID="TBEmail" runat="server" TextMode="Email" placeholder="Correo"></asp:TextBox>
+                <h3>Celular</h3>
+                <asp:TextBox ID="TBCellPhone" runat="server" TextMode="Number" placeholder="Celular"></asp:TextBox>
                 <h3>Contraseña</h3>
                 <asp:TextBox ID="TBPassword" runat="server" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
                 <h3>Confirmar contraseña</h3>
                 <asp:TextBox ID="TBConfirmPassword" runat="server" TextMode="Password" placeholder="Confirmar contraseña"></asp:TextBox>
+                <h3>Direccion</h3>
+                <asp:TextBox ID="TBAddress" runat="server" placeholder="Direccion"></asp:TextBox>
             </section>
             <div class="register-button">
-                <a href="myData.aspx" class="custom-button">Siguiente</a>
+                <asp:Button href="myData.aspx" class="custom-button" runat="server" Text="Siguiente" OnClick="BtnNext"></asp:Button>
             </div>
         </div>
     </main>

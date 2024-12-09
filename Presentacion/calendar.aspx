@@ -17,9 +17,9 @@
 
         <section class="description">
             <div>
-                <asp:Repeater ID="RpDates" runat="server">
+                <asp:Repeater ID="RpDates" runat="server"  OnItemDataBound="RpDates_ItemDataBound">
                     <ItemTemplate>
-                        <p ID="PNamePet" runat="server"><strong>Name:</strong><p id="petName"> <%# Eval("NamePet") %> </p></p>
+                        <asp:Label ID="LbNamePet" runat="server"><strong>Name:</strong><p id="petName"> <%# Eval("NamePet") %> </p></asp:Label>
                         <p><strong>Título:</strong> <%# Eval("Title") %></p>
                         <p><strong>Descripción:</strong> <%# Eval("Description") %></p>
                         <p><strong>Inicio:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
