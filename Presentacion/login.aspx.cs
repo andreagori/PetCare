@@ -36,7 +36,7 @@ namespace Presentacion
             }
             catch (ArgumentException ex)
             {
-                lblErrorMessage.Text = ex.Message; // Suponiendo que tienes un Label con id="lblErrorMessage"
+                lblErrorMessage.Text = ex.Message;
                 lblErrorMessage.Visible = true;
             }
         }

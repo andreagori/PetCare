@@ -17,8 +17,9 @@ namespace Entidades
         private DateTime _StartTime;
         private DateTime _EndTime;
         private bool _State;
+        private string _NamePet;
 
-        public E_Date(int idDate, int idPet, string title, string description, bool dateType, bool addedBy, DateTime startTime, DateTime endTime, bool state)
+        public E_Date(int idDate, int idPet, string title, string description, bool dateType, bool addedBy, DateTime startTime, DateTime endTime, bool state, string namePet)
         {
             IdDate = idDate;
             IdPet = idPet;
@@ -29,6 +30,7 @@ namespace Entidades
             StartTime = startTime;
             EndTime = endTime;
             State = state;
+            NamePet = namePet;
         }
 
         public E_Date()
@@ -42,6 +44,7 @@ namespace Entidades
             StartTime = DateTime.MinValue;
             EndTime = DateTime.MinValue;
             State = false;
+            NamePet = string.Empty;
         }
 
         public int IdDate { get => _idDate; set => _idDate = value; }
@@ -53,5 +56,6 @@ namespace Entidades
         public DateTime StartTime { get => _StartTime; set => _StartTime = value; }
         public DateTime EndTime { get => _EndTime; set => _EndTime = value; }
         public bool State { get => _State; set => _State = value; }
+        public string NamePet { get => _NamePet; set => _NamePet = value; } 
     }
 }

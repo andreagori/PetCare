@@ -88,46 +88,7 @@ namespace Datos
             return dates;
         }
 
-        public List<E_Date> GetOneDatePet(int idPet)
-        {
-            List<E_Date> dates = new List<E_Date>();
-            SqlCommand cmd = new SqlCommand("GetOneDatePet", Conexion)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            cmd.Parameters.AddWithValue("@idPet", idPet);
-            try
-            {
-                AbrirConexion();
-                SqlDataReader reader = cmd.ExecuteReader();
-                dates = new List<E_Date>();
-                while (reader.Read())
-                {
-                    E_Date actualDate = new E_Date(
-                        reader.GetInt32(0),
-                        reader.GetInt32(1),
-                        reader.GetString(2),
-                        reader.GetString(3),
-                        reader.GetBoolean(4),
-                        reader.GetBoolean(5),
-                        reader.GetDateTime(6),
-                        reader.GetDateTime(7),
-                        reader.GetBoolean(8)
-                    );
-                    dates.Add(actualDate);
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error al querer obtener los datos", e);
-            }
-            finally
-            {
-                CerrarConexion();
-                cmd.Dispose();
-            }
-            return dates;
-        }
+        
 
     }
 
