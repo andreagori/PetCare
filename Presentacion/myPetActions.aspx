@@ -7,12 +7,10 @@
         <asp:Label ID="LbNamePet" runat="server" Visible="true">a</asp:Label>
 
         <section class="petGrid">
-            <a>Mi info</a>
             <a>Cartel De Busqueda</a>
             <a href="medicalCard.aspx">Cartilla Medica</a>
             <a href="calendar.aspx">Calendario</a>
             <a href="myHistory.aspx">Historial</a>
-            <a>Agregar Miembro</a>
         </section>
     </main>
     <footer class="Footer2">

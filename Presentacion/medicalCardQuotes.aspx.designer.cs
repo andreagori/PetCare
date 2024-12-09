@@ -11,7 +11,7 @@ namespace Presentacion
 {
 
 
-    public partial class medicalCard1
+    public partial class medicalCard
     {
     }
 }

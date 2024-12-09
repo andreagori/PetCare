@@ -15,7 +15,7 @@
                     <a class="myPetsItem" href="myPetActions.aspx?petId=<%# Eval("IdPet") %>&NamePet=<%# HttpUtility.UrlEncode(Eval("NamePet").ToString()) %>">
                         <img src='<%# Eval("PhotoPet") %>'/>
                     </a>
-                <p><%# Eval("NamePet") %></p>
+                    <p><%# Eval("NamePet") %></p>
                 </ItemTemplate>
             </asp:Repeater>
         </section>

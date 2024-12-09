@@ -158,7 +158,7 @@
     <Content Include="CSS\general.css" />
     <Content Include="CSS\inside.css" />
     <Content Include="CSS\loginMain.css" />
-    <Content Include="CSS\medicalCard.css" />
+    <Content Include="CSS\medicalCardQuotes.css" />
     <Content Include="CSS\medicalCardData.css" />
     <Content Include="CSS\myData.css" />
     <Content Include="CSS\myHistory.css" />
@@ -167,6 +167,7 @@
     <Content Include="CSS\startPage.css" />
     <Content Include="login.aspx" />
     <Content Include="medicalCard.aspx" />
+    <Content Include="medicalCardQuotes.aspx" />
     <Content Include="myData.aspx" />
     <Content Include="myHistory.aspx" />
     <Content Include="myPetActions.aspx" />
@@ -238,6 +239,13 @@
     </Compile>
     <Compile Include="medicalCard.aspx.designer.cs">
       <DependentUpon>medicalCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalCardQuotes.aspx.cs">
+      <DependentUpon>medicalCardQuotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalCardQuotes.aspx.designer.cs">
+      <DependentUpon>medicalCardQuotes.aspx</DependentUpon>
     </Compile>
     <Compile Include="myData.aspx.cs">
       <DependentUpon>myData.aspx</DependentUpon>

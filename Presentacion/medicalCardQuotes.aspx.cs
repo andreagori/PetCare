@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Presentacion
 {
-    public partial class medicalCard1 : System.Web.UI.Page
+    public partial class medicalCard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
