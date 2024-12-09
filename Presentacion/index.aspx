@@ -15,26 +15,24 @@
             ¡Ve lo que tenemos para ofrecerte!
         </h1>
         <section class="rolesRow">
-            <section class="rolesItem">
+            <section class="rolesItem cuidador">
                 <h1>Cuidador</h1>
                 <section>
-                    <p>- Calendario</p>
-                    <p>- Reportes</p>
+                    <p>- Reporte Cuidado</p>
                     <p>- Agenda</p>
+                    <p>- Calendario</p>
                 </section>
             </section>
-        
-            <section class="rolesItem" style="background-color:#fea910;">
-                <h1 style="color:#fea910; border:2px solid #fea910;">Dueño</h1>
+            <section class="rolesItem dueno">
+                <h1>Dueño</h1>
                 <section>
                     <p>- Agenda</p>
-                    <p>- Cartilla Medica</p>
+                    <p>- Cartilla Médica</p>
                     <p>- Cartel búsqueda</p>
                 </section>
             </section>
-        
-            <section class="rolesItem" style="background-color:#37b5ff;">
-                <h1 style="color:#37b5ff; border:2px solid #37b5ff;" >Veterinario</h1>
+            <section class="rolesItem veterinario">
+                <h1>Veterinario</h1>
                 <section>
                     <p>- Cartilla Médica</p>
                     <p>- Reporte Cita</p>
@@ -43,45 +41,40 @@
             </section>
         </section>
     </section>
-
-    <section class="section2">
+    <section class="benefits">
         <h1>Beneficios</h1>
         <img src="assets/banner.png"/>
     </section>
-
     <section class="startButtons">
         <h1>Inicia en PetCare</h1>
         <section class="ButtonsRow">
-            
-            <asp:Button CssClass="ButtonsRowItem" runat="server" 
-                OnClick="goToLogin" Text="Iniciar sesion" style="background-color:#37b5ff;"/>
-            <asp:Button CssClass="ButtonsRowItem" runat="server" 
-                OnClick="goToRegister" Text="Registrarse" style="background-color:#fea910;"/>
-            
+            <asp:Button CssClass="ButtonsRowItem blueButton" runat="server" 
+                OnClick="goToLogin" Text="Iniciar sesión" />
+            <asp:Button CssClass="ButtonsRowItem yellowButton" runat="server" 
+                OnClick="goToRegister" Text="Registrarse" />
         </section>
     </section>
-
-
-    <h1 class="aboutUs">Sobre nosotros</h1>
-    <footer class="Footer">
-        <section>
-            <h1>¿Quienes Somos?</h1>
-            <p>Cuatro alumnos de 5to semestre</p>
-        </section>
+    <section class="aboutUs">
+        <h1>Sobre nosotros</h1>
+        <footer class="Footer">
+            <section>
+                <h1>¿Quienes Somos?</h1>
+                <p>Cuatro alumnos de 5to semestre</p>
+            </section>
         
-        <section>
-            <h1>¿Por Qué?</h1>
-            <p>
-                Desarrollar un proyecto final que involucre ambientes de 
-                programación visual y base de datos.
-            </p>
-        </section>
+            <section>
+                <h1>¿Por Qué?</h1>
+                <p>
+                    Desarrollar un proyecto final que involucre ambientes de 
+                    programación visual y base de datos.
+                </p>
+            </section>
         
-        <section>
-            <h1>Acerca</h1>
-            <p>Idea pensada como dueños de mascotas</p>
-        </section>
-    </footer>
-
+            <section>
+                <h1>Acerca</h1>
+                <p>Idea pensada como dueños de mascotas</p>
+            </section>
+        </footer>
+    </section>
 </asp:Content>
     
