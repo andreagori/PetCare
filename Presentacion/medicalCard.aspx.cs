@@ -24,7 +24,7 @@ namespace Presentacion
                 {
                     nameIn.Text = pets[i].NamePet;
                     breed.Text = pets[i].Specie;
-                    sex.Text = pets[i].Sex? "male" : "female";
+                    sex.Text = pets[i].Sex? "female" : "male";
                     day.Text = pets[i].BirthDay.ToString();
                     weight.Text = 0.ToString();
                     illiness.Text = "Cositas";

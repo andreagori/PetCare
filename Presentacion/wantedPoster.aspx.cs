@@ -16,28 +16,36 @@ namespace Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string id = Request.QueryString["IdPet"];
-            Session["SourcePage"] = "PagePet";
-            if (int.TryParse(id, out int newId))  // Asegúrate de que sea un número entero
-            {
-                // Almacenar el IdPet en la sesión
-                Session["IdPet"] = newId;
-            }
-            else
-            {
-                // Manejar el caso si no se pasa un valor válido
-                Response.Write("ID de mascota no válido.");
-            }
             LoadName();
         }
 
         private void LoadName()
         {
             string namePet = Request.QueryString["NamePet"];
+            string id = Request.QueryString["IdPet"];
+            int idpet = int.Parse(id);
+            
+            E_Owner owner = (E_Owner)Session["Owner"];
+            
+            // Cargar datos de mascota
+            List<E_Pet> list = new N_Owner().GetOwnerPets(owner.IdOwner);
+            E_Pet currentPet = new E_Pet();
+            for(int i=0;i<list.Count; i++)
+            {
+                if(idpet == list[i].IdPet)
+                {
+                    currentPet = list[i];
+                    break;
+                }
+            }
 
+            // Modificar DOM
             if (!string.IsNullOrEmpty(namePet))
             {
                 petName.Text = namePet;
+                string sex = currentPet.Sex ? "Male" : "Female";
+                petData.Text = namePet + " "+ currentPet.Age + " " + sex;
+                ownerData.Text = owner.Name + " " + owner.CellPhone + " " + owner.Address;
             }
             else
             {

@@ -20,11 +20,11 @@
             <div>
                 <section>
                     <h4>Datos de la mascota</h4>
-                    <p>Mascota perdida nombre - color wero y asi</p>
+                    <asp:Label id="petData" runat="server"></asp:Label>
                 </section>
                 <section>
                     <h4>Datos del dueño</h4>
-                    <p>Adan gonzalez cesena - 646 236 2914, Villa bonita</p>
+                    <asp:Label id="ownerData" runat="server"></asp:Label>
                 </section>
             </div>
         </main>
