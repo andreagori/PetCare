@@ -1,4 +1,8 @@
-﻿.pet{
+﻿*{
+    box-sizing: border-box;
+}
+
+.pet{
     display: flex;
     flex-direction: column;
     height: 80vh;
@@ -7,18 +11,12 @@
     align-items: center;
 }
 
-.pet h1{
+.petName span{
     text-align: center;
     margin: 0;
     font-size: 52px;
-    color: #fea910;
-}
-
-.pet #LbNamePet {
-        text-align: center;
-        margin: 0;
-        font-size: 52px;
-        color: #fea910;
+    font-weight: 600;
+    color: #38b6ff;
 }
 
 .petGrid{
@@ -47,21 +45,8 @@
     
     border-radius: 32px;
     padding: 2%;
-    background-color: #38b6ff;
+    background-color: #df960f;
 }
 
-/* .myPets a {
-    max-width: 20%;
-    max-height: 10%;
-    
-    color: white;
-    font-size: 22px;
-    font-weight: 900;
-    text-decoration: none;
-    
-    border-radius: 32px;
-    border: solid 2px white;
-    
-    padding: 1%;
-} */
+
 

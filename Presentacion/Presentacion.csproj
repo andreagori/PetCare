@@ -165,6 +165,7 @@
     <Content Include="CSS\myPetActions.css" />
     <Content Include="CSS\myPets.css" />
     <Content Include="CSS\startPage.css" />
+    <Content Include="CSS\wantedPoster.css" />
     <Content Include="login.aspx" />
     <Content Include="medicalCard.aspx" />
     <Content Include="medicalCardQuotes.aspx" />
@@ -173,6 +174,7 @@
     <Content Include="myPetActions.aspx" />
     <Content Include="myPets.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="wantedPoster.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
   </ItemGroup>
@@ -296,6 +298,13 @@
     </Compile>
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wantedPoster.aspx.cs">
+      <DependentUpon>wantedPoster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wantedPoster.aspx.designer.cs">
+      <DependentUpon>wantedPoster.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

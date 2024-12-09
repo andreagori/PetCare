@@ -4,14 +4,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main class="pet">
-        <asp:Label ID="LbNamePet" runat="server" Visible="true">a</asp:Label>
+        <div class="petName">
+            <asp:Label ID="LbNamePet" runat="server" Visible="true">a</asp:Label>
+        </div>
 
         <section class="petGrid">
-            <a>Cartel De Busqueda</a>
+            <a href="wantedPoster.aspx?IdPet=<%# Eval("IdPet") %>">Cartel De Busqueda</a>
             <a href="medicalCard.aspx">Cartilla Medica</a>
             <a href="calendar.aspx">Calendario</a>
             <a href="myHistory.aspx?IdPet=<%# Eval("IdPet") %>">Historial</a>
-            <a>Agregar Miembro</a>
         </section>
     </main>
     <footer class="Footer2">

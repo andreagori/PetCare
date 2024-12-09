@@ -12,9 +12,11 @@
         <section class="historyData">
             <asp:Repeater ID="rpHistory" runat="server">
                 <ItemTemplate>
-                    <p><strong>Título:</strong> <%# Eval("Title") %></p>
-                    <p><strong>Descripción:</strong> <%# Eval("Description") %></p>
-                    <p><strong>Fecha:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
+                    <div class="hItem">
+                        <p><strong>Título:</strong> <%# Eval("Title") %></p>
+                        <p><strong>Descripción:</strong> <%# Eval("Description") %></p>
+                        <p><strong>Fecha:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
+                    </div>
                 </ItemTemplate>
             </asp:Repeater>
         </section>
