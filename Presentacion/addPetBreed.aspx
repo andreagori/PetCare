@@ -9,12 +9,9 @@
             <h1 style="color: #fea910;">Raza De Animal</h1>
         </div>
         
-        <a href="addPetData.aspx" class="addPetMainButton">
-            <img src="assets/buttons/addCat.png"/>
-        </a>
-        <a href="addPetData.aspx" class="addPetMainButton">
-            <img src="assets/buttons/addDog.png"/>
-        </a>
+        <asp:ImageButton ID="btnCat" runat="server" ImageUrl="assets/buttons/addCat.png" OnClick="btnCat_Click"  />
+        <asp:ImageButton ID="btnDog" runat="server" ImageUrl="assets/buttons/addDog.png" OnClick="btnDog_Click" />
+
     </main>
     <footer class="Footer2">
 

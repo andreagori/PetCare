@@ -13,5 +13,10 @@ namespace Presentacion
         {
 
         }
+
+        protected void btnCat_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("addCatBreed.aspx");
+        }
     }
 }

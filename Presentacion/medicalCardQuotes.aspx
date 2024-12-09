@@ -10,41 +10,16 @@
 
         <main class="medicalMain">
             <section class="medicalList">
-                <a>
-                    <h3 id="vaccineName">Nombre</h3>
-                    <h4 id="vaccineType">tipo</h4>
-                    <p id="vaccineDescription">descripcion</p>
-                </a>
-                <a>
-                    <h3 id="vaccineName">Nombre</h3>
-                    <h4 id="vaccineType">tipo</h4>
-                    <p id="vaccineDescription">descripcion</p>
-                </a>
-                <a>
-                    <h3 id="vaccineName">Nombre</h3>
-                    <h4 id="vaccineType">tipo</h4>
-                    <p id="vaccineDescription">descripcion</p>
-                </a>
-                <a>
-                    <h3 id="vaccineName">Nombre</h3>
-                    <h4 id="vaccineType">tipo</h4>
-                    <p id="vaccineDescription">descripcion</p>
-                </a>
-                <a>
-                    <h3 id="vaccineName">Nombre</h3>
-                    <h4 id="vaccineType">tipo</h4>
-                    <p id="vaccineDescription">descripcion</p>
-                </a>
-                <a>
-                    <h3 id="vaccineName">Nombre</h3>
-                    <h4 id="vaccineType">tipo</h4>
-                    <p id="vaccineDescription">descripcion</p>
-                </a>
-                <a>
-                    <h3 id="vaccineName">Nombre</h3>
-                    <h4 id="vaccineType">tipo</h4>
-                    <p id="vaccineDescription">descripcion</p>
-                </a>
+                <asp:Repeater ID="RpDates" runat="server">
+                    <ItemTemplate>         
+                        <a>
+                            <h3><strong>Título:</strong> <%# Eval("Title") %></h3>
+                            <h4><strong>Inicio:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></h4>
+                            <p><strong>descripcion:</strong><%# Eval("Description") %> </p>
+                            <h4><strong>Finalizacion:</strong><%# Eval("EndTime", "{0:yyyy/MM/dd}") %></h4>
+                        </a>
+                    </ItemTemplate>
+                </asp:Repeater>
             </section>
 
         </main>
