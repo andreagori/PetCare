@@ -31,7 +31,7 @@
             </section>
             
             <a class="TopIcon">
-                <img src="assets/avatares/PetCare_Avatares/av6.png" />
+                <img ID="IPerfil"  runat="server" />
             </a>
         </header>
         

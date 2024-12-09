@@ -16,7 +16,7 @@ namespace Datos
         public int IDM_Owner(string action, E_Owner owner)
         {
             int result = 0;
-            SqlCommand cmd = new SqlCommand("IDM_Owner", Conexion)
+            SqlCommand cmd = new SqlCommand("IDM_Owners", Conexion)
             {
                 CommandType = CommandType.StoredProcedure
             };

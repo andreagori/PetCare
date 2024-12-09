@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Negocios;
 using Entidades;
 using System.Web.UI.HtmlControls;
+
 namespace Presentacion
 {
     public partial class calendar : System.Web.UI.Page
@@ -25,7 +26,6 @@ namespace Presentacion
                 if (Session["IdPet"] != null)
                 {
                     int id = (int)Session["IdPet"];
-                    N_Date dates = new N_Date();
                     List<E_Date> datesList = new N_Date().GetActivitiesPet(id);
                     RpDates.DataSource = datesList;
                     RpDates.DataBind();
@@ -43,6 +43,21 @@ namespace Presentacion
                 }
             }
         }
+        protected void RpDates_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                var lbNamePet = (Label)e.Item.FindControl("LbNamePet");
 
+                if (Session["SourcePage"] != null && Session["SourcePage"].ToString() == "PagePet")
+                {
+                    lbNamePet.Visible = false;
+                }
+                else
+                {
+                    lbNamePet.Visible = true;
+                }
+            }
+        }
     }
 }

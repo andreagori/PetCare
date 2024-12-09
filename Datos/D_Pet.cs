@@ -29,8 +29,10 @@ namespace Datos
             cmd.Parameters.AddWithValue("@Specie", pet.Specie);
             cmd.Parameters.AddWithValue("@Breed", pet.Breed);
             cmd.Parameters.AddWithValue("@BirthDay", pet.BirthDay);
+            cmd.Parameters.AddWithValue("@Weight", pet.Weight);
             cmd.Parameters.AddWithValue("@Age", pet.Age);
             cmd.Parameters.AddWithValue("@Sex", pet.Age);
+            cmd.Parameters.AddWithValue("@ShareCode", pet.ShareCode);
             cmd.Parameters.AddWithValue("@State", pet.State);
 
             try

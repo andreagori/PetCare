@@ -19,6 +19,7 @@ namespace Presentacion
             else
             {
                 E_Owner owner = (E_Owner)Session["Owner"];
+                IPerfil.Attributes["src"] = "assets/avatares/PetCare_Avatares/" + owner.ImgPerfil.ToString();
             }
         }
     }

@@ -11,25 +11,25 @@
         </div>
 
         <section class="description">
-            <asp:Repeater ID="RpDates" runat="server">
-                <ItemTemplate>
-                    <div class="cActivity" id="show">
-                        <p><strong>Título:</strong>
-                            <%# Eval("Title") %>
-                        </p>
-                        <p><strong>Descripción:</strong>
-                            <%# Eval("Description") %>
-                        </p>
-                        <p><strong>Inicio:</strong>
-                            <%# Eval("StartTime", "{0:yyyy/MM/dd}" ) %>
-                        </p>
-                        <p><strong>Finalizacion</strong>
-                            <%# Eval("StartTime", "{0:yyyy/MM/dd}" ) %>
-                        </p>
-                    </div>
-                </ItemTemplate>
-            </asp:Repeater>
-    </section>
+            <div>
+                <asp:Repeater ID="RpDates" runat="server"  OnItemDataBound="RpDates_ItemDataBound">
+                    <ItemTemplate>
+                        <asp:Label ID="LbNamePet" runat="server"><strong>Name:</strong><p id="petName"> <%# Eval("NamePet") %> </p></asp:Label>
+                        <p><strong>Título:</strong> <%# Eval("Title") %></p>
+                        <p><strong>Descripción:</strong> <%# Eval("Description") %></p>
+                        <p><strong>Inicio:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
+                        <p><strong>Finalizacion</strong><%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
+                    </ItemTemplate>
+                </asp:Repeater>
+
+            </div>
+        </section>
+        <script>
+            const petName = document.getElementById("petName");
+            if(petName.textContent === ""){
+                petName.style.display = 'none';
+            }
+        </script>
         <a class="calendarButton" style="background-color:#008cff;" href="addToCalendar.aspx">Agregar</a>
         
         <div id="overlay" class="overlay">
