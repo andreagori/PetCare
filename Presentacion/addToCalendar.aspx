@@ -14,17 +14,24 @@
             <input type="text"/>
         </section>
 
-        <div class="quoteRow">
+        <section>
             <h3>Fecha</h3>
-            <h3>Hora</h3>
+            <input type="date"/>            
+        </section>
+        
+        <div class="quoteRow">
+            <h3>Inicio</h3>
+            <h3>Fin</h3>
             <input type="date"/>
-            <input type="datetime"/>
+            <input type="date"/>
         </div>
     
         <div class="description">
             <h3>Descripcion</h3>
             <input type="text"/>
         </div>
+
+        
 
         <a class="quoteButton" href="calendar.aspx" style="background-color:#fea910;">Agregar cita</a>
     </main>

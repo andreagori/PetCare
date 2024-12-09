@@ -13,7 +13,7 @@
         <section class="description">
             <asp:Repeater ID="RpDates" runat="server">
                 <ItemTemplate>
-                    <div class="cActivity">
+                    <div class="cActivity" id="show">
                         <p><strong>Título:</strong>
                             <%# Eval("Title") %>
                         </p>
@@ -31,8 +31,44 @@
             </asp:Repeater>
     </section>
         <a class="calendarButton" style="background-color:#008cff;" href="addToCalendar.aspx">Agregar</a>
+        
+        <div id="overlay" class="overlay">
+            <div class="modal">
+                <h2>Ventana Emergente</h2>
+                <p>Este es el contenido de la ventana emergente.</p>
+                <button id="closeButton">close</button>
+            </div>
+        </div>
     </main>
+    
     <footer class="Footer2">
 
     </footer>
+    <script>
+        let state = false
+        const button = document.getElementById("show");
+        const buttonClose = document.getElementById("closeButton");
+        button.onclick = (event) => { 
+            event.preventDefault();
+            showModal();
+        };
+        
+        buttonClose.onclick = (event) => { 
+            event.preventDefault();
+            showModal();
+        };
+        console.log(state);
+        
+        function showModal(){
+            console.log("Entro con " + state);
+            if(!state){
+                document.getElementById('overlay').style.display = 'flex';
+                state=!state;
+            }
+            else{
+                document.getElementById('overlay').style.display = 'none';    
+                state=!state;
+            }
+        }
+    </script>
 </asp:Content>
