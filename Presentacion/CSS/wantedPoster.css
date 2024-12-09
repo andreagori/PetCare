@@ -2,17 +2,18 @@
     display: flex;
     flex-direction: column;
     
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     
     width: 100%;
+    height: 85vh;
 }
 
-.wanted header:first-child{
+.wanted header h1:first-child{
     color: #fea910;
 }
 
-.wanted header:last-child{
+.wanted header h1:last-child{
     color: #38b6ff;
 }
 
@@ -24,5 +25,66 @@
     align-items: center;
 
     width: 50%;
+    height: 70%;
     background-color: #f5f6f3;
+}
+
+.poster h1{
+    color: red;
+    font-size: 32px;
+}
+
+.posterName{
+    font-size: 24px;
+    color: black;
+}
+
+.posterImage{
+    background-size: cover;
+    height: 100px;
+}
+
+.poster div{
+    width: 90%;
+}
+
+.poster section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+    height: auto;
+    color: black;
+}
+
+.poster h3 {
+    color:red;
+    font-size: 24px;
+}
+
+.poster section h4{
+    font-size: 22px;
+    margin: 0;
+}
+
+.poster section p{
+    margin: 0 0 5% 0 ;
+}
+
+.posterButton{
+    background-color: #fea910;
+    max-width: 20%;
+    max-height: 10%;
+    
+    color: white;
+    
+    font-size: 22px;
+    font-weight: 600;
+    
+    border-radius: 32px;
+    border: solid 2px white;
+    text-decoration: none;
+    
+    padding: 1%;
 }

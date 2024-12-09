@@ -7,9 +7,10 @@ using System.Web.UI.WebControls;
 using Negocios;
 using Entidades;
 using System.Web.UI.HtmlControls;
+
 namespace Presentacion
 {
-    public partial class calendar : System.Web.UI.Page
+    public partial class calendarGeneral : System.Web.UI.Page
     {
 
         protected void Page_Load(object sender, EventArgs e)
@@ -27,8 +28,8 @@ namespace Presentacion
                     int id = (int)Session["IdPet"];
                     N_Date dates = new N_Date();
                     List<E_Date> datesList = new N_Date().GetActivitiesPet(id);
-                    RpDates.DataSource = datesList;
-                    RpDates.DataBind();
+                    RpDatesGeneral.DataSource = datesList;
+                    RpDatesGeneral.DataBind();
                 }
             }
 
@@ -38,11 +39,10 @@ namespace Presentacion
                 {
                     E_Owner owner = (E_Owner)Session["Owner"];
                     List<E_Date> datesList = new N_Date().GetAllDates(owner.IdOwner);
-                    RpDates.DataSource = datesList;
-                    RpDates.DataBind();
+                    RpDatesGeneral.DataSource = datesList;
+                    RpDatesGeneral.DataBind();
                 }
             }
         }
-
     }
 }

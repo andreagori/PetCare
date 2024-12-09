@@ -26,7 +26,7 @@
             </a>
             <section>
                 <a href="myPets.aspx">Mis mascotas</a>
-                <a href="calendar.aspx">Calendario</a>
+                <a href="calendarGeneral.aspx">Calendario</a>
                 <a href="myHistory.aspx" >Historial</a>
             </section>
             

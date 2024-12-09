@@ -151,6 +151,7 @@
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario1VA.png" />
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario2VA.png" />
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario3VA.png" />
+    <Content Include="calendarGeneral.aspx" />
     <Content Include="calendar.aspx" />
     <Content Include="CSS\addPetBreed.css" />
     <Content Include="CSS\addPetData.css" />
@@ -213,6 +214,13 @@
     </Compile>
     <Compile Include="addToCalendar.aspx.designer.cs">
       <DependentUpon>addToCalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="calendarGeneral.aspx.cs">
+      <DependentUpon>calendarGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="calendarGeneral.aspx.designer.cs">
+      <DependentUpon>calendarGeneral.aspx</DependentUpon>
     </Compile>
     <Compile Include="calendar.aspx.cs">
       <DependentUpon>calendar.aspx</DependentUpon>

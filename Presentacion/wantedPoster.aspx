@@ -13,29 +13,23 @@
             <h1>!!SE BUSCA!!</h1>
 
             <asp:Label id="LbNamePet" runat="server">
-                <p>a <%# Eval("NamePet") %></p>
-                <img src="" alt="Foto de la mascota">
+                <p>Nombre : <%# Eval("NamePet") %></p>
+                <img src="assets/dogs.png" alt="Foto de la mascota" class="posterImage">
             </asp:Label>
             
             <h3>SE DARA RECOMPENSA</h3>
-            <section>
-                <h4>Datos de la mascota</h4>
-                <p>Datos</p>
-            </section>
-            <section>
-                <h4>Datos del dueño</h4>
-                <p></p>
-            </section>
+            <div>
+                <section>
+                    <h4>Datos de la mascota</h4>
+                    <p>Mascota perdida nombre - color wero y asi</p>
+                </section>
+                <section>
+                    <h4>Datos del dueño</h4>
+                    <p>Adan gonzalez cesena - 646 236 2914, Villa bonita</p>
+                </section>
+            </div>
         </main>
     
-        <button>Exportar</button>
-    </div>    
+        <asp:Button class="posterButton" runat="server" Text="exportar" />
+    </div>
 </asp:Content>
-
-
-<script>
-    const petName= document.getElementById("PNamePet");
-    if(petName.textContent === ""){
-        petName.style.display = 'none';
-    }
-</script>

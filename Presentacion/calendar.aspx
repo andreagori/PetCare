@@ -10,31 +10,26 @@
             <h1 style="color: #38b6ff;">Calendario</h1>
         </div>
 
-
-        <section class="calendarSec">
-            <p>Agregar mascota</p>
-        </section>
-
         <section class="description">
-            <div>
-                <asp:Repeater ID="RpDates" runat="server">
-                    <ItemTemplate>
-                        <p ID="PNamePet" runat="server"><strong>Name:</strong><p id="petName"> <%# Eval("NamePet") %> </p></p>
-                        <p><strong>Título:</strong> <%# Eval("Title") %></p>
-                        <p><strong>Descripción:</strong> <%# Eval("Description") %></p>
-                        <p><strong>Inicio:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
-                        <p><strong>Finalizacion</strong><%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
-                    </ItemTemplate>
-                </asp:Repeater>
-
-            </div>
-        </section>
-        <script>
-            const petName = document.getElementById("petName");
-            if(petName.textContent === ""){
-                petName.style.display = 'none';
-            }
-        </script>
+            <asp:Repeater ID="RpDates" runat="server">
+                <ItemTemplate>
+                    <div class="cActivity">
+                        <p><strong>Título:</strong>
+                            <%# Eval("Title") %>
+                        </p>
+                        <p><strong>Descripción:</strong>
+                            <%# Eval("Description") %>
+                        </p>
+                        <p><strong>Inicio:</strong>
+                            <%# Eval("StartTime", "{0:yyyy/MM/dd}" ) %>
+                        </p>
+                        <p><strong>Finalizacion</strong>
+                            <%# Eval("StartTime", "{0:yyyy/MM/dd}" ) %>
+                        </p>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+    </section>
         <a class="calendarButton" style="background-color:#008cff;" href="addToCalendar.aspx">Agregar</a>
     </main>
     <footer class="Footer2">
