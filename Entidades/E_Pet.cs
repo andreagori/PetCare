@@ -15,8 +15,10 @@ namespace Entidades
         private string _Specie;
         private string _Breed;
         private DateTime _BirthDay;
+        private float _Weight;
         private int _Age;
         private bool _Sex;
+        private int _ShareCode;
         private bool _State;
 
 
@@ -30,8 +32,10 @@ namespace Entidades
             Specie = string.Empty;
             Breed = string.Empty;
             BirthDay = DateTime.Now;
+            Weight = 0;
             Age = 0;
             Sex = false;
+            ShareCode = 0;
             State = true;
         }
         public E_Pet(int idPet, int idOwner, string namePet, string photoPet, string specie, string breed, DateTime birthDay, int age, bool sex, bool state)
@@ -55,6 +59,8 @@ namespace Entidades
         public string Specie { get => _Specie; set => _Specie = value; }
         public string Breed { get => _Breed; set => _Breed = value; }
         public DateTime BirthDay { get => _BirthDay; set => _BirthDay = value; }
+        public float Weight { get => _Weight; set => _Weight = value; }
+        public int ShareCode { get => _ShareCode; set => _ShareCode = value; }
         public int Age { get => _Age; set => _Age = value; }
         public bool Sex { get => _Sex; set => _Sex = value; }
         public bool State { get => _State; set => _State = value; }
