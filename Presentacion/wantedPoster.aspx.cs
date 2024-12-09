@@ -16,8 +16,33 @@ namespace Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string id = Request.QueryString["IdPet"];
+            Session["SourcePage"] = "PagePet";
+            if (int.TryParse(id, out int newId))  // Asegúrate de que sea un número entero
+            {
+                // Almacenar el IdPet en la sesión
+                Session["IdPet"] = newId;
+            }
+            else
+            {
+                // Manejar el caso si no se pasa un valor válido
+                Response.Write("ID de mascota no válido.");
+            }
+            LoadName();
         }
-        
+
+        private void LoadName()
+        {
+            string namePet = Request.QueryString["NamePet"];
+
+            if (!string.IsNullOrEmpty(namePet))
+            {
+                petName.Text = namePet;
+            }
+            else
+            {
+                petName.Text = "Nombre no disponible";
+            }
+        }
     }
 }

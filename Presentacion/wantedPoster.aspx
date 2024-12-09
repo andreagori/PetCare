@@ -12,10 +12,9 @@
         <main class="poster">
             <h1>!!SE BUSCA!!</h1>
 
-            <asp:Label id="LbNamePet" runat="server">
-                <p>Nombre : <%# Eval("NamePet") %></p>
-                <img src="assets/dogs.png" alt="Foto de la mascota" class="posterImage">
-            </asp:Label>
+            
+            <asp:Label ID="petName" runat="server" Visible="true">a</asp:Label>
+            <img src="assets/dogs.png" alt="Foto de la mascota" class="posterImage" />
             
             <h3>SE DARA RECOMPENSA</h3>
             <div>

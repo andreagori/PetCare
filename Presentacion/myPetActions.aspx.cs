@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Datos;
 using Entidades;
 
 namespace Presentacion
@@ -14,11 +15,13 @@ namespace Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["IdPet"];
+            string name = Request.QueryString["NamePet"];
             Session["SourcePage"] = "PagePet";
             if (int.TryParse(id, out int newId))  // Asegúrate de que sea un número entero
             {
                 // Almacenar el IdPet en la sesión
                 Session["IdPet"] = newId;
+                wantedPosterLink.NavigateUrl = "wantedPoster.aspx?IdPet=" + newId + "&NamePet="+name;
             }
             else
             {
