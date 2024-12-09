@@ -31,6 +31,19 @@ namespace Entidades
             State = state;
         }
 
+        public E_Date()
+        {
+            IdDate = 0;
+            IdPet = 0;
+            Title = string.Empty;
+            Description = string.Empty;
+            DateType = false;
+            AddedBy = false;
+            StartTime = DateTime.MinValue;
+            EndTime = DateTime.MinValue;
+            State = false;
+        }
+
         public int IdDate { get => _idDate; set => _idDate = value; }
         public int IdPet { get => _idPet; set => _idPet = value; }
         public string Title { get => _Title; set => _Title = value; }

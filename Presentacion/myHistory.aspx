@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/inside.Master" AutoEventWireup="true" CodeBehind="myHistory.aspx.cs" Inherits="Presentacion.myHistory" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="myHistory.aspx.cs" Inherits="Presentacion.myHistory" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="CSS/myHistory.css" type="text/css"/>
 </asp:Content>
@@ -10,7 +10,13 @@
         </div>
 
         <section class="historyData">
-            <p>- Paseo</p>
+            <asp:Repeater ID="rpHistory" runat="server">
+                <ItemTemplate>
+                    <p><strong>Título:</strong> <%# Eval("Title") %></p>
+                    <p><strong>Descripción:</strong> <%# Eval("Description") %></p>
+                    <p><strong>Fecha:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
+                </ItemTemplate>
+            </asp:Repeater>
         </section>
 
         <a style="background-color:#008cff;">Exportar</a>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +13,18 @@ namespace Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string id = Request.QueryString["IdPet"];
+
+            if (int.TryParse(id, out int newId))  // Asegúrate de que sea un número entero
+            {
+                // Almacenar el IdPet en la sesión
+                Session["IdPet"] = newId;
+            }
+            else
+            {
+                // Manejar el caso si no se pasa un valor válido
+                Response.Write("ID de mascota no válido.");
+            }
             LoadName();
         }
 
