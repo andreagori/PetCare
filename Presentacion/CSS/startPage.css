@@ -2,6 +2,7 @@
     margin: 0;
 }
 
+/* CONTENIDO DE LA PÁGINA */
 .startPage{
     display: flex;
     justify-content: center;
@@ -11,14 +12,17 @@
     z-index: 1;
 }
 
+/* TEXTO DEL BANNER */
 .startPage h1 {
     margin: 0 2% 0 2%;
-    font-size: 52px;
+    font-size: 54px;
     font-weight: 800;
-    color: blue;
+    color: white;
     text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* IMAGEN DEL BANNER */
 .startPage img{
     position: absolute;
     width: 100vw;
@@ -28,133 +32,205 @@
 
 /* ----------- Roles ---------- */
 
-.roles{
+/* ESTILO GENERALs */
+.roles {
     display: flex;
     flex-direction: column;
-    
     justify-content: center;
     align-items: center;
     font-size: 32px;
     width: 100vw;
-    
     background-color: white;
+    padding: 20px;
 }
-.roles h1{
+
+.roles h1 {
     text-align: center;
     margin: 5%;
 }
 
-.rolesRow{
+/* CONTENEDOR PARA LOS ITEMS */
+.rolesRow {
     display: flex;
     justify-content: space-around;
-    width: 100vw;
+    width: 100%;
+    flex-wrap: wrap; 
+    gap: 20px; 
 }
 
-.rolesItem{
+/* ESTILO BASE DE CADA ITEM */
+.rolesItem {
     display: flex;
     flex-direction: column;
-    border-radius: 32px;
-    width: 15%;
-    
+    border-radius: 16px;
+    width: 22%;
     align-items: center;
-    
-    background-color: #fff62a;
-    
-    padding: 0 10px 10px 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.rolesItem h1{
-    display: flex;
-    justify-content: center;
-    width: 80%;
+.rolesItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-    margin-top: -5%;
-    border: 2px solid #fff62a;
-    border-radius: 16px;
-    
+/* ESTILOS PARA CADA ROL */
+.rolesItem.cuidador {
+    border: 10px solid #ffde00;
+}
+
+.rolesItem.dueno {
+    border: 10px solid #fea910;
+}
+
+.rolesItem.veterinario {
+    border: 10px solid #37b5ff;
+}
+
+/* ESTILO PARA EL TITULO */
+.rolesItem h1 {
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
     font-weight: 800;
     font-size: 32px;
-    color: #fff62a;
-    
-    background-color: white;
+    color: white;
+    background-color: #fff62a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.rolesItem section{
+/* SECCION DE LA DESCRIPCION DE CADA ITEM */
+.rolesItem section {
     display: flex;
     flex-direction: column;
-    
     justify-content: center;
-    align-items: center;
-    
-    width: 80%;
+    align-items: flex-start;
+    width: 100%;
     font-weight: 500;
-    font-size: 22px;
-    
-    border-radius: 12px;
-    padding: 0 5px 0 5px;
-    
+    font-size: 26px;
+    padding: 0px 10px;
     background-color: white;
+    border-radius: 12px;
 }
 
-/* ----------- Segunda seccion ---------- */
-.section2{
+/* ESTILOS PARA CADA ROL */
+.rolesItem.cuidador h1 {
+    background-color: #ffde00; 
+}
+
+.rolesItem.dueno h1 {
+    background-color: #fea910; 
+}
+
+.rolesItem.veterinario h1 {
+    background-color: #37b5ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .rolesRow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rolesItem {
+        width: 80%;
+    }
+}
+@media (max-width: 480px) {
+    .rolesItem {
+        width: 100%;
+    }
+}
+
+
+/* ----------- Beneficios ---------- */
+/* CONTENIDO */
+.benefits {
     display: flex;
     flex-direction: column;
-    
     justify-content: center;
     align-items: center;
-    
-    margin: 5% 0 5% 0;
-    width: 99vw;
+    margin: 2% 0;
+    width: 100vw;
     font-size: 32px;
 }
 
-.section2 img{
+/* TITULO */
+.benefits h1 {
+    margin-bottom: 5%;
+}
+
+/* IMAGEN DE LOS BENEFICIOS */
+.benefits img {
     max-width: 100%;
 }
 
 /* ----------- Botones ---------- */
-
-.startButtons{
+/* TODO EL CONTENIDO */
+.startButtons {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
+    margin: 2% 0;
+    width: 100%; 
+    font-size: 32px;
+}
 
-    margin-bottom: 3%;
-    
+/* TITULO DE SECCION */
+.startButtons h1 {
+    margin-bottom: 5%;
+}
+
+/* FILA DE BOTONES */
+.ButtonsRow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+/* BOTON GENERAL */
+.ButtonsRowItem {
+    font-family: "Quicksand", sans-serif;
+    border-radius: 32px;
+    border: none;
+    font-size: 36px;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px 30px; 
+    transition: all 0.3s ease;
+}
+
+.ButtonsRowItem:hover {
+    transform: scale(1.05); 
+    opacity: 0.9; 
+}
+
+.blueButton {
+    background-color: #37b5ff;
+}
+
+.yellowButton {
+    background-color: #fea910;
+}
+
+/* ----------- SOBRE NOSOTROS ---------- */
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-size: 32px;
 }
 
-.ButtonsRow{
-    display: flex;
-
-    justify-content: space-around;
-    align-items: center;
-    
-    width: 80%;
-}
-
-.ButtonsRowItem {
-    font-family: "Quicksand", sans-serif;
-    
-    background-color: red;
-    border-radius: 32px;
-    border: none;
-    
-    font-size: 24px;
-    color: white;
-    font-weight: 800;
-    text-decoration: underline;
-    cursor: pointer;
-    
-    padding: 2% 3% 2% 3%;
-}
-
-/* ----------- About Us ---------- */
-.aboutUs{
-    width: 100%;
-    text-align: center;
+.aboutUs h1 {
+    margin-bottom: 5%;
 }
