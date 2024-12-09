@@ -14,7 +14,7 @@ namespace Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["IdPet"];
-
+            Session["SourcePage"] = "PagePet";
             if (int.TryParse(id, out int newId))  // Asegúrate de que sea un número entero
             {
                 // Almacenar el IdPet en la sesión

@@ -17,6 +17,8 @@ namespace Presentacion
             {
                 LoadPets();
             }
+
+            Session["SourcePage"] = "PageOwner";
         }
 
         private void LoadPets()
