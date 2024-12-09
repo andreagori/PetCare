@@ -10,7 +10,7 @@ using Entidades;
 
 namespace Datos
 {
-    internal class D_Pet : D_Conexion
+    public class D_Pet : D_Conexion
     {
         public D_Pet() { }
 
@@ -50,10 +50,47 @@ namespace Datos
             }
             return result;
         }
+        public List<E_Date> Historical(int idPet)
+        {
+            List<E_Date> dates = new List<E_Date>();
+            SqlCommand cmd = new SqlCommand("HistoricalPet", Conexion)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.AddWithValue("@idPet", idPet);
+            try
+            {
+                AbrirConexion();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    E_Date actualDate = new E_Date()
+                    {
+                        Title = reader.GetString(0),
+                        Description = reader.GetString(1),
+                        StartTime = reader.GetDateTime(2),
+
+
+                    };
+                    dates.Add(actualDate);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al querer obtener los datos", e);
+            }
+            finally
+            {
+                CerrarConexion();
+                cmd.Dispose();
+            }
+            return dates;
+        }
 
         public List<E_Date> GetOneDatePet(int idPet)
         {
-            List<E_Date> dates = null;
+            List<E_Date> dates = new List<E_Date>();
             SqlCommand cmd = new SqlCommand("GetOneDatePet", Conexion)
             {
                 CommandType = CommandType.StoredProcedure
@@ -91,6 +128,7 @@ namespace Datos
             }
             return dates;
         }
+
     }
 
 }

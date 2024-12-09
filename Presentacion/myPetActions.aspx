@@ -10,7 +10,8 @@
             <a>Cartel De Busqueda</a>
             <a href="medicalCard.aspx">Cartilla Medica</a>
             <a href="calendar.aspx">Calendario</a>
-            <a href="myHistory.aspx">Historial</a>
+            <a href="myHistory.aspx?IdPet=<%# Eval("IdPet") %>">Historial</a>
+            <a>Agregar Miembro</a>
         </section>
     </main>
     <footer class="Footer2">
