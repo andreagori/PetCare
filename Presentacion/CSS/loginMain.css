@@ -1,57 +1,144 @@
-﻿.loginMain{
+﻿/* CONTENEDOR PRINCIPAL */
+.Register {
     display: flex;
     flex-direction: column;
-    
-    height: 80vh;
-    width: 100%;
-
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 20px;
 }
 
-.loginMain h1{
-    text-align: center;
-    margin: 0;
-    font-size: 42px;
-}
-
-.loginMain section{
+.loginMain {
     display: flex;
     flex-direction: column;
-
-    align-items: start;
-    justify-content: start;
-
-    width: 30%;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    margin: 0;
 }
 
-.loginMain section h3{
-    font-size: 20px;
-    margin: 0;
+/* TITULO */
+.loginMain-Title {
+    text-align: center;
+}
+
+.loginMain-Title h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.loginMain-Title .highlight-yellow {
+    color: #fea910;
+}
+
+.loginMain-Title .highlight-blue {
     color: #38b6ff;
 }
 
-.loginMain input{
+/* CONTENIDO */
+.loginMain-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 2%;
-    
-    border-radius: 32px;
-    border: none;
-    
-    background-color: #f5f6f3;
+    max-width: 400px; 
+    gap: 40px;
 }
 
-.loginMain a {    
-    max-width: 20%;
-    max-height: 10%;
+/* SECCIÓN DE INPUTS */
+.loginMain-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom:20px;
+    gap: 20px; 
+}
 
-    color: white;
-    font-size: 22px;
+/* TITULO DE LOS INPUTS */
+.loginMain-input h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #38b6ff;
     font-weight: 600;
-    
+}
+
+/* ESTILO DE LOS INPUT */
+.loginMain-input input {
+    width: 100%;
+    margin-top: -10px;
+    padding: 10px 15px;
     border-radius: 32px;
-    border: solid 2px white;
-    
+    border: 2px solid #ccc;
+    background-color: #f5f6f3;
+    font-size: 16px;
+}
+
+/* SELECCION DE LOS INPUT */
+.loginMain-input input:focus {
+    outline: none;
+    border-color: #38b6ff;
+    box-shadow: 0 0 5px rgba(56, 182, 255, 0.5);
+}
+
+/* BOTONES */
+.loginMain-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    margin-top: -20px;
+    width: 100%;
+}
+
+/* BOTÓN: RECUPERAR CONTRASEÑA */
+.loginMain-buttons a {
+    color: white;
+    background-color: #38b6ff;
+    border: 2px solid #38b6ff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
     text-decoration: none;
-    padding: 1%;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* SELECCION DEL BOTON */
+.loginMain-buttons a:hover {
+    background-color: #1a9edb !important;
+    border-color: #1a9edb !important;
+}
+
+/* BOTÓN: LISTO */
+.custom-button {
+    color: white;
+    background-color: #fea910;
+    border: 2px solid #fea910;
+    padding: 10px 40px;
+    border-radius: 24px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: Quicksand, Arial, serfi;
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* SELECCION DEL BOTON */
+.custom-button:hover {
+    background-color: #fe9310 !important;
+    border-color: #fe9310 !important;
+}
+
+.register-button {
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
