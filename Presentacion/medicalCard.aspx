@@ -61,6 +61,6 @@
             </section>
         </main>
 
-        <button class="medicalButton" >Citas medicas</button>
+        <a class="medicalButton" href="medicalCardQuotes.aspx">Citas medicas</a>
     </div>
 </asp:Content>

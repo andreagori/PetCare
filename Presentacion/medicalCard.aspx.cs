@@ -13,5 +13,9 @@ namespace Presentacion
         {
 
         }
+        protected void goToQuotes(object sender, EventArgs e)
+        {
+            Response.Redirect("~/medicalCardQuotes.aspx");
+        }
     }
 }
