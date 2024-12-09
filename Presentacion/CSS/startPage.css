@@ -4,30 +4,25 @@
 
 .startPage{
     display: flex;
-    
     justify-content: center;
     align-items: center;
-    
     width: 100vw;
     height: 60vh;
-    
     z-index: 1;
 }
 
-.startPage h1{
-    margin:0 2% 0 2%;
+.startPage h1 {
+    margin: 0 2% 0 2%;
     font-size: 52px;
     font-weight: 800;
-    color: white;
+    color: blue;
     text-align: center;
 }
 
 .startPage img{
     position: absolute;
-    
     width: 100vw;
     height: auto;
-    
     z-index: -1;
 }
 

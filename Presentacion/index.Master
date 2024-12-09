@@ -24,13 +24,17 @@
 <body>
     <form id="form1" runat="server">
         <header class="TopBar">
-             <a href="index.aspx">
-                 <img src="assets/icons/Logo2.png"/>
-             </a>
-            <section>
-                <a href="login.aspx">Iniciar sesion</a>
-                <a href="register.aspx">Registrar</a>
-            </section>
+            <div class="TopBar-Logo">
+                <a href="index.aspx">
+                    <img src="assets/icons/Logo2.png"/>
+                </a>
+            </div>
+            <div class="TopBar-Links">
+                <section>
+                    <a href="login.aspx">Iniciar sesion</a>
+                    <a href="register.aspx">Registrarme</a>
+                </section>
+            </div>
         </header>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

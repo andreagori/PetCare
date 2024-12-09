@@ -1,95 +1,105 @@
-﻿body {
+﻿/* GENERAL */
+html, body {
+    overflow-x: hidden;
+}
+
+body {
     margin: 0;
     font-family: "Quicksand", sans-serif;
     font-style: normal;
 }
 
-/* .quicksand-<uniquifier> {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
+/* ---------------------------------------------- */
 
-.TopBar{
+/* QUE TODO SE AJUSTE DENTRO DEL TAMAÑO DE LA PANTALLA */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ENCABEZADO PRINCIPAL */
+.TopBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     color: white;
-
     height: 10vh;
-    width: 100vw;
-    
-    background-color: #fff62a;
+    width: 100%;
+    background-color: #ffde00;
+    max-width: 100%;
+    overflow: hidden;
 }
-/* Para la imagen */
-.TopBar a {
-    display: flex;
-    align-items: center;
-    height: 80%;
 
-    font-size: 32px;
-    text-decoration: underline;
+/* LOGO */
+.TopBar-Logo img {
+    height: 60%;
+    max-height: 50px;
+    object-fit: contain;
+    margin-left: 15px;
+}
+
+/* SECCIÓN DE ENLACES */
+.TopBar-Links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+/* SECCION DE ENLACES INDIVIDUALES */
+.TopBar-Links section {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+/* ENLACES */
+.TopBar section a {
+    display: block;
+    white-space: nowrap;
+    font-size: 28px;
+    font-weight: 600;
     color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.TopBar a img{
-    height: 80%;
-}
-
-.TopBar section{
-    display: flex;
-    justify-content: space-between;
-    
-    width: 20%;
-    font-size: 26px;
-    font-weight: 800;
-    margin-right: 5%;
-}
-
-.TopBar section a{
-    cursor: pointer;
+.TopBar section a:hover {
     color: #fea910;
-    text-decoration: underline;
 }
 
+/* ---------------------------------------------- */
 
-.Footer{
+/* PIE DE PÁGINA PRINCIPAL */
+.Footer {
     display: flex;
     align-items: start;
     justify-content: space-around;
-    
-    background-color: #fff62a;
-    
+    background-color: #ffde00;
     width: 100vw;
     height: auto;
 }
 
-.Footer2{
+.Footer2 {
     display: flex;
     align-items: start;
     justify-content: space-around;
-    
-    background-color: #fff62a;
-    
+    background-color: #ffde00;
     width: 100vw;
     height: 10vh;
 }
 
-.Footer section{
+.Footer section {
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     justify-content: center;
-    
     font-size: 24px;
     font-weight: 600;
     text-align: center;
-
     width: 80%;
-    color: #fea910;
+    color: #ffde00;
 }
 
 .Footer section h1{

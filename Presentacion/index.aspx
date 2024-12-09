@@ -5,8 +5,8 @@
     <section class="startPage">
         <img src="assets/dogs.png"/>
         <h1>
-            ¿Tienes una mascota, 
-            cuidas una o eres responsable de su salud?
+            ¿Tienes una mascota,cuidas una<br>
+            o eres responsable de su salud?
         </h1>
     </section>
     <section class="roles">
