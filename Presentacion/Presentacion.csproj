@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="activityDetails.aspx" />
+    <Content Include="addIllness.aspx" />
     <Content Include="addMedicalData.aspx" />
     <Content Include="addPetBreed.aspx" />
     <Content Include="addPetData.aspx" />
@@ -150,6 +151,7 @@
     <Content Include="assets\avatares\PetCare_Avatares\av4.png" />
     <Content Include="assets\avatares\PetCare_Avatares\av5.png" />
     <Content Include="assets\avatares\PetCare_Avatares\av6.png" />
+    <Content Include="assets\avatares\PetCare_Avatares\AvF.png" />
     <Content Include="assets\avatares\PetCare_Gatos\cat1.png" />
     <Content Include="assets\avatares\PetCare_Gatos\cat2.png" />
     <Content Include="assets\avatares\PetCare_Gatos\cat3.png" />
@@ -230,6 +232,7 @@
     <Content Include="CSS\general.css" />
     <Content Include="CSS\inside.css" />
     <Content Include="CSS\loginMain.css" />
+    <Content Include="CSS\medicalCard.css" />
     <Content Include="CSS\medicalCardQuotes.css" />
     <Content Include="CSS\medicalCardData.css" />
     <Content Include="CSS\myData.css" />
@@ -259,6 +262,13 @@
     </Compile>
     <Compile Include="activityDetails.aspx.designer.cs">
       <DependentUpon>activityDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addIllness.aspx.cs">
+      <DependentUpon>addIllness.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addIllness.aspx.designer.cs">
+      <DependentUpon>addIllness.aspx</DependentUpon>
     </Compile>
     <Compile Include="addMedicalData.aspx.cs">
       <DependentUpon>addMedicalData.aspx</DependentUpon>
@@ -459,15 +469,15 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
   </Target>
   <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -46,5 +46,38 @@ namespace Datos
             }
             return dates;
         }
+
+        public int IDM_Illness(string action, E_Illiness illnes)
+        {
+            int result = 0;
+            SqlCommand cmd = new SqlCommand("IDM_Illiness", Conexion)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.AddWithValue("@Action", action);
+            cmd.Parameters.AddWithValue("@idIlliness", illnes.IdIllness);
+            cmd.Parameters.AddWithValue("@idCard", illnes.IdCard);
+            cmd.Parameters.AddWithValue("@IllinessName", illnes.IllinessName);
+            cmd.Parameters.AddWithValue("@Description", illnes.Description);
+            cmd.Parameters.AddWithValue("@DateIlliness", illnes.DateIllness);
+            cmd.Parameters.AddWithValue("@state", illnes.State);
+
+            try
+            {
+                AbrirConexion();
+                result = cmd.ExecuteNonQuery();
+            }
+            catch(Exception e)
+            {
+                throw new Exception("Error al querer insertar padecimiento");
+            }
+            finally
+            {
+                CerrarConexion();
+                cmd.Dispose();
+            }
+            return result;
+        }
     }
 }

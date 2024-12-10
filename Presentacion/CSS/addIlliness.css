@@ -1,0 +1,73 @@
+.addIlliness{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
+    height: 80vh;
+}
+
+.aiTitle{
+    font-size: 28px;
+    text-align: center;
+}
+
+.aiTitle h1:first-child{
+    margin: 0;
+    color: #fea910;
+}
+
+.aiTitle h1:Last-child{
+    margin: 0;
+    color: #38b6ff;
+}
+
+.aiMain{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    
+    width: 60%;
+    height: auto;
+}
+
+.aiMain section h3{
+    font-size: 22px;
+    color: #38b6ff;
+    margin: 0;
+}
+
+.aiMain section{
+    margin-bottom: 40px;
+}
+
+.aiGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(2,1fr) ;
+}
+
+.aiGrid h3{
+    color: #38b6ff;
+    margin: 0;
+}
+
+.aiGridInput{
+    border-radius: 32px;
+    background-color: #f5f6f3;
+    border: 2px solid #ccc;
+
+    height: 30px;
+}
+
+.aiGridButton{
+    border-radius: 32px;
+    background-color: #f5f6f3;
+    
+    padding: 20px;
+    border: none;
+}

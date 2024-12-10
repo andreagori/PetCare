@@ -1,26 +1,36 @@
-﻿.history {
+﻿
+/* CONTENIDO GENERAL */
+.history {
     display: flex;
     flex-direction: column;
-    height: 80vh;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     justify-content: space-around;
     align-items: center;
 }
 
-.history h1 {
+/* TITULO */
+.history-Title {
     text-align: center;
-    margin: 0;
-    font-size: 42px;
 }
 
-.history div :first-child {
+/* TAMAÑO */
+.history-Title h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* COLORES DE TITULO */
+.history-Title .highlight-yellow {
     color: #fea910;
 }
 
-.history div :last-child {
+.history-Title .highlight-blue {
     color: #38b6ff;
 }
 
+/* SECCION */
 .history section {
     display: flex;
     flex-direction: column;
@@ -45,22 +55,23 @@
     border: solid 2px white;
     text-decoration: none;
     padding: 1%;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
+/* INFORMACION */
 .historyData {
     display: flex;
     align-items: center;
     justify-content: start;
     overflow-y: auto;
-
     width: 100%;
-    height: 30%;
-    
+    height: 50%;
     background-color: #f5f6f3;
     padding: 1%;
-    
     border-radius: 32px;
     border: none;
+    margin-bottom: 50px;
 }
 
 .hItem {

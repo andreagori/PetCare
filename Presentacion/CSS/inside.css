@@ -1,74 +1,96 @@
-﻿body {
+﻿/* GENERAL */
+html, body {
+    overflow-x: hidden;
+}
+
+body {
     margin: 0;
     font-family: "Quicksand", sans-serif;
     font-style: normal;
 }
 
-
-.TopBarGrid{
-    display: grid;
-    grid-template-columns: auto 2fr 1fr;
-    grid-template-rows: 10vh;
-    width: 100vw;
-    background-color: #fff62a;;
+/* ---------------------------------------------- */
+/* QUE TODO SE AJUSTE DENTRO DEL TAMAÑO DE LA PANTALLA */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.TopBarGrid a{
-    font-weight:900;
-    color: white;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 28px;
-}
-
-.TopBarGrid section{
+/* ENCABEZADO PRINCIPAL */
+.TopBarGrid {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
+    color: white;
+    height: 10vh;
+    width: 100%;
+    background-color: #ffde00;
+    max-width: 100%;
+    overflow: hidden;
 }
 
-.TopLogo {
+/* LOGO */
+.TopLogo img {
+    height: 60%;
+    max-height: 50px;
+    object-fit: contain;
+    margin-left: 15px;
+    margin-top: 6px;
+}
+
+/* SECCIÓN DE ENLACES */
+.TopBar-Links {
+    display: flex;
+    gap: 30px; 
+    margin-left: -50%; 
+}
+
+/* ENLACES */
+.TopBar-Links a {
+    display: block;
+    white-space: nowrap;
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.TopBar-Links a:hover {
+    color: #fea910;
+}
+
+/* ICONO DE PERFIL */
+.TopIcon {
     display: flex;
     align-items: center;
-    height: 80%;
-    margin: auto;
-    padding-right: 20px;
+    justify-content: center;
+    padding: 10px;
 }
 
-.TopLogo img{
-    height: 80%;
+.TopIcon img {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
-.TopIcon{
-    display: flex;
-    margin-right: 5%;
-    align-items: center;
-    justify-content: end;
-}
-
-.TopIcon img{
-    height: 80%;
-}
-
-
-.Footer{
+.Footer {
     display: flex;
     align-items: start;
     justify-content: space-around;
-    
-    background-color: #fff62a;
-    
+    background-color: #ffde00;
     width: 100vw;
     height: auto;
 }
 
-.Footer2{
+.Footer2 {
     display: flex;
     align-items: start;
     justify-content: space-around;
-    
-    background-color: #fff62a;
-    
+    background-color: #ffde00;
     width: 100vw;
     height: 10vh;
 }

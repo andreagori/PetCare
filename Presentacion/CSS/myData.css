@@ -1,78 +1,168 @@
-﻿.myDataRow {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-    .myDataRow input {
-        margin: 0 2% 0 0;
-    }
-
-    .myDataRow :last-child {
-        margin: 0;
-    }
-
-
-.ownerAvatares {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #f5f6f3;
-    border-radius: 32px;
-    width: 100%;
-    padding: 2%;
-}
-
-    .ownerAvatares img {
-        margin: auto;
-        cursor: pointer;
-    }
-
+﻿/* CONTENIDO */
 .dataMain {
     display: flex;
     flex-direction: column;
-    height: 80vh;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    height: 115vh;
+    width: 100vw;
+    margin: 0;
 }
 
-    .dataMain h1 {
-        text-align: center;
-        margin: 0;
-        font-size: 42px;
-    }
+/* TITULO */
+.dataMain-Title {
+    text-align: center;
+}
 
-    .dataMain section {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: start;
-        width: 30%;
-    }
+/* TAMAÑO */
+.dataMain-Title h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+}
 
-        .dataMain section h3 {
-            font-size: 20px;
-            margin: 0 0 1%;
-            color: #38b6ff;
-        }
+/* COLORES DE TITULO */
+.dataMain-Title .highlight-yellow {
+    color: #fea910;
+}
 
-    .dataMain input {
-        width: 100%;
-        padding: 2%;
-        border-radius: 32px;
-        border: none;
-        background-color: #f5f6f3;
-    }
+.dataMain-Title .highlight-blue {
+    color: #38b6ff;
+}
 
-    .dataMain a {
-        max-width: 20%;
-        max-height: 10%;
-        color: white;
-        font-size: 22px;
-        font-weight: 600;
-        border-radius: 32px;
-        border: solid 2px white;
-        text-decoration: none;
-        padding: 1%;
-    }
+/* SECCION DE LOS INPUTS */
+.dataMain-Content section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%; 
+    max-width: 600px; 
+    margin-bottom: 20px;
+}
+
+/* SUBTITULOS */
+.dataMain-Content section h3 {
+    font-size: 20px;
+    color: #38b6ff;
+    font-weight: 600;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* INPUTS */
+.dataMain-Content input {
+    width: 100%;
+    padding: 2%;
+    border-radius: 20px;
+    border: none;
+    background-color: #f5f6f3;
+    height: 50px;
+}
+
+/* INPUT SELECCIONADO */
+.dataMain-Content input:focus {
+    outline: none;
+    border-color: #38b6ff;
+    box-shadow: 0 0 5px rgba(56, 182, 255, 0.5);
+}
+
+/* FILA DE LOS INPUTS DE LA FECHA */
+.myDataRow {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    gap: 20px;
+}
+
+.myDataRow input {
+    width: 600px;
+    padding: 2%;
+    border-radius: 20px;
+    border: none;
+    background-color: #f5f6f3;
+    height: 50px;
+    text-indent: 20px;
+}
+
+/* DROPDOWN LIST */
+.dataMain-Content select {
+    width: 100%; 
+    height: 50px; 
+    padding: 0 16px; 
+    border-radius: 20px; 
+    border: none; 
+    background-color: #f5f6f3; 
+    color: #333; 
+    font-size: 16px; 
+    appearance: none; 
+    cursor: pointer;
+}
+
+/* FLECHA DEL DROPDOWN */
+.dataMain-Content select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(56, 182, 255, 0.5);
+}
+
+/* OPCIONES DEL DROPDOWN */
+.dataMain-Content select option {
+    background-color: #f5f6f3; 
+    color: #333; 
+}
+
+
+/* AVATARES */
+.ownerAvatares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 30px;
+    justify-items: center;
+    background-color: #f5f6f3;
+    border-radius: 32px;
+    width: 100%;
+    padding: 25px;
+}
+
+/* IMAGEN DE CADA AVATAR */
+.ownerAvatares img {
+    width: 80px; 
+    height: 80px; 
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s; 
+}
+
+/* INTERACCION CON EL CURSOR */
+.ownerAvatares img:hover {
+    transform: scale(1.1); 
+}
+
+/* BOTON CREAR */
+.boton {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.custom-button {
+    background-color: #fea910 !important;
+    border: 2px solid #fea910 !important;
+    color: white;
+    border-radius: 24px;
+    font-family: Quicksand, Arial, serfi;
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* SELECCION DEL BOTON */
+.custom-button:hover {
+    background-color: #fe9310 !important;
+    border-color: #fe9310 !important;
+}

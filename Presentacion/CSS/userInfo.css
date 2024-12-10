@@ -1,0 +1,29 @@
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 90vh;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.userInfo header {
+    display: flex;
+
+    height: 20%;
+    
+    color: #fea910;
+}
+
+.userInfo header img{
+    height: 80px;
+}
+
+.usMail{
+    color: #fea910;
+}

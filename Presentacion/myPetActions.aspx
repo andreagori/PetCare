@@ -7,12 +7,19 @@
         <div class="petName">
             <asp:Label ID="LbNamePet" runat="server" Visible="true">a</asp:Label>
         </div>
-
         <section class="petGrid">
-            <asp:HyperLink ID="wantedPosterLink" runat="server" Text="Cartel de busqueda"  />
-            <asp:HyperLink ID="medicalCardLink" runat="server" Text="Medical card"  />
-            <a href="calendar.aspx">Calendario</a>
-            <a href="myHistory.aspx?IdPet=<%# Eval("IdPet") %>">Historial</a>
+            <div class="petGridItem">
+                <a href="calendar.aspx" class="petLink">Calendario</a>
+            </div>
+            <div class="petGridItem">
+                <asp:HyperLink ID="medicalCardLink" runat="server" Text="Cartilla Médica" CssClass="petLink" />
+            </div>
+            <div class="petGridItem">
+                <asp:HyperLink ID="wantedPosterLink" runat="server" Text="Cartel de búsqueda" CssClass="petLink" />
+            </div>
+            <div class="petGridItem">
+                <a href="myHistory.aspx?IdPet=<%# Eval("IdPet") %>" class="petLink">Historial</a>
+            </div>
         </section>
     </main>
     <footer class="Footer2">

@@ -4,11 +4,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main class="history">
-        <div>
-            <h1>Mi</h1>
-            <h1>Historial</h1>
-        </div>
-
+        <div class="history-Title">
+            <h1>
+                <span class="highlight-yellow">Mi</span><br>
+                <span class="highlight-blue">Historial</span>
+            </h1>
+        </div> 
         <section class="historyData">
             <asp:Repeater ID="rpHistory" runat="server">
                 <ItemTemplate>
@@ -23,7 +24,5 @@
 
         <asp:Button ID="btnExportPdf" runat="server" Text="Exportar" OnClick="ExportToPdf" />
     </main>
-    <footer class="Footer2">
-
-    </footer>
+    <footer class="Footer2" />
 </asp:Content>
