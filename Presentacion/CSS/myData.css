@@ -1,78 +1,102 @@
-﻿.myDataRow {
+﻿/* CONTENIDO */
+.dataMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    margin: 0;
+}
+
+/* TITULO */
+.dataMain-Title {
+    text-align: center;
+}
+
+/* TAMAÑO */
+.dataMain-Title h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* COLORES DE TITULO */
+.dataMain-Title .highlight-yellow {
+    color: #fea910;
+}
+
+.dataMain-Title .highlight-blue {
+    color: #38b6ff;
+}
+
+/* SECCION DE LOS INPUTS */
+.dataMain-Content section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%; 
+    max-width: 600px; 
+    margin-bottom: 20px;
+}
+
+/* SUBTITULOS */
+.dataMain-Content section h3 {
+    font-size: 20px;
+    margin: 0 0 1%;
+    color: #38b6ff;
+}
+
+/* INPUTS */
+.dataMain-Content input {
+    width: 100%;
+    padding: 2%;
+    border-radius: 32px;
+    border: none;
+    background-color: #f5f6f3;
+}
+
+/* INPUT SELECCIONADO */
+.dataMain-Content input:focus {
+    outline: none;
+    border-color: #38b6ff;
+    box-shadow: 0 0 5px rgba(56, 182, 255, 0.5);
+}
+
+.myDataRow {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-    .myDataRow input {
-        margin: 0 2% 0 0;
-    }
+.myDataRow input {
+    margin: 0 2% 0 0;
+}
 
-    .myDataRow :last-child {
-        margin: 0;
-    }
-
+.myDataRow :last-child {
+    margin: 0;
+}
 
 .ownerAvatares {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
     background-color: #f5f6f3;
     border-radius: 32px;
-    width: 100%;
-    padding: 2%;
+    width: 100%; 
+    padding: 16px; 
 }
 
-    .ownerAvatares img {
-        margin: auto;
-        cursor: pointer;
-    }
-
-.dataMain {
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
+.ownerAvatares img {
+    width: 80px; 
+    height: 80px; 
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s; 
 }
 
-    .dataMain h1 {
-        text-align: center;
-        margin: 0;
-        font-size: 42px;
-    }
-
-    .dataMain section {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: start;
-        width: 30%;
-    }
-
-        .dataMain section h3 {
-            font-size: 20px;
-            margin: 0 0 1%;
-            color: #38b6ff;
-        }
-
-    .dataMain input {
-        width: 100%;
-        padding: 2%;
-        border-radius: 32px;
-        border: none;
-        background-color: #f5f6f3;
-    }
-
-    .dataMain a {
-        max-width: 20%;
-        max-height: 10%;
-        color: white;
-        font-size: 22px;
-        font-weight: 600;
-        border-radius: 32px;
-        border: solid 2px white;
-        text-decoration: none;
-        padding: 1%;
-    }
+.ownerAvatares img:hover {
+    transform: scale(1.1); 
+}

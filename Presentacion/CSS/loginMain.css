@@ -6,7 +6,7 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    margin-bottom: 20px;
+    margin: 7% 0;
 }
 
 .loginMain {
@@ -139,6 +139,6 @@
 }
 
 .register-button {
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 40px;
 }
