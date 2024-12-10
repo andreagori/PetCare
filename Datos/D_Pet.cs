@@ -17,7 +17,7 @@ namespace Datos
         public int IDM_Pet(string action, E_Pet pet)
         {
             int result = 0;
-            SqlCommand cmd = new SqlCommand("IDM_Pet", Conexion)
+            SqlCommand cmd = new SqlCommand("IDM_Pets", Conexion)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -31,7 +31,7 @@ namespace Datos
             cmd.Parameters.AddWithValue("@BirthDay", pet.BirthDay);
             cmd.Parameters.AddWithValue("@Weight", pet.Weight);
             cmd.Parameters.AddWithValue("@Age", pet.Age);
-            cmd.Parameters.AddWithValue("@Sex", pet.Age);
+            cmd.Parameters.AddWithValue("@Sex", pet.Sex);
             cmd.Parameters.AddWithValue("@ShareCode", pet.ShareCode);
             cmd.Parameters.AddWithValue("@State", pet.State);
 

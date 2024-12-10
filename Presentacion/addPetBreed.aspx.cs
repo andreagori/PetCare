@@ -16,7 +16,11 @@ namespace Presentacion
 
         protected void btnCat_Click(object sender, EventArgs e)
         {
-            Response.Redirect("addCatBreed.aspx");
+            Response.Redirect("addPetData.aspx?Specie=" + "Cat");
+        }
+        protected void btnDog_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("addPetData.aspx?Specie=" + "Dog");
         }
     }
 }
