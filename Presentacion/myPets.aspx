@@ -4,10 +4,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main class="myPets">
-        <div>
-            <h1>Mis</h1>
-            <h1>Mascotas</h1>
-        </div>
+        <div class="myPetsMain-Title">
+            <h1>
+                <span class="highlight-yellow">Mis</span><br>
+                <span class="highlight-blue">Mascotas</span>
+            </h1>
+        </div> 
         
         <section class="myPetsIcons">
             <asp:Repeater ID="rpPets" runat="server">
@@ -19,11 +21,7 @@
                 </ItemTemplate>
             </asp:Repeater>
         </section>
-
         <a style="background-color:#fea910;" href="addPetBreed.aspx">Agregar</a>
     </main>
-
-    <footer class="Footer2">
-
-    </footer>
+    <footer class="Footer2" />
 </asp:Content>

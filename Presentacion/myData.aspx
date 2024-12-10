@@ -55,7 +55,6 @@
                     }
                 });
             </script>
-           
         </div> 
         <div class="boton">
             <asp:Button ID="btnCreateUser" CssClass="custom-button" OnClick="BtnCreateUser" Text="Crear" runat="server"></asp:Button>
