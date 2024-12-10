@@ -12,6 +12,8 @@ using System.Xml.Linq;
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.Rendering;
 using System.IO;
+using MigraDoc.DocumentObjectModel.Shapes;
+using MigraDoc.DocumentObjectModel.Tables;
 
 namespace Presentacion
 {
@@ -94,9 +96,46 @@ namespace Presentacion
             Document document = new Document();
             Section section = document.AddSection();
 
-            // Agregar título
-            section.AddParagraph("¡¡SE BUSCA!!")
-                   .Format.Font.Size = 24;
+            // Agregar encabezado con logo y nombre del proyecto
+            MigraDoc.DocumentObjectModel.Tables.Table headerTable = section.AddTable();
+            headerTable.Borders.Visible = false;
+
+            // Configurar columnas
+            Column logoColumn = headerTable.AddColumn(MigraDoc.DocumentObjectModel.Unit.FromCentimeter(3));
+            Column textColumn = headerTable.AddColumn(MigraDoc.DocumentObjectModel.Unit.FromCentimeter(12));
+
+            // Crear una fila
+            Row headerRow = headerTable.AddRow();
+
+            // Agregar logo
+            if (!string.IsNullOrEmpty(currentPet.PhotoPet)) // Aquí usarías el logo real de tu programa
+            {
+                try
+                {
+                    var logoImage = headerRow.Cells[0].AddImage(Server.MapPath("~/assets/icons/Logo.png"));
+                    logoImage.Width = MigraDoc.DocumentObjectModel.Unit.FromCentimeter(2);
+                    logoImage.Height = MigraDoc.DocumentObjectModel.Unit.FromCentimeter(2);
+                    logoImage.LockAspectRatio = true;
+                }
+                catch
+                {
+                    headerRow.Cells[0].AddParagraph("Logo no disponible.");
+                }
+            }
+
+            // Agregar título del proyecto
+            Paragraph titleParagraph = headerRow.Cells[1].AddParagraph("PetCare - Poster de Búsqueda");
+            titleParagraph.Format.Font.Size = 20;
+            titleParagraph.Format.Font.Bold = true;
+            titleParagraph.Format.Alignment = ParagraphAlignment.Left;
+            section.AddParagraph("\n");
+
+            // Título principal "SE BUSCA"
+            Paragraph mainTitle = section.AddParagraph("¡SE BUSCA!");
+            mainTitle.Format.Font.Size = 30;
+            mainTitle.Format.Font.Bold = true;
+            mainTitle.Format.Font.Color = Colors.Red;
+            mainTitle.Format.Alignment = ParagraphAlignment.Center;
             section.AddParagraph("\n");
 
             // Agregar imagen de la mascota
@@ -105,15 +144,19 @@ namespace Presentacion
                 try
                 {
                     var image = section.AddImage(Server.MapPath(currentPet.PhotoPet));
-                    image.Width = MigraDoc.DocumentObjectModel.Unit.FromCentimeter(5); // Ajusta el tamaño de la imagen
-                    image.Height = MigraDoc.DocumentObjectModel.Unit.FromCentimeter(5);
+                    image.Width = MigraDoc.DocumentObjectModel.Unit.FromCentimeter(7); // Ajusta el tamaño de la imagen
+                    image.Height = MigraDoc.DocumentObjectModel.Unit.FromCentimeter(7);
                     image.LockAspectRatio = true;
+                    image.Left = ShapePosition.Center;
                 }
                 catch
                 {
-                    section.AddParagraph("Imagen no disponible.");
+                    section.AddParagraph("Imagen no disponible.")
+                           .Format.Alignment = ParagraphAlignment.Center;
                 }
             }
+
+            section.AddParagraph("\n");
 
             // Obtener los datos de la mascota utilizando el método GetPetDetails
             E_Pet petDetails = new N_Owner().GetPet(idPet);
@@ -124,18 +167,77 @@ namespace Presentacion
             }
 
             // Agregar datos de la mascota
-            section.AddParagraph("Datos de la Mascota:");
-            section.AddParagraph($"Nombre: {petDetails.NamePet}");
-            section.AddParagraph($"Edad: {petDetails.Age} años");
-            section.AddParagraph($"Sexo: {(petDetails.Sex ? "Macho" : "Hembra")}");
-            section.AddParagraph($"Raza: {petDetails.Breed}");
-            section.AddParagraph($"Especie: {petDetails.Specie}");
-            section.AddParagraph($"Peso: {petDetails.Weight} kg");
+            Paragraph nombre = section.AddParagraph($"{petDetails.NamePet}");
+            nombre.Format.Alignment = ParagraphAlignment.Center;
+            nombre.Format.Font.Size = 20;
+            nombre.Format.Font.Bold = true;
+
+
+            Paragraph datosMascota = section.AddParagraph("Datos de la Mascota");
+            datosMascota.Format.Font.Size = 18;
+            datosMascota.Format.Alignment = ParagraphAlignment.Center;
+            datosMascota.Format.Font.Bold = true;
+
+            Paragraph edad = section.AddParagraph();
+            edad.AddFormattedText("Edad: ", TextFormat.Bold);
+            edad.AddText($"{petDetails.Age} años");
+            edad.Format.Font.Size = 14;
+
+            Paragraph sexo = section.AddParagraph();
+            sexo.AddFormattedText("Sexo: ", TextFormat.Bold);
+            sexo.AddText(petDetails.Sex ? "Macho" : "Hembra");
+            sexo.Format.Font.Size = 14;
+
+            Paragraph raza = section.AddParagraph();
+            raza.AddFormattedText("Raza: ", TextFormat.Bold);
+            raza.AddText(petDetails.Breed);
+            raza.Format.Font.Size = 14;
+
+            Paragraph especie = section.AddParagraph();
+            especie.AddFormattedText("Especie: ", TextFormat.Bold);
+            especie.AddText(petDetails.Specie);
+            especie.Format.Font.Size = 14;
+
+            Paragraph peso = section.AddParagraph();
+            peso.AddFormattedText("Peso: ", TextFormat.Bold);
+            peso.AddText($"{petDetails.Weight} kg");
+            peso.Format.Font.Size = 14;
+
+            section.AddParagraph("\n");
+            section.AddParagraph("\n");
+            section.AddParagraph("\n");
+            section.AddParagraph("\n");
             section.AddParagraph("\n");
 
-            // Nota de recompensa
-            section.AddParagraph("SE DARÁ RECOMPENSA")
-                   .Format.Font.Size = 18;
+            // Nota de informacion owner
+            Paragraph ownerInfo = section.AddParagraph("INFORMACION DE CONTACTO");
+            ownerInfo.Format.Font.Size = 18;
+            ownerInfo.Format.Font.Bold = true;
+            ownerInfo.Format.Alignment = ParagraphAlignment.Center;
+            ownerInfo.Format.Font.Color = Colors.Red;
+
+            // Detalles del dueño
+            section.AddParagraph("\n");
+
+            Paragraph ownerName = section.AddParagraph();
+            ownerName.AddFormattedText("Nombre: ", TextFormat.Bold);
+            ownerName.AddText(owner.Name);
+            ownerName.Format.Font.Size= 14;
+
+            Paragraph ownerEmail = section.AddParagraph();
+            ownerEmail.AddFormattedText("Correo Electrónico: ", TextFormat.Bold);
+            ownerEmail.AddText(owner.Email);
+            ownerEmail.Format.Font.Size = 14;
+
+            Paragraph ownerPhone = section.AddParagraph();
+            ownerPhone.AddFormattedText("Teléfono: ", TextFormat.Bold);
+            ownerPhone.AddText(owner.CellPhone);
+            ownerPhone.Format.Font.Size = 14;
+
+            Paragraph ownerAddress = section.AddParagraph();
+            ownerAddress.AddFormattedText("Dirección: ", TextFormat.Bold);
+            ownerAddress.AddText(owner.Address);
+            ownerAddress.Format.Font.Size = 14;
 
             // Renderizar el documento a PDF
             PdfDocumentRenderer renderer = new PdfDocumentRenderer(true)
@@ -155,6 +257,5 @@ namespace Presentacion
                 Response.End();
             }
         }
-
     }
 }
