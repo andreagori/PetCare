@@ -15,5 +15,7 @@
         <asp:Label runat="server" ID="celular"></asp:Label>
         <br />
         <asp:Label runat="server" ID="direccion"></asp:Label>
+
+        <asp:Button runat="server" OnClick="BtCloseSession_OnClick" Text="Cerrar sesion"/>
     </main>
 </asp:Content>

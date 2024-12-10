@@ -55,28 +55,40 @@ namespace Presentacion
 
         protected void BtnNext_OnClick(object sender, EventArgs e)
         {
-            E_Owner owner = (E_Owner)Session["Owner"];
-            string selectedAvatar = Request.Form["selectedAvatar"];
-            string Specie = Request.QueryString["Specie"];
-            string Mounth = TbMounth.Text;
-            string Day = TbDay.Text;
-            string Year = TbYear.Text;
-            string formatM = Mounth.PadLeft(2, '0');
-            string formatD = Day.PadLeft(2, '0');
-            string BirthDayPet = Year+"-" + formatM + "-" +formatD;
+            if (checkData())
+            {
+                E_Owner owner = (E_Owner)Session["Owner"];
+                string selectedAvatar = Request.Form["selectedAvatar"];
+                string Specie = Request.QueryString["Specie"];
+                string Mounth = TbMounth.Text;
+                string Day = TbDay.Text;
+                string Year = TbYear.Text;
+                string formatM = Mounth.PadLeft(2, '0');
+                string formatD = Day.PadLeft(2, '0');
+                string BirthDayPet = Year+"-" + formatM + "-" +formatD;
 
-            
-            string selectedSex = DdlSex.SelectedValue;
-            bool sex = selectedSex == "Male";
-            
+                
+                string selectedSex = DdlSex.SelectedValue;
+                bool sex = selectedSex == "Male";
+                
 
-            E_Pet pet = new E_Pet(0, owner.IdOwner, TbNamePet.Text, selectedAvatar, Specie,TbBreed.Text, DateTime.Parse(BirthDayPet), float.Parse(TbWeight.Text),int.Parse(TbAge.Text),sex,55555,true);
-            string message = new N_Pets().Insert(pet);
-            Response.Redirect("~/myPets.aspx");
+                E_Pet pet = new E_Pet(0, owner.IdOwner, TbNamePet.Text, selectedAvatar, Specie,TbBreed.Text, DateTime.Parse(BirthDayPet), float.Parse(TbWeight.Text),int.Parse(TbAge.Text),sex,55555,true);
+                string message = new N_Pets().Insert(pet);
+                Response.Redirect("~/myPets.aspx");
+
+            }
 
 
         }
 
+        protected bool checkData()
+        {
+            if (string.IsNullOrWhiteSpace(TbNamePet.Text) || string.IsNullOrWhiteSpace(TbBreed.Text) || string.IsNullOrWhiteSpace(TbMounth.Text) || string.IsNullOrWhiteSpace(TbDay.Text) || string.IsNullOrWhiteSpace(TbYear.Text) || string.IsNullOrWhiteSpace(TbWeight.Text) || string.IsNullOrWhiteSpace(TbAge.Text))
+            {
+                return false; 
+            }
+            return true;
+        }
         protected void DdlSex_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedSex = DdlSex.SelectedValue;

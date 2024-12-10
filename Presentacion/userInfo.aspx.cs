@@ -25,9 +25,14 @@ namespace Presentacion
                 correo.Text = owner.Email;   
                 celular.Text = owner.CellPhone;  
                 direccion.Text = owner.Address; 
-
-
             }
         }
-	}
+
+        protected void BtCloseSession_OnClick(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("~/index.aspx");
+        }
+
+    }
 }
