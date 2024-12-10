@@ -72,8 +72,7 @@ namespace Datos
                         Title = reader.GetString(0),
                         Description = reader.GetString(1),
                         StartTime = reader.GetDateTime(2),
-
-
+                        EventType = reader.GetString(3)  // Asignar el EventType obtenido desde la base de datos
                     };
                     dates.Add(actualDate);
                 }
@@ -90,6 +89,7 @@ namespace Datos
             return dates;
         }
 
+
         public E_Pet GetPetById(int idPet)
         {
             E_Pet pet = null;
@@ -104,14 +104,14 @@ namespace Datos
                 {
                     pet = new E_Pet
                     {
-                        IdPet = (int)reader["IdPet"],
-                        NamePet = reader["NamePet"].ToString(),
-                        Specie = reader["Specie"].ToString(),
-                        Breed = reader["Breed"].ToString(),
-                        Age = (int)reader["Age"],
-                        Sex = (bool)reader["Sex"],
-                        Weight = (int)reader["Weight"]
-                        // Agrega otros campos necesarios aquí
+                        IdPet = reader["IdPet"] != DBNull.Value ? (int)reader["IdPet"] : 0,
+                        NamePet = reader["NamePet"] != DBNull.Value ? reader["NamePet"].ToString() : string.Empty,
+                        Specie = reader["Specie"] != DBNull.Value ? reader["Specie"].ToString() : string.Empty,
+                        Breed = reader["Breed"] != DBNull.Value ? reader["Breed"].ToString() : string.Empty,
+                        Age = reader["Age"] != DBNull.Value ? (int)reader["Age"] : 0,
+                        Sex = reader["Sex"] != DBNull.Value ? (bool)reader["Sex"] : false,
+                        Weight = reader["Weight"] != DBNull.Value ? (int)reader["Weight"] : 0
+                        // Asegúrate de agregar los otros campos de la misma manera
                     };
                 }
                 reader.Close();
@@ -127,7 +127,6 @@ namespace Datos
             }
             return pet;
         }
-
 
     }
 
