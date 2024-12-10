@@ -11,17 +11,12 @@
     </div>
 
     <section class="description">
-            <asp:Repeater ID="RpDates" runat="server">
-                <ItemTemplate>
-                    <div>
-                        <asp:TextBox ID="actTitle" runat="server" Text='<%# Eval("Title") %>' />
-                        <asp:TextBox ID="actDescription" runat="server" Text='<%# Eval("Description") %>' />
-                        <asp:TextBox ID="actStart" runat="server" Text='<%# Eval("StartTime", "{0:yyyy/MM/dd}") %>' />
-                        <asp:TextBox ID="actEnd" runat="server" Text='<%# Eval("EndTime", "{0:yyyy/MM/dd}") %>' />
-                    </div>
-                </ItemTemplate>
-            </asp:Repeater>
-
+        <div>
+            <asp:TextBox ID="actTitle" runat="server" Text='Titulo' />
+            <asp:TextBox ID="actDescription" runat="server" Text='Descripcion' />
+            <asp:TextBox ID="actStart" runat="server" Text='Fecha de inicio' />
+            <asp:TextBox ID="actEnd" runat="server" Text='Fecha de finalización' />
+        </div>
     </section>
     <asp:Button runat="server" OnClick="SubirActividad" Text="Agregar" />
 

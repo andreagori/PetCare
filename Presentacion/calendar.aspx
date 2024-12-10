@@ -14,7 +14,7 @@
             <div>
                 <asp:Repeater ID="RpDates" runat="server"  OnItemDataBound="RpDates_ItemDataBound">
                     <ItemTemplate> 
-                        <a class="cActivity" href="activityDetails.aspx?Title=<%# Eval("Title") %>">
+                        <a class="cActivity">
                             <asp:Label ID="LbNamePet" runat="server"><strong>Name:</strong><p id="petName"> <%# Eval("NamePet") %> </p></asp:Label>
                             <p><strong>Título:</strong> <%# Eval("Title") %></p>
                             <p><strong>Descripción:</strong> <%# Eval("Description") %></p>
@@ -27,7 +27,7 @@
             </div>
         </section>
 
-        <a class="calendarButton" style="background-color:#008cff;" href="addToCalendar.aspx">Agregar</a>
+        <a class="calendarButton" style="background-color:#008cff;" href="activityDetails.aspx">Agregar</a>
     </main>
     
     <footer class="Footer2">

@@ -23,6 +23,8 @@ namespace Presentacion
                 int idPet = (int)Session["IdPet"];
                 List<E_Date> Dates = new N_Date().GetDatesPet(idPet);
                 RpDates.DataSource = Dates;
+                RpVaccines.DataSource = Dates;
+                RpVaccines.DataBind();
                 RpDates.DataBind();
             }
         }

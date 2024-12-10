@@ -48,10 +48,19 @@
             </section>
 
             <section>
-                <h3>padecimientos</h3>
-                <ItemTemplate class="row">
-                    <asp:Label runat="server" ID="illiness"></asp:Label>
-                </ItemTemplate>
+                <h1>Padecimientos</h1>
+                <div class="medicalList">
+                <asp:Repeater ID="RpDates" runat="server">
+                    <ItemTemplate>         
+                        <a href="quoteDetails.aspx?Title=<%# Eval("Title") %>">
+                            <h3><strong>Título:</strong> <%# Eval("Title") %></h3>
+                            <h4><strong>Inicio:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></h4>
+                            <p><strong>descripcion:</strong><%# Eval("Description") %> </p>
+                            <h4><strong>Finalizacion:</strong><%# Eval("EndTime", "{0:yyyy/MM/dd}") %></h4>
+                        </a>
+                    </ItemTemplate>
+                </asp:Repeater>
+                </div>
             </section>
         </main>
 
