@@ -50,7 +50,7 @@
                 <div class="medicalList">
                     <asp:Repeater ID="RpIllness" runat="server">
                         <ItemTemplate>         
-                            <a href="#">
+                            <a>
                                 <h3><strong>Padecimiento:</strong> <%# Eval("IllinessName") %></h3>
                                 <p><strong>Descripción:</strong> <%# Eval("Description") %> </p>
                                 <h4><strong>Fecha:</strong> <%# Eval("DateIllness", "{0:yyyy/MM/dd}") %></h4>

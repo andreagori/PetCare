@@ -229,6 +229,7 @@
     <Content Include="calendar.aspx" />
     <Content Include="CSS\addPetBreed.css" />
     <Content Include="CSS\addPetData.css" />
+    <Content Include="CSS\addVaccine.css" />
     <Content Include="CSS\calendar.css" />
     <Content Include="CSS\general.css" />
     <Content Include="CSS\inside.css" />
