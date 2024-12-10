@@ -70,9 +70,9 @@ namespace Datos
                         //IdOwner = reader.IsDBNull(1) ? 0 : reader.GetInt32(1),
                         NamePet = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
                         PhotoPet = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
-                        Specie = reader.IsDBNull(4) ? "Indefinida" : reader.GetString(3),
-                        Breed = reader.IsDBNull(5) ? "Indefinida" : reader.GetString(4),
-                        Weight = reader.IsDBNull(5) ? 1 : reader.GetFloat(5),
+                        //Specie = reader.IsDBNull(4) ? "Indefinida" : reader.GetString(3),
+                        //Breed = reader.IsDBNull(5) ? "Indefinida" : reader.GetString(4),
+                        //Weight = reader.IsDBNull(5) ? 1 : reader.GetFloat(5),
                         //BirthDay = reader.IsDBNull(6) ? DateTime.MinValue : reader.GetDateTime(6),
                         //Age = reader.IsDBNull(7) ? 0 : reader.GetInt32(7),
                         //Sex = reader.IsDBNull(8) ? false : reader.GetBoolean(8),
@@ -161,19 +161,23 @@ namespace Datos
             {
                 AbrirConexion();
                 SqlDataReader reader = cmd.ExecuteReader();
-                pet = new E_Pet
+                if (reader.Read())
                 {
-                    IdPet = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
-                    IdOwner = reader.IsDBNull(1) ? 0 : reader.GetInt32(1),
-                    NamePet = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
-                    PhotoPet = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
-                    Specie = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
-                    Breed = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
-                    BirthDay = reader.IsDBNull(6) ? DateTime.MinValue : reader.GetDateTime(6),
-                    Age = reader.IsDBNull(7) ? 0 : reader.GetInt32(7),
-                    Sex = reader.IsDBNull(8) ? false : reader.GetBoolean(8),
-                    State = reader.IsDBNull(9) ? false : reader.GetBoolean(9)
-                };
+                    pet = new E_Pet
+                    {
+                        IdPet = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
+                        IdOwner = reader.IsDBNull(1) ? 0 : reader.GetInt32(1),
+                        NamePet = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                        PhotoPet = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                        Specie = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
+                        Breed = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
+                        BirthDay = reader.IsDBNull(6) ? DateTime.MinValue : reader.GetDateTime(6),
+                        Weight = reader.IsDBNull(6) ? 0 : reader.GetInt32(7),
+                        Age = reader.IsDBNull(7) ? 0 : reader.GetInt32(8),
+                        Sex = reader.IsDBNull(8) ? false : reader.GetBoolean(9),
+                        State = reader.IsDBNull(9) ? false : reader.GetBoolean(10)
+                    };
+                }
             }
             catch (Exception e)
             {

@@ -78,12 +78,11 @@
                     // Agregar borde al avatar seleccionado
                     avatar.style.border = "2px solid #fea910";
 
-                    // Guardar el nombre del archivo en el campo oculto
-                    var avatarPath = avatar.getAttribute("src");
-                    var avatarName = avatarPath.split("/").pop(); // Extraer solo el nombre del archivo
-                    document.getElementById("selectedAvatar").value = avatarName;
+                    // Guardar la ruta completa del archivo en el campo oculto
+                    var avatarPath = avatar.getAttribute("src"); // Obtener la ruta completa
+                    document.getElementById("selectedAvatar").value = avatarPath;
 
-                    console.log("Avatar seleccionado: " + avatarName); // Para depuración
+                    console.log("Avatar seleccionado (ruta completa): " + avatarPath); // Para depuración
                 }
             });
         </script>
