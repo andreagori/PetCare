@@ -73,6 +73,8 @@ namespace Presentacion
             E_Pet pet = new E_Pet(0, owner.IdOwner, TbNamePet.Text, selectedAvatar, Specie,TbBreed.Text, DateTime.Parse(BirthDayPet), float.Parse(TbWeight.Text),int.Parse(TbAge.Text),sex,55555,true);
             string message = new N_Pets().Insert(pet);
             Response.Redirect("~/myPets.aspx");
+
+
         }
 
         protected void DdlSex_SelectedIndexChanged(object sender, EventArgs e)
