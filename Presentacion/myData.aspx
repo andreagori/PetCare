@@ -10,14 +10,6 @@
             </h1>
         </div> 
         <div class="dataMain-Content">
-            <section id="birthdateSection">
-                <h3>Fecha de nacimiento</h3>
-                <div class="myDataRow">
-                    <input id="dia" placeHolder="Día" type="number" min="1" max="31" required/>
-                    <input id="mes" placeHolder="Mes" type="number" min="1" max="12" required/>
-                    <input id="anio" placeHolder="Año" type="number" min="1900" max="2024" required/>
-                </div>
-            </section>
             <section id="rolSection">
                 <h3>Rol</h3>
                     <asp:DropDownList ID="ddlRoles" runat="server">
@@ -43,7 +35,7 @@
                 avatares.addEventListener("click", function (e) {
                     var avatar = e.target;
                     if (avatar.tagName.toLowerCase() === "img") {
-                        var avatares = document.querySelectorAll("#avatares img");
+                        var avatares = document.querySelectorAll("#avatares av1.png");
                         avatares.forEach(function (img) {
                             img.style.border = "none";
                         });
