@@ -11,7 +11,7 @@ namespace Presentacion
 {
 
 
-    public partial class calendarGeneral
+    public partial class quoteDetails
     {
 
         /// <summary>
@@ -21,6 +21,6 @@ namespace Presentacion
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RpDatesGeneral;
+        protected global::System.Web.UI.WebControls.Repeater RpDates;
     }
 }

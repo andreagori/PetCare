@@ -80,7 +80,6 @@
 }
 
 .medicalList p{
-    grid-column: 1 / span 2;
     word-wrap: break-word; /* Forzar saltos de línea para palabras largas */
     overflow-wrap: break-word; /* Compatibilidad adicional */
     hyphens: auto; /* Agregar guiones si es necesario */
@@ -112,4 +111,23 @@
     border: solid 2px white;
     text-decoration: none;
     padding: 1%;
+}
+
+.quoteDetails{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: space-around;
+    
+    width: 30%;
+    height: 60%;
+    padding: 1% 2%;
+    
+    background-color: #f5f6f3;
+    border-radius: 32px;
+    
+    overflow-y:auto;
+    overflow-x: hidden;
+
 }

@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="activityDetails.aspx" />
     <Content Include="addMedicalData.aspx" />
     <Content Include="addPetBreed.aspx" />
     <Content Include="addPetData.aspx" />
@@ -151,7 +152,6 @@
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario1VA.png" />
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario2VA.png" />
     <Content Include="assets\mobil\VA\PetCareNuevoUsuario3VA.png" />
-    <Content Include="calendarGeneral.aspx" />
     <Content Include="calendar.aspx" />
     <Content Include="CSS\addPetBreed.css" />
     <Content Include="CSS\addPetData.css" />
@@ -174,12 +174,20 @@
     <Content Include="myHistory.aspx" />
     <Content Include="myPetActions.aspx" />
     <Content Include="myPets.aspx" />
+    <Content Include="quoteDetails.aspx" />
     <Content Include="register.aspx" />
     <Content Include="wantedPoster.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="activityDetails.aspx.cs">
+      <DependentUpon>activityDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="activityDetails.aspx.designer.cs">
+      <DependentUpon>activityDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="addMedicalData.aspx.cs">
       <DependentUpon>addMedicalData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,13 +222,6 @@
     </Compile>
     <Compile Include="addToCalendar.aspx.designer.cs">
       <DependentUpon>addToCalendar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="calendarGeneral.aspx.cs">
-      <DependentUpon>calendarGeneral.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="calendarGeneral.aspx.designer.cs">
-      <DependentUpon>calendarGeneral.aspx</DependentUpon>
     </Compile>
     <Compile Include="calendar.aspx.cs">
       <DependentUpon>calendar.aspx</DependentUpon>
@@ -299,6 +300,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="quoteDetails.aspx.cs">
+      <DependentUpon>quoteDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quoteDetails.aspx.designer.cs">
+      <DependentUpon>quoteDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>
