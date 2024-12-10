@@ -38,6 +38,8 @@
             </section>
         </main>
 
+        <a href="addQuote.aspx">Agregar cita</a>
+        <a href="addVaccine.aspx">Agregar Vacuna</a>
     </main>
     <footer class="Footer2">
 

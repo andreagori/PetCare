@@ -29,6 +29,6 @@
             </div>
         </main>
     
-        <asp:Button class="posterButton" runat="server" Text="exportar" />
+        <asp:Button class="posterButton" runat="server" Text="Exportar" OnClick="ExportToPdf" />
     </div>
 </asp:Content>

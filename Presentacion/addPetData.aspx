@@ -18,10 +18,10 @@
             <h3>Raza</h3>
             <h3>Genero</h3>
             <asp:TextBox ID="TbBreed" type="Text" runat="server"></asp:TextBox>
-            <asp:DropDownList ID="DdlSex" type="Text" runat="server">
+            <asp:DropDownList ID="DdlSex" runat="server" OnSelectedIndexChanged="DdlSex_SelectedIndexChanged">
                 <asp:ListItem Text="Selecciona un sexo" Value="" />
-                <asp:ListItem Text="Macho" Value="1"/>
-                <asp:ListItem Text="Hembra" Value="0"/>
+                <asp:ListItem Text="Macho" Value="Male"/>
+                <asp:ListItem Text="Hembra" Value="Female"/>
             </asp:DropDownList>
         </div>
     
