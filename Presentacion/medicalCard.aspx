@@ -50,13 +50,12 @@
             <section>
                 <h1>Padecimientos</h1>
                 <div class="medicalList">
-                <asp:Repeater ID="RpDates" runat="server">
+                <asp:Repeater ID="RpIllness" runat="server">
                     <ItemTemplate>         
-                        <a href="quoteDetails.aspx?Title=<%# Eval("Title") %>">
-                            <h3><strong>Título:</strong> <%# Eval("Title") %></h3>
-                            <h4><strong>Inicio:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></h4>
+                        <a>
+                            <h3><strong>Padecimiento:</strong> <%# Eval("IllinessName") %></h3>
                             <p><strong>descripcion:</strong><%# Eval("Description") %> </p>
-                            <h4><strong>Finalizacion:</strong><%# Eval("EndTime", "{0:yyyy/MM/dd}") %></h4>
+                            <h4><strong>Fecha:</strong> <%# Eval("DateIllness", "{0:yyyy/MM/dd}") %></h4>
                         </a>
                     </ItemTemplate>
                 </asp:Repeater>

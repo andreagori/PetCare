@@ -33,10 +33,13 @@ namespace Presentacion
         {
             if (Session["IdPet"] != null)
             {
+
                 int idPet = (int)Session["IdPet"];
-                List<E_Date> Dates = new N_Date().GetDatesPet(idPet);
-                RpDates.DataSource = Dates;
-                RpDates.DataBind();
+                int idCard = new N_Card().GetCard(idPet);
+
+                List<E_Illiness> illinesses = new N_Illness().GetIllinesPet(idCard);
+                RpIllness.DataSource = illinesses;
+                RpIllness.DataBind();
             }
         }
     }

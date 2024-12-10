@@ -8,7 +8,7 @@ using Datos;
 
 namespace Negocios
 {
-    internal class N_Illness
+    public class N_Illness
     {
         readonly D_Illiness actualIllness = new D_Illiness();
         public List<E_Illiness> GetIllinesPet(int idCard)

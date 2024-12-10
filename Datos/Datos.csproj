@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="D_Card.cs" />
     <Compile Include="D_Conexion.cs" />
     <Compile Include="D_Date.cs" />
     <Compile Include="D_Illiness.cs" />
