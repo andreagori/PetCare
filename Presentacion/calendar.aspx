@@ -19,7 +19,7 @@
                             <p><strong>Título:</strong> <%# Eval("Title") %></p>
                             <p><strong>Descripción:</strong> <%# Eval("Description") %></p>
                             <p><strong>Inicio:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
-                            <p><strong>Finalizacion</strong><%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
+                            <p><strong>Finalizacion</strong><%# Eval("EndTime", "{0:yyyy/MM/dd}") %></p>
                         </a>
                     </ItemTemplate>
                 </asp:Repeater>

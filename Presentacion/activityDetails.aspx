@@ -13,29 +13,19 @@
     <section class="description">
             <asp:Repeater ID="RpDates" runat="server">
                 <ItemTemplate>
-                    <a>
-                        <p ID="PNamePet" runat="server">
-                            <strong>Name:</strong>
-                            <%# Eval("NamePet") %>
-                        </p>
-                        <p><strong>Título:</strong>
-                            <%# Eval("Title") %>
-                        </p>
-                        <p><strong>Descripción:</strong>
-                            <%# Eval("Description") %>
-                        </p>
-                        <p><strong>Inicio:</strong>
-                            <%# Eval("StartTime", "{0:yyyy/MM/dd}" ) %>
-                        </p>
-                        <p><strong>Finalizacion</strong>
-                            <%# Eval("StartTime", "{0:yyyy/MM/dd}" ) %>
-                        </p>
-                    </a>
+                    <div>
+                        <asp:TextBox ID="actTitle" runat="server" Text='<%# Eval("Title") %>' />
+                        <asp:TextBox ID="actDescription" runat="server" Text='<%# Eval("Description") %>' />
+                        <asp:TextBox ID="actStart" runat="server" Text='<%# Eval("StartTime", "{0:yyyy/MM/dd}") %>' />
+                        <asp:TextBox ID="actEnd" runat="server" Text='<%# Eval("EndTime", "{0:yyyy/MM/dd}") %>' />
+                    </div>
                 </ItemTemplate>
             </asp:Repeater>
 
     </section>
-    <a class="calendarButton" style="background-color:#008cff;" href="addToCalendar.aspx">Agregar</a>
+    <asp:Button runat="server" OnClick="SubirActividad" Text="Agregar" />
+
+    
 </main>
 <footer class="Footer2">
 

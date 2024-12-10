@@ -23,7 +23,7 @@ namespace Presentacion
                 if(id == currentId)
                 {
                     nameIn.Text = pets[i].NamePet;
-                    breed.Text = pets[i].Specie;
+                    breed.Text = pets[i].Breed;
                     sex.Text = pets[i].Sex? "female" : "male";
                     day.Text = pets[i].BirthDay.ToString();
                     weight.Text = 0.ToString();

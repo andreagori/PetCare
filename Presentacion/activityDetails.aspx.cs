@@ -13,7 +13,10 @@ namespace Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadDates();
+            if (!IsPostBack)
+            {
+                LoadDates();
+            }
         }
         private void LoadDates()
         {
@@ -51,6 +54,29 @@ namespace Presentacion
                             break;
                         }
                     }
+                }
+            }
+        }
+
+        protected void SubirActividad(object sender, EventArgs e)
+        {
+            int id = (int)Session["IdPet"];
+            foreach (RepeaterItem item in RpDates.Items)
+            {
+                TextBox txtTitle = item.FindControl("actTitle") as TextBox;
+                TextBox txtDescription = item.FindControl("actDescription") as TextBox;
+                TextBox txtStart = item.FindControl("actStart") as TextBox;
+                TextBox txtEnd = item.FindControl("actEnd") as TextBox;
+
+                if (txtTitle != null && txtDescription != null && txtStart != null && txtEnd != null)
+                {
+                    string title = txtTitle.Text;
+                    string description = txtDescription.Text;
+                    string start = txtStart.Text;
+                    string end = txtEnd.Text;
+
+                    N_Date date = new N_Date();
+                    date.updateDate(id, title, description, false, false, start, end);
                 }
             }
         }

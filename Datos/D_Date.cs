@@ -98,5 +98,39 @@ namespace Datos
             }
             return dates;
         }
+        public void updateDate(int idPet, string title, string description, bool dateType, bool addedBy , string startTime, string endTime)
+        {
+            SqlCommand cmd = new SqlCommand("IDM_Dates", Conexion)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Parameters.AddWithValue("@Action", "Insert");
+            cmd.Parameters.AddWithValue("@idDate", 0);
+            cmd.Parameters.AddWithValue("@idPet", idPet);
+            cmd.Parameters.AddWithValue("@Title", title);
+            cmd.Parameters.AddWithValue("@Description", description);
+            cmd.Parameters.AddWithValue("@dateType", false);
+            cmd.Parameters.AddWithValue("@addedBy", false);
+            cmd.Parameters.AddWithValue("@startTime", "2024-01-01 08:00:00");
+            cmd.Parameters.AddWithValue("@endTime", "2024-01-01 17:00:00");
+            cmd.Parameters.AddWithValue("@State", true);
+            try
+            {
+                // Abrir conexión y ejecutar el comando
+                AbrirConexion();
+                cmd.ExecuteNonQuery(); // Usar ExecuteNonQuery para comandos que no devuelven datos
+            }
+            catch (Exception e)
+            {
+                // Manejar errores
+                throw new Exception("Error al insertar datos en la base de datos", e);
+            }
+            finally
+            {
+                // Cerrar la conexión y liberar recursos
+                CerrarConexion();
+                cmd.Dispose();
+            }
+        }
     }
 }
