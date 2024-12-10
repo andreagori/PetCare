@@ -38,6 +38,8 @@
             </section>
         </main>
 
+        <asp:Button runat="server" OnClick="addQuote" Text="Agregar cita"/>
+
     </main>
     <footer class="Footer2">
 
