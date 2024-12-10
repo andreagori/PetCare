@@ -159,6 +159,7 @@
     <Content Include="CSS\general.css" />
     <Content Include="CSS\inside.css" />
     <Content Include="CSS\loginMain.css" />
+    <Content Include="CSS\medicalCard.css" />
     <Content Include="CSS\medicalCardQuotes.css" />
     <Content Include="CSS\medicalCardData.css" />
     <Content Include="CSS\myData.css" />
