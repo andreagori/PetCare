@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="activityDetails.aspx" />
+    <Content Include="addIllness.aspx" />
     <Content Include="addMedicalData.aspx" />
     <Content Include="addPetBreed.aspx" />
     <Content Include="addPetData.aspx" />
@@ -187,6 +188,13 @@
     </Compile>
     <Compile Include="activityDetails.aspx.designer.cs">
       <DependentUpon>activityDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addIllness.aspx.cs">
+      <DependentUpon>addIllness.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addIllness.aspx.designer.cs">
+      <DependentUpon>addIllness.aspx</DependentUpon>
     </Compile>
     <Compile Include="addMedicalData.aspx.cs">
       <DependentUpon>addMedicalData.aspx</DependentUpon>
