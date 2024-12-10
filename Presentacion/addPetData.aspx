@@ -23,21 +23,19 @@
             </asp:DropDownList>
         </div>
         <div class="petBirthdateRow">
-            <h3>Fecha de nacimiento</h3>
+            <h3>Fecha de nacimiento D/M/Y</h3>
             <asp:TextBox ID="TbYear" type="Number" runat="server"></asp:TextBox>
             <asp:TextBox ID="TbMounth" type="Number" runat="server"></asp:TextBox>
             <asp:TextBox ID="TbDay" type="Number" runat="server"></asp:TextBox>
         </div>
-            <div class ="petRow">
-                <h3>Edad</h3>
-                <h3>Peso</h3>
-                <asp:TextBox ID="TbAge" type="Number" runat="server"></asp:TextBox>
-                <asp:TextBox ID="TbWeight" type="Number" runat="server"></asp:TextBox>
-            </div>
-        <section>
-            <h3>Padecimientos</h3>
-            <asp:TextBox ID="TbIlliness" type="Text" runat="server"></asp:TextBox>
-        </section>
+
+        <div class ="petRow">
+            <h3>Edad</h3>
+            <h3>Peso</h3>
+            <asp:TextBox ID="TbAge" type="Number" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TbWeight" type="Number" runat="server"></asp:TextBox>
+        </div>
+        
         <section>
             <h3>Avatar</h3>
             <div id="AvatarPet" class="petAvatar">

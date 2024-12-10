@@ -38,6 +38,8 @@
     border-radius: 32px;
 }
 
+
+
 .aiMain section h3{
     font-size: 22px;
     color: #38b6ff;
@@ -46,6 +48,13 @@
 
 .aiMain section{
     width: 90%;
+}
+
+.aiMain section:first-child{
+    margin-top: 20px;
+}
+
+.aiMain div:last-child{
     margin-bottom: 40px;
 }
 
