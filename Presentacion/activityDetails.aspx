@@ -9,7 +9,7 @@
         <h1 style="color: #fea910;">Mi</h1>
         <h1 style="color: #38b6ff;">Calendario</h1>
     </div>
-
+    <asp:Label  ID="lbError" runat="server" visible ="false"></asp:Label>
     <section class="description">
 
         <section>
@@ -26,18 +26,18 @@
             <h4>Dia inicial</h4>
             <h4>Mes inicial</h4>
             <h4>Año inicial</h4>
-            <asp:TextBox cssclass="inputDes" ID="dayStart" runat="server" Text='' class="inputDes" />
-            <asp:TextBox cssclass="inputDes" ID="monthStart" runat="server" Text='' />
-            <asp:TextBox cssclass="inputDes" ID="yearStart" runat="server" Text='' />
+            <asp:TextBox cssclass="inputDes" Type="Number" ID="dayStart" runat="server" Text='' class="inputDes" />
+            <asp:TextBox cssclass="inputDes" Type="Number" ID="monthStart" runat="server" Text='' />
+            <asp:TextBox cssclass="inputDes" Type="Number" ID="yearStart" runat="server" Text='' />
         </section>
         
         <section class="itemGrid">
             <h4>Dia final</h4>
             <h4>Mes final</h4>
             <h4>Año final</h4>
-            <asp:TextBox cssclass="inputDes" ID="dayEnd" runat="server" Text='' />
-            <asp:TextBox cssclass="inputDes" ID="monthEnd" runat="server" Text='' />
-            <asp:TextBox cssclass="inputDes" ID="yearEnd" runat="server" Text='' />
+            <asp:TextBox cssclass="inputDes" Type="Number" ID="dayEnd" runat="server" Text='' />
+            <asp:TextBox cssclass="inputDes" Type="Number" ID="monthEnd" runat="server" Text='' />
+            <asp:TextBox cssclass="inputDes" Type="Number" ID="yearEnd" runat="server" Text='' />
         </section>
             
     </section>
