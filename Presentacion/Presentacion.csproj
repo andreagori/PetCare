@@ -242,6 +242,7 @@
     <Content Include="CSS\myPetActions.css" />
     <Content Include="CSS\myPets.css" />
     <Content Include="CSS\startPage.css" />
+    <Content Include="CSS\userInfo.css" />
     <Content Include="CSS\wantedPoster.css" />
     <Content Include="login.aspx" />
     <Content Include="medicalCard.aspx" />

@@ -1,29 +1,79 @@
-.userInfo{
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.userInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: 100%;
-    height: 90vh;
+    min-height: 80vh;
 }
 
-*{
-    box-sizing: border-box;
-}
-
-.userInfo header {
+/* Contenido */
+.userInfo-Content {
     display: flex;
-
-    height: 20%;
-    
-    color: #fea910;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    background-color: #fff8e1;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.userInfo header img{
-    height: 80px;
+/* Título */
+.userInfo-Title {
+    font-size: 36px; 
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-weight: 700;
+    color: #fea910;
+    margin-bottom: 10px;
 }
 
-.usMail{
-    color: #fea910;
+/* Avatar */
+.userInfo-Avatar img {
+    height: 120px;
+    width: 120px;
+}
+
+/* Información del usuario */
+.userInfo-Data {
+    font-size: 18px; 
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-weight: 600; 
+    color: #333; 
+    margin: 10px 0;
+}
+
+/* Botón de cerrar sesión */
+.userInfo-Button {
+    background-color: #e63946; /* Fondo rojo */
+    color: white;
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px; /* Esquinas redondeadas */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 50px;
+}
+
+.userInfo-Button:hover {
+    background-color: #b71c1c; /* Rojo más oscuro */
+    transform: translateY(-2px);
+}
+
+.userInfo-Button:active {
+    transform: translateY(1px);
 }
