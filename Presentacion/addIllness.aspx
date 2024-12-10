@@ -9,7 +9,7 @@
             <h1>Agregar</h1>
             <h1>Padecimiento</h1>
         </header>
-
+        <asp:Label ID="LbMessage" runat="server" Text="" style="color:red;" Visible="false"></asp:Label> 
         <main class="aiMain">
             <section>
                 <h3>Nombre</h3>
@@ -25,9 +25,9 @@
                 <h3>dia</h3>
                 <h3>Mes</h3>
                 <h3>Año</h3>
-                <asp:TextBox ID="TbDay" runat="server" cssclass="aiGridInput"></asp:TextBox>
-                <asp:TextBox ID="TbMonth" runat="server" cssclass="aiGridInput"></asp:TextBox>
-                <asp:TextBox ID="TbYear" runat="server" cssclass="aiGridInput"></asp:TextBox>
+                <asp:TextBox ID="TbDay" Type="Number" runat="server" cssclass="aiGridInput"></asp:TextBox>
+                <asp:TextBox ID="TbMonth" Type="Number" runat="server" cssclass="aiGridInput"></asp:TextBox>
+                <asp:TextBox ID="TbYear" Type="Number" runat="server" cssclass="aiGridInput"></asp:TextBox>
             </div>
 
             
