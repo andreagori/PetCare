@@ -151,7 +151,7 @@ namespace Datos
 
         public E_Pet GetPet(int idPet)
         {
-            E_Pet pet = null;
+            E_Pet pet = new E_Pet();
             SqlCommand cmd = new SqlCommand("GetDataPet", Conexion)
             {
                 CommandType = CommandType.StoredProcedure

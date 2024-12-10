@@ -14,7 +14,17 @@ namespace Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["IdPet"];
+            int idpet = int.Parse(id);
+            
+            E_Pet pet = new N_Owner().GetPet(1);
+            nameIn.Text = pet.NamePet;
+            breed.Text = pet.Breed;
+            sex.Text = pet.Sex ? "female" : "male";
+            day.Text = pet.BirthDay.ToString();
+            weight.Text = pet.Weight.ToString();
+            illiness.Text = "Cositas";
 
+            /*
             E_Owner owner = (E_Owner)Session["Owner"];
             List<E_Pet> pets = new N_Owner().GetOwnerPets(owner.IdOwner);
             for(int i = 0;i<pets.Count; i++)
@@ -32,6 +42,7 @@ namespace Presentacion
                     break;
                 }
             }
+            */
         }
         protected void goToQuotes(object sender, EventArgs e)
         {
