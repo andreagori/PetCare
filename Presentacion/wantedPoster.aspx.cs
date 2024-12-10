@@ -116,7 +116,7 @@ namespace Presentacion
             }
 
             // Obtener los datos de la mascota utilizando el método GetPetDetails
-            E_Pet petDetails = new N_Pets().GetPetDetails(idPet);
+            E_Pet petDetails = new N_Owner().GetPet(idPet);
             if (petDetails == null)
             {
                 Response.Write("<script>alert('No se encontró la información de la mascota.');</script>");

@@ -45,7 +45,7 @@ namespace Presentacion
                 int idPet = (int)Session["IdPet"];
 
                 // Obtener los detalles de la mascota para el nombre
-                E_Pet petDetails = new N_Pets().GetPetDetails(idPet);
+                E_Pet petDetails = new N_Owner().GetPet(idPet);
 
                 // Validar si se obtuvo la mascota
                 if (petDetails != null)
