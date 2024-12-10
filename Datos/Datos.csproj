@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="D_Conexion.cs" />
     <Compile Include="D_Date.cs" />
+    <Compile Include="D_Illiness.cs" />
     <Compile Include="D_Owner.cs" />
     <Compile Include="D_Pet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

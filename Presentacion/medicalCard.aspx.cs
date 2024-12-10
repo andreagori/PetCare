@@ -17,11 +17,11 @@ namespace Presentacion
             
             int idpet = int.Parse(id);
             
-            E_Pet pet = new N_Owner().GetPet(1);
+            E_Pet pet = new N_Owner().GetPet(idpet);
             nameIn.Text = pet.NamePet;
             breed.Text = pet.Breed;
             sex.Text = pet.Sex ? "female" : "male";
-            day.Text = pet.BirthDay.ToString();
+            day.Text = pet.BirthDay.ToString("d");
             weight.Text = pet.Weight.ToString();
             LoadDates();
         }
