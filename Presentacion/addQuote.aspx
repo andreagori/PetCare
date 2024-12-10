@@ -19,16 +19,16 @@
     
         <div class="quoteBirthdateRow">
             <h3>Fecha inicio</h3>
-            <asp:TextBox runat="server" Text="day" ID="day"/>
+            <asp:TextBox runat="server" Type="Number" Text="day" ID="day"/>
             <asp:TextBox runat="server" Text="month" ID="month"/>
             <asp:TextBox runat="server" Text="year" ID="year"/>
         </div>
         
         <div class="quoteBirthdateRow">
             <h3>Fecha inicio</h3>
-            <asp:TextBox runat="server" Text="day" ID="dayEnd"/>
-            <asp:TextBox runat="server" Text="month" ID="monthEnd"/>
-            <asp:TextBox runat="server" Text="year" ID="yearEnd"/>
+            <asp:TextBox runat="server" Type="Number" Text="day" ID="dayEnd"/>
+            <asp:TextBox runat="server" Type="Number" Text="month" ID="monthEnd"/>
+            <asp:TextBox runat="server" Type="Number"  Text="year" ID="yearEnd"/>
         </div>
         
         <section>
