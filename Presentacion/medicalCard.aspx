@@ -59,7 +59,7 @@
                     </asp:Repeater>
                 </div>
             </section>
-            <a href="addIllness.aspx"> Agregar padecimiento </a>
+            <a href="addIllness.aspx" class="btn-agregar">Agregar padecimiento</a>
         </main>
         <a class="medicalButton" href="medicalCardQuotes.aspx">Citas médicas</a>
     </div>

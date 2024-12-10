@@ -34,13 +34,25 @@ namespace Presentacion
                 RpIllness.DataBind();
 
                 string id = Request.QueryString["IdPet"];
-                int idpet = int.Parse(id);
-                E_Pet pet = new N_Owner().GetPet(idpet);
-                nameIn.Text = pet.NamePet;
-                breed.Text = pet.Breed;
-                sex.Text = pet.Sex ? "female" : "male";
-                day.Text = pet.BirthDay.ToString("d");
-                weight.Text = pet.Weight.ToString();
+                if (string.IsNullOrEmpty(id))
+                {
+                    // Manejar el caso en que el parámetro no está presente, por ejemplo:
+                    // Redirigir a otra página o mostrar un mensaje de error
+                }
+                else
+                {
+                    try
+                    {
+                        int idpet = int.Parse(id);
+                        E_Pet pet = new N_Owner().GetPet(idpet);
+                        nameIn.Text = pet.NamePet;
+                    }
+                    catch (FormatException)
+                    {
+                        // Manejar el caso en que el parámetro no sea un entero válido
+                        Response.Redirect("ErrorPage.aspx"); // O cualquier página de error que desees
+                    }
+                }
             }
         }
     }
