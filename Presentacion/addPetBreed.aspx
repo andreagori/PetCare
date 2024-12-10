@@ -15,7 +15,5 @@
             <asp:ImageButton ID="btnDog" runat="server" ImageUrl="assets/buttons/addDog.png" OnClick="btnDog_Click" />
         </div>
     </main>
-    <footer class="Footer2">
-
-    </footer>
+    <footer class="Footer2" />
 </asp:Content>
