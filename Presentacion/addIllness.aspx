@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="addIllness">
+    <div class="addIlliness">
         <header class="aiTitle">
             <h1>Agregar</h1>
             <h1>Padecimiento</h1>
@@ -13,29 +13,27 @@
         <main class="aiMain">
             <section>
                 <h3>Nombre</h3>
-                <asp:TextBox ID="TbIllnessName" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TbIllnessName" runat="server" cssclass="aiGridInput"></asp:TextBox>
             </section>
 
             <section>
                 <h3>Descripcion</h3>
-                <asp:TextBox ID="TbDescription" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TbDescription" runat="server" cssclass="aiGridInput"></asp:TextBox>
             </section>
 
-            <section>
+            <div class="aiGrid">
                 <h3>dia</h3>
-                <asp:TextBox ID="TbDay" runat="server"></asp:TextBox>
                 <h3>Mes</h3>
-                <asp:TextBox ID="TbMonth" runat="server"></asp:TextBox>
                 <h3>Año</h3>
-                <asp:TextBox ID="TbYear" runat="server"></asp:TextBox>
-            </section>
+                <asp:TextBox ID="TbDay" runat="server" cssclass="aiGridInput"></asp:TextBox>
+                <asp:TextBox ID="TbMonth" runat="server" cssclass="aiGridInput"></asp:TextBox>
+                <asp:TextBox ID="TbYear" runat="server" cssclass="aiGridInput"></asp:TextBox>
+            </div>
 
-
-
-            <section>
-                <asp:Button ID="btnAddIllness" runat="server" Text="Agregar" OnClick="BtAddIllness_OnClick"/>
-            </section>
+            
+            
         </main>
+        <asp:Button cssclass="aiGridButton" ID="btnAddIllness" runat="server" Text="Agregar" OnClick="BtAddIllness_OnClick" />
     </div>
 
 </asp:Content>
