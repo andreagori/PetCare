@@ -9,6 +9,8 @@
             <h1 style="color:#38b6ff;">Cita médica</h1>
         </div>
 
+        <asp:Label runat="server" ID="lberror" ForeColor="Red" Visible="false" />   
+
         <section>
             <h3>Razon de cita</h3>
             <asp:TextBox runat="server" Text="Razon" ID="razon"/>

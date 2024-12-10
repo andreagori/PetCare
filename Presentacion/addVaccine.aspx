@@ -7,7 +7,7 @@
             <h1 style="color:#fea910;">Agregar</h1>
             <h1 style="color:#38b6ff;">Cita médica</h1>
         </div>
-
+        <asp:Label runat="server" ID="lbError" Text="" Visible="false" ForeColor="Red" />
         <section>
             <h3>Nombre</h3>
             <asp:TextBox runat="server" Text="Nombre" ID="nameT"/>
@@ -28,7 +28,7 @@
     
         <section>
             <h3>Descripcion</h3>
-            <asp:TextBox runat="server" Text="Razon" ID="descriptionT"/>
+            <asp:TextBox runat="server" Text="Razon"  ID="descriptionT"/>
         </section>
 
         <asp:Button runat="server" onclick="sendVaccine" Text="Agregar Vacuna"/>
