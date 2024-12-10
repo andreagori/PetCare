@@ -26,7 +26,8 @@ namespace Presentacion
             }
 
             E_Owner owner = (E_Owner)Session["NewOwner"];
-            owner.ImgPerfil = "Img";
+            owner.ImgPerfil = "AvF.png";
+            
             string selectedRole = ddlRoles.SelectedValue;
             if (selectedRole == "Owner")
             {
