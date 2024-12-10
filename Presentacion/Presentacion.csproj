@@ -178,6 +178,7 @@
     <Content Include="assets\buttons\returnYellow.png" />
     <Content Include="assets\buttons\shareButton.png" />
     <Content Include="assets\icons\Logo.png" />
+    <Content Include="assets\icons\PetCare_LOGO.png" />
     <Content Include="assets\images %281%29.jpeg" />
     <Content Include="assets\mobil\addCat.png" />
     <Content Include="assets\mobil\addCompleteButton.png" />
