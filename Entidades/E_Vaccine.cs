@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class E_Vaccine
+    public class E_Vaccine
     {
         private int _idVaccine;
         private int _idCard;
@@ -15,6 +15,8 @@ namespace Entidades
         private string _Description;
         private DateTime _dateAplication;
         private bool _State;
+
+
 
         public E_Vaccine(int idVaccine, int idCard, string name, string type, string description, DateTime dateAplication, bool state)
         {
@@ -25,6 +27,17 @@ namespace Entidades
             Description = description;
             DateAplication = dateAplication;
             State = state;
+        }
+        
+        public E_Vaccine()
+        {
+            IdVaccine = 0;
+            IdCard = 0;
+            Name = "";
+            Type = "";
+            Description = "";
+            DateAplication = DateTime.Now;
+            State = false;
         }
 
         public int IdVaccine { get => _idVaccine; set => _idVaccine = value; }

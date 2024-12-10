@@ -27,11 +27,11 @@
                 <h1>Vacunas</h1>
                 <asp:Repeater ID="RpVaccines" runat="server">
                     <ItemTemplate>         
-                        <a href="quoteDetails.aspx?Title=<%# Eval("Title") %>">
-                            <h3><strong>Título:</strong> <%# Eval("Title") %></h3>
-                            <h4><strong>Inicio:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></h4>
+                        <a>
+                            <h3><strong>Título:</strong> <%# Eval("Name") %></h3>
+                            <h4><strong>Inicio:</strong> <%# Eval("Type") %></h4>
                             <p><strong>descripcion:</strong><%# Eval("Description") %> </p>
-                            <h4><strong>Finalizacion:</strong><%# Eval("EndTime", "{0:yyyy/MM/dd}") %></h4>
+                            <h4><strong>Finalizacion:</strong><%# Eval("DateAplication", "{0:yyyy/MM/dd}") %></h4>
                         </a>
                     </ItemTemplate>
                 </asp:Repeater>

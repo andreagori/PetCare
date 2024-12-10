@@ -14,6 +14,7 @@ namespace Presentacion
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadDates();
+            LoadVaccines();
         }
 
         protected void LoadDates()
@@ -23,9 +24,18 @@ namespace Presentacion
                 int idPet = (int)Session["IdPet"];
                 List<E_Date> Dates = new N_Date().GetDatesPet(idPet);
                 RpDates.DataSource = Dates;
-                RpVaccines.DataSource = Dates;
-                RpVaccines.DataBind();
                 RpDates.DataBind();
+            }
+        }
+        
+        protected void LoadVaccines()
+        {
+            if (Session["IdPet"] != null)
+            {
+                int id = 2;
+                List<E_Vaccine> vaccines = new N_Vaccine().GetVaccines(id);
+                RpVaccines.DataSource = vaccines;
+                RpVaccines.DataBind();
             }
         }
     }
