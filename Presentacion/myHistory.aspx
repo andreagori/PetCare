@@ -21,8 +21,7 @@
                 </ItemTemplate>
             </asp:Repeater>
         </section>
-
-        <asp:Button ID="btnExportPdf" runat="server" Text="Exportar" OnClick="ExportToPdf" />
+        <asp:Button ID="btnExportPdf" runat="server" Text="Exportar" OnClick="ExportToPdf" CssClass="btn-exportar" />
     </main>
     <footer class="Footer2" />
 </asp:Content>
