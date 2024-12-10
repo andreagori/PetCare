@@ -38,7 +38,7 @@ namespace Entidades
             ShareCode = 0;
             State = true;
         }
-        public E_Pet(int idPet, int idOwner, string namePet, string photoPet, string specie, string breed, DateTime birthDay, int age, bool sex, bool state)
+        public E_Pet(int idPet, int idOwner, string namePet, string photoPet, string specie, string breed, DateTime birthDay,float weight, int age, bool sex,int shareCode,bool state)
         {
             IdPet = idPet;
             IdOwner = idOwner;
@@ -47,8 +47,10 @@ namespace Entidades
             Specie = specie;
             Breed = breed;
             BirthDay = birthDay;
+            Weight = weight;
             Age = age;
             Sex = sex;
+            ShareCode = shareCode;
             State = state;
         }
 

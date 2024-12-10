@@ -17,5 +17,20 @@ namespace Negocios
             return ActualPet.Historical(idPet);
         }
 
+        public string Insert(E_Pet pet)
+        {
+            int R;
+
+            string message = "Error al registrar mascota";
+
+            R = ActualPet.IDM_Pet("INSERT", pet);
+            if (R == 0)
+            {
+                message = "Mascota registrado correctamente";
+
+            }
+            return message;
+        }
+
     }
 }

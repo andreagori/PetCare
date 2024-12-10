@@ -14,7 +14,7 @@ namespace Presentacion
         {
             if (Session["Owner"] == null)
             {
-                Response.Redirect("~/login.aspx");
+                Response.Redirect("~/login.aspx"); 
             }
             else
             {
