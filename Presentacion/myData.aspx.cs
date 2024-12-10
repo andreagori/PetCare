@@ -43,12 +43,31 @@ namespace Presentacion
             {
                 owner.ImgPerfil = selectedAvatar;
             }
+            try
+            {
 
-            string message = new N_Owner().Insert(owner);
-            Session["NewOwner"] = null;
-            owner = new N_Owner().Login(owner.Email, owner.Password);
-            Session["Owner"] = owner;
-            Response.Redirect("myPets.aspx");
+                string message = new N_Owner().Insert(owner);
+                Session["NewOwner"] = null;
+                owner = new N_Owner().Login(owner.Email, owner.Password);
+                Session["Owner"] = owner;
+                Response.Redirect("myPets.aspx");
+            }
+            catch (Exception ex)
+            {
+
+                if (ex.Message.Contains("El correo ingresado ya está asociado a otra cuenta. Por favor, utiliza otro correo."))
+                { 
+                    Response.Write("<script>alert('El correo ya esta registrado en otro usuario');</script>");
+                }
+                if (ex.Message.Contains("El celular ingresado ya está asociado a otra cuenta. Por favor, utiliza otro celular."))
+                {
+                    Response.Write("<script>alert('El telefono ya esta registrado en otro usuario');</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Error al registrar usuario');</script>");
+                }
+            }
 
         }
     }

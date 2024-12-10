@@ -39,7 +39,19 @@ namespace Datos
             }
             catch (Exception e)
             {
-                throw new Exception("Error al querer insertar, borrar o modificar", e);
+                if (e.Message.Contains("El correo ya esta registrado en otro usuario"))
+                {
+                    throw new Exception("El correo ingresado ya está asociado a otra cuenta. Por favor, utiliza otro correo.");
+                }
+
+                if (e.Message.Contains("El celular ya esta registrado en otro usuario."))
+                {
+                    throw new Exception("El celular ingresado ya está asociado a otra cuenta. Por favor, utiliza otro celular.");
+                }
+                else
+                {
+                    throw new Exception("Error al querer insertar, borrar o modificar", e);
+                }
             }
             finally
             {

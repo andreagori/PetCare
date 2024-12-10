@@ -19,7 +19,6 @@ namespace Presentacion
         protected void loadDataPet()
         {
             string selectedAvatar = Request.Form["selectedAvatar"];
-     
         }
         protected void AsingSpecie()
         {
@@ -59,22 +58,30 @@ namespace Presentacion
             {
                 E_Owner owner = (E_Owner)Session["Owner"];
                 string selectedAvatar = Request.Form["selectedAvatar"];
+                if (string.IsNullOrEmpty(selectedAvatar))
+                {
+                    selectedAvatar = "assets/icons/Logo.png";
+                }
                 string Specie = Request.QueryString["Specie"];
                 string Mounth = TbMounth.Text;
                 string Day = TbDay.Text;
                 string Year = TbYear.Text;
-                string formatM = Mounth.PadLeft(2, '0');
-                string formatD = Day.PadLeft(2, '0');
-                string BirthDayPet = Year+"-" + formatM + "-" +formatD;
+                if (checkDate(Day, Mounth, Year))
+                {
+                    string formatM = Mounth.PadLeft(2, '0');
+                    string formatD = Day.PadLeft(2, '0');
+                    string BirthDayPet = Year+"-" + formatM + "-" +formatD;
 
-                
-                string selectedSex = DdlSex.SelectedValue;
-                bool sex = selectedSex == "Male";
-                
+                    
+                    string selectedSex = DdlSex.SelectedValue;
+                    bool sex = selectedSex == "Male";
+                    
 
-                E_Pet pet = new E_Pet(0, owner.IdOwner, TbNamePet.Text, selectedAvatar, Specie,TbBreed.Text, DateTime.Parse(BirthDayPet), float.Parse(TbWeight.Text),int.Parse(TbAge.Text),sex,55555,true);
-                string message = new N_Pets().Insert(pet);
-                Response.Redirect("~/myPets.aspx");
+                    E_Pet pet = new E_Pet(0, owner.IdOwner, TbNamePet.Text, selectedAvatar, Specie,TbBreed.Text, DateTime.Parse(BirthDayPet), float.Parse(TbWeight.Text),int.Parse(TbAge.Text),sex,55555,true);
+                    string message = new N_Pets().Insert(pet);
+                    Response.Redirect("~/myPets.aspx");
+                    
+                }
 
             }
 
@@ -98,17 +105,65 @@ namespace Presentacion
                 bool sex = selectedSex == "Male";
             }
         }
-        //IdPet = idPet;
-        //IdOwner = idOwner;
-        //NamePet = namePet;
-        //PhotoPet = photoPet;
-        //Specie = specie;
-        //Breed = breed;
-        //BirthDay = birthDay;
-        //Weight = weight;
-        //Age = age;
-        //Sex = sex;
-        //ShareCode = shareCode;
-        //State = state;
+        protected bool checkDate(string day, string month, string year)
+        {
+
+            if (!int.TryParse(day, out int d) || !int.TryParse(month, out int m) || !int.TryParse(year, out int y))
+            {
+                return false;
+            }
+
+
+            if (m < 1 || m > 12)
+            {
+                return false;
+            }
+
+            if (y < 2000 || y > 2024)
+            {
+                return false;
+            }
+
+            int daysInMonth;
+            switch (m)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    daysInMonth = 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    daysInMonth = 30;
+                    break;
+                case 2:
+
+                    if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))
+                    {
+                        daysInMonth = 29;
+                    }
+                    else
+                    {
+                        daysInMonth = 28;
+                    }
+                    break;
+                default:
+                    return false;
+            }
+
+
+            if (d < 1 || d > daysInMonth)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }
