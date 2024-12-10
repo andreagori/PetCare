@@ -5,6 +5,8 @@ using Negocios;
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.Rendering;
 using System.IO;
+using MigraDoc.DocumentObjectModel.Tables;
+using MigraDoc.DocumentObjectModel.Shapes;
 
 namespace Presentacion
 {
@@ -60,34 +62,49 @@ namespace Presentacion
                         // Crear documento con MigraDoc
                         Document document = new Document();
                         Section section = document.AddSection();
-                        section.AddParagraph($"Historial de Actividades - Mascota: {petName}");
 
+                        var image = section.AddImage(Server.MapPath("~/assets/icons/Logo.png"));
+                        image.Width = MigraDoc.DocumentObjectModel.Unit.FromCentimeter(5); // Ajusta el tamaño de la imagen
+                        image.Height = MigraDoc.DocumentObjectModel.Unit.FromCentimeter(5);
+                        image.LockAspectRatio = true;
+                        image.Left = ShapePosition.Center;
+
+                        // Título del documento
+                        Paragraph docTitulo = section.AddParagraph($"Historial de Actividades - Mascota: {petName}");
+                        docTitulo.Format.Font.Size = 24;
+                        docTitulo.Format.Alignment = ParagraphAlignment.Center;
+                        docTitulo.Format.Font.Bold = true;
+
+                        section.AddParagraph("\n");
+
+                        // Crear tabla
+                        MigraDoc.DocumentObjectModel.Tables.Table table = section.AddTable();
+                        table.Borders.Width = 0.75;
+
+                        // Definir columnas
+                        Column column1 = table.AddColumn(MigraDoc.DocumentObjectModel.Unit.FromCentimeter(5));
+                        Column column2 = table.AddColumn(MigraDoc.DocumentObjectModel.Unit.FromCentimeter(4));
+                        Column column3 = table.AddColumn(MigraDoc.DocumentObjectModel.Unit.FromCentimeter(8));
+
+                        // Encabezado de la tabla
+                        Row headerRow = table.AddRow();
+                        headerRow.Shading.Color = MigraDoc.DocumentObjectModel.Colors.LightGray;
+                        headerRow.Cells[0].AddParagraph("Fecha").Format.Font.Bold = true;
+                        headerRow.Cells[1].AddParagraph("Tipo de Actividad").Format.Font.Bold = true;
+                        headerRow.Cells[2].AddParagraph("Descripción").Format.Font.Bold = true;
+
+                        // Llenar filas de la tabla con datos
                         foreach (var item in history)
                         {
-                            string dateTypeText = "";
-
-                            // Usar un switch clásico
-                            switch (item.EventType)
-                            {
-                                case "Vacuna":
-                                    dateTypeText = "Vacuna";
-                                    break;
-                                case "Enfermedad":
-                                    dateTypeText = "Enfermedad";
-                                    break;
-                                case "Cita Médica":
-                                    dateTypeText = "Cita Médica";
-                                    break;
-                                case "Actividad":
-                                    dateTypeText = "Actividad";
-                                    break;
-                                default:
-                                    dateTypeText = "Desconocido";
-                                    break;
-                            }
-
-                            section.AddParagraph($"Fecha: {item.StartTime}, {dateTypeText}: {item.Title}");
+                            Row row = table.AddRow();
+                            row.Cells[0].AddParagraph(item.StartTime.ToShortDateString())
+                                        .Format.Font.Bold = true; // Fecha en negritas
+                            row.Cells[1].AddParagraph(item.EventType)
+                                        .Format.Font.Bold = true; // Tipo en negritas
+                            row.Cells[2].AddParagraph(item.Title); // Descripción en texto normal
                         }
+
+                        section.AddParagraph("\n");
 
                         // Renderizar el documento
                         PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(true);
