@@ -43,7 +43,7 @@ body {
 .TopBar-Links {
     display: flex;
     gap: 30px; 
-    margin-left: -50%; 
+    margin-left: -60%; 
 }
 
 /* ENLACES */

@@ -3,32 +3,30 @@
     <link rel="stylesheet" href="CSS/wantedPoster.css" type="text/css"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="wanted">
-        <header>
-            <h1>Cartel de</h1>
-            <h1>Busqueda</h1>
-        </header>
+    <main class="wanted">
+        <div class="wanted-Title">
+            <h1>
+                <span class="highlight-yellow">Cartel</span><br>
+                <span class="highlight-blue">de búsqueda</span>
+            </h1>
+        </div> 
     
-        <main class="poster">
-            <h1>!!SE BUSCA!!</h1>
-
-            
-            <asp:Label ID="petName" runat="server" Visible="true">a</asp:Label>
-            <img src="assets/dogs.png" alt="Foto de la mascota" class="posterImage" />
-            
-            <h3>SE DARA RECOMPENSA</h3>
-            <div>
-                <section>
+        <div class="poster">
+            <h1 class="poster-header">¡SE BUSCA!</h1>
+            <asp:Label ID="petName" CssClass="posterName" runat="server" Visible="true">Nombre de la Mascota</asp:Label>
+            <h3 class="poster-reward">INFORMACIÓN</h3>
+            <div class="poster-details">
+                <section class="poster-section">
                     <h4>Datos de la mascota</h4>
                     <asp:Label id="petData" runat="server"></asp:Label>
                 </section>
-                <section>
+                <section class="poster-section">
                     <h4>Datos del dueño</h4>
                     <asp:Label id="ownerData" runat="server"></asp:Label>
                 </section>
             </div>
-        </main>
-    
+        </div>
         <asp:Button class="posterButton" runat="server" Text="Exportar" OnClick="ExportToPdf" />
-    </div>
+    </main>
+    <footer class="Footer2" />
 </asp:Content>
