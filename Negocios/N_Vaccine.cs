@@ -10,11 +10,17 @@ namespace Negocios
 {
     public class N_Vaccine
     {
-        readonly D_Date ActualDate = new D_Date();
+        readonly D_Vaccine ActualVaccine = new D_Vaccine();
 
         public List<E_Vaccine> GetVaccines(int idCard)
         {
-            return ActualDate.GetVaccines(idCard);
+            return ActualVaccine.GetVaccines(idCard);
+        }
+        
+        public void insertVaccine(int idVaccine, int idCard, string name, 
+            string type, string description, DateTime dateAplication)
+        {
+            ActualVaccine.insertVaccine(idVaccine, idCard, name, type, description, dateAplication);
         }
     }
 }

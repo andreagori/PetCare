@@ -64,20 +64,27 @@ namespace Presentacion
             string formatM = Mounth.PadLeft(2, '0');
             string formatD = Day.PadLeft(2, '0');
             string BirthDayPet = Year+"-" + formatM + "-" +formatD;
-            string selectedSex = Request.Form["selectedSex"];
-            bool sex;
-            if (selectedSex == "1")
-            {
-                sex = true;
-            }
-            else
-            {
-                sex = false;
-            }
+
+            
+            string selectedSex = DdlSex.SelectedValue;
+            bool sex = selectedSex == "Male";
+            
 
             E_Pet pet = new E_Pet(0, owner.IdOwner, TbNamePet.Text, selectedAvatar, Specie,TbBreed.Text, DateTime.Parse(BirthDayPet), float.Parse(TbWeight.Text),int.Parse(TbAge.Text),sex,55555,true);
             string message = new N_Pets().Insert(pet);
             Response.Redirect("~/myPets.aspx");
+
+
+        }
+
+        protected void DdlSex_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedSex = DdlSex.SelectedValue;
+
+            if (!string.IsNullOrEmpty(selectedSex))
+            {
+                bool sex = selectedSex == "Male";
+            }
         }
         //IdPet = idPet;
         //IdOwner = idOwner;

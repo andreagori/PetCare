@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="addQuote.aspx.cs" Inherits="Presentacion.addQuote1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="addVaccine.aspx.cs" Inherits="Presentacion.addVaccine" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="CSS/medicalCardData.css" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main class="quoteMain">
@@ -10,31 +9,29 @@
         </div>
 
         <section>
-            <h3>Razon de cita</h3>
-            <asp:TextBox runat="server" Text="Razon" ID="razon"/>
+            <h3>Nombre</h3>
+            <asp:TextBox runat="server" Text="Nombre" ID="nameT"/>
+        </section>
+        
+        <section>
+            <h3>Tipo</h3>
+            <asp:TextBox runat="server" Text="Nombre" ID="typeT"/>
         </section>
 
-    
+
         <div class="quoteBirthdateRow">
             <h3>Fecha inicio</h3>
             <asp:TextBox runat="server" Text="day" ID="day"/>
             <asp:TextBox runat="server" Text="month" ID="month"/>
             <asp:TextBox runat="server" Text="year" ID="year"/>
         </div>
-        
-        <div class="quoteBirthdateRow">
-            <h3>Fecha inicio</h3>
-            <asp:TextBox runat="server" Text="day" ID="dayEnd"/>
-            <asp:TextBox runat="server" Text="month" ID="monthEnd"/>
-            <asp:TextBox runat="server" Text="year" ID="yearEnd"/>
-        </div>
-        
+    
         <section>
             <h3>Descripcion</h3>
             <asp:TextBox runat="server" Text="Razon" ID="descriptionT"/>
         </section>
 
-        <asp:Button runat="server" onclick="sendQuote" Text="Agregar Cita"/>
+        <asp:Button runat="server" onclick="sendVaccine" Text="Agregar Vacuna"/>
     </main>
     <footer class="Footer2">
 

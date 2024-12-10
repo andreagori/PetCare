@@ -15,5 +15,20 @@ namespace Negocios
         {
             return actualIllness.GetIllinesPet(idCard);
         }
+
+        public string Insert(E_Illiness newIllness)
+        {
+            int R;
+
+            string message = "Error al agregar padecimiento";
+
+            R = actualIllness.IDM_Illness("INSERT", newIllness);
+            if (R == 0)
+            {
+                message = "Padecimiento registrado correctamente";
+
+            }
+            return message;
+        }
     }
 }

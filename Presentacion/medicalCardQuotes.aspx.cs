@@ -39,5 +39,10 @@ namespace Presentacion
                 RpVaccines.DataBind();
             }
         }
+
+        protected void addQuote(object sender, EventArgs e)
+        {
+
+        }
     }
 }

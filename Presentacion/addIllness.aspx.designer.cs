@@ -11,79 +11,61 @@ namespace Presentacion
 {
 
 
-    public partial class addQuote1
+    public partial class addIllness
     {
 
         /// <summary>
-        /// Control razon.
+        /// Control TbIllnessName.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox razon;
+        protected global::System.Web.UI.WebControls.TextBox TbIllnessName;
 
         /// <summary>
-        /// Control day.
+        /// Control TbDescription.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox day;
+        protected global::System.Web.UI.WebControls.TextBox TbDescription;
 
         /// <summary>
-        /// Control month.
+        /// Control TbDay.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox month;
+        protected global::System.Web.UI.WebControls.TextBox TbDay;
 
         /// <summary>
-        /// Control year.
+        /// Control TbMonth.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox year;
+        protected global::System.Web.UI.WebControls.TextBox TbMonth;
 
         /// <summary>
-        /// Control dayEnd.
+        /// Control TbYear.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dayEnd;
+        protected global::System.Web.UI.WebControls.TextBox TbYear;
 
         /// <summary>
-        /// Control monthEnd.
+        /// Control btnAddIllness.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox monthEnd;
-
-        /// <summary>
-        /// Control yearEnd.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox yearEnd;
-
-        /// <summary>
-        /// Control descriptionT.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox descriptionT;
+        protected global::System.Web.UI.WebControls.Button btnAddIllness;
     }
 }

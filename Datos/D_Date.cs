@@ -55,46 +55,6 @@ namespace Datos
             }
             return dates;
         } 
-        
-        public List<E_Vaccine> GetVaccines(int idCard)
-        {
-            List<E_Vaccine> dates = new List<E_Vaccine>();
-            SqlCommand cmd = new SqlCommand("GetCardVeccines", Conexion)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            cmd.Parameters.AddWithValue("@idCard", idCard);
-            try
-            {
-                AbrirConexion();
-                SqlDataReader reader = cmd.ExecuteReader();
-                dates = new List<E_Vaccine>();
-                while (reader.Read())
-                {
-                    E_Vaccine actualVaccine = new E_Vaccine()
-                    {
-                        IdVaccine = reader.GetInt32(0),
-                        Name = reader.GetString(1),
-                        Type = reader.GetString(2),
-                        Description = reader.GetString(3),
-                        DateAplication = reader.GetDateTime(4),
-                        State = true,
-
-                    };
-                    dates.Add(actualVaccine);
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error al querer obtener los datos", e);
-            }
-            finally
-            {
-                CerrarConexion();
-                cmd.Dispose();
-            }
-            return dates;
-        }
 
         public List<E_Date> GetAllDates(int idOwner)
         {
@@ -151,6 +111,41 @@ namespace Datos
             cmd.Parameters.AddWithValue("@Title", title);
             cmd.Parameters.AddWithValue("@Description", description);
             cmd.Parameters.AddWithValue("@dateType", false);
+            cmd.Parameters.AddWithValue("@addedBy", true);
+            cmd.Parameters.AddWithValue("@startTime", startTime);
+            cmd.Parameters.AddWithValue("@endTime", endTime);
+            cmd.Parameters.AddWithValue("@State", true);
+            try
+            {
+                // Abrir conexión y ejecutar el comando
+                AbrirConexion();
+                cmd.ExecuteNonQuery(); // Usar ExecuteNonQuery para comandos que no devuelven datos
+            }
+            catch (Exception e)
+            {
+                // Manejar errores
+                throw new Exception("Error al insertar datos en la base de datos", e);
+            }
+            finally
+            {
+                // Cerrar la conexión y liberar recursos
+                CerrarConexion();
+                cmd.Dispose();
+            }
+        }
+        
+        public void updateQuote(int idPet, string title, string description, bool DateType ,bool addedBy, DateTime startTime, DateTime endTime)
+        {
+            SqlCommand cmd = new SqlCommand("IDM_Dates", Conexion)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Parameters.AddWithValue("@Action", "Insert");
+            cmd.Parameters.AddWithValue("@idDate", 0);
+            cmd.Parameters.AddWithValue("@idPet", idPet);
+            cmd.Parameters.AddWithValue("@Title", title);
+            cmd.Parameters.AddWithValue("@Description", description);
+            cmd.Parameters.AddWithValue("@dateType", true);
             cmd.Parameters.AddWithValue("@addedBy", true);
             cmd.Parameters.AddWithValue("@startTime", startTime);
             cmd.Parameters.AddWithValue("@endTime", endTime);

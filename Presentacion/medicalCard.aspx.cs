@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using Datos;
+using Entidades;
 using Negocios;
 using System;
 using System.Collections.Generic;
@@ -13,16 +14,7 @@ namespace Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string id = Request.QueryString["IdPet"];
-            
-            int idpet = int.Parse(id);
-            
-            E_Pet pet = new N_Owner().GetPet(idpet);
-            nameIn.Text = pet.NamePet;
-            breed.Text = pet.Breed;
-            sex.Text = pet.Sex ? "female" : "male";
-            day.Text = pet.BirthDay.ToString("d");
-            weight.Text = pet.Weight.ToString();
+
             LoadDates();
         }
         protected void goToQuotes(object sender, EventArgs e)
@@ -40,6 +32,15 @@ namespace Presentacion
                 List<E_Illiness> illinesses = new N_Illness().GetIllinesPet(idCard);
                 RpIllness.DataSource = illinesses;
                 RpIllness.DataBind();
+
+                string id = Request.QueryString["IdPet"];
+                int idpet = int.Parse(id);
+                E_Pet pet = new N_Owner().GetPet(idpet);
+                nameIn.Text = pet.NamePet;
+                breed.Text = pet.Breed;
+                sex.Text = pet.Sex ? "female" : "male";
+                day.Text = pet.BirthDay.ToString("d");
+                weight.Text = pet.Weight.ToString();
             }
         }
     }
