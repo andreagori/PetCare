@@ -172,10 +172,10 @@ namespace Datos
                         Specie = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
                         Breed = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
                         BirthDay = reader.IsDBNull(6) ? DateTime.MinValue : reader.GetDateTime(6),
-                        Weight = reader.IsDBNull(6) ? 0 : reader.GetInt32(7),
-                        Age = reader.IsDBNull(7) ? 0 : reader.GetInt32(8),
-                        Sex = reader.IsDBNull(8) ? false : reader.GetBoolean(9),
-                        State = reader.IsDBNull(9) ? false : reader.GetBoolean(10)
+                        Weight = reader.IsDBNull(7) ? 0 : reader.GetInt32(7),
+                        Age = reader.IsDBNull(8) ? 0 : reader.GetInt32(8),
+                        Sex = reader.IsDBNull(9) ? false : reader.GetBoolean(9),
+                        State = reader.IsDBNull(10) ? false : reader.GetBoolean(10)
                     };
                 }
             }
