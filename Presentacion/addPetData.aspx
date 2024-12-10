@@ -4,48 +4,40 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main class="addPet">
-        <div>
-            <h1 style="color:#fea910;">Mi</h1>
-            <asp:Label ID="LbSpeciePet" style="color:#38b6ff;" runat="server"></asp:Label>
+        <div class="addPet-Title">
+            <h1 class="highlight-yellow">Mi</h1>
+            <asp:Label ID="LbSpeciePet" class="highlight-blue" runat="server"></asp:Label>
         </div>
-
         <section>
             <h3>Nombre</h3>
             <asp:TextBox ID="TbNamePet" type="Text" runat="server"></asp:TextBox>
         </section>
-    
         <div class="petRow">
             <h3>Raza</h3>
             <h3>Genero</h3>
             <asp:TextBox ID="TbBreed" type="Text" runat="server"></asp:TextBox>
-            <asp:DropDownList ID="DdlSex" runat="server" OnSelectedIndexChanged="DdlSex_SelectedIndexChanged">
-                <asp:ListItem Text="Selecciona un sexo" Value="" />
+            <asp:DropDownList ID="DdlSex" CssClass="dropdown-list" runat="server" OnSelectedIndexChanged="DdlSex_SelectedIndexChanged">
+                <asp:ListItem Text="Selecciona" Value="" />
                 <asp:ListItem Text="Macho" Value="Male"/>
                 <asp:ListItem Text="Hembra" Value="Female"/>
             </asp:DropDownList>
         </div>
-    
         <div class="petBirthdateRow">
             <h3>Fecha de nacimiento</h3>
             <asp:TextBox ID="TbYear" type="Number" runat="server"></asp:TextBox>
             <asp:TextBox ID="TbMounth" type="Number" runat="server"></asp:TextBox>
             <asp:TextBox ID="TbDay" type="Number" runat="server"></asp:TextBox>
         </div>
-        
-
             <div class ="petRow">
                 <h3>Edad</h3>
                 <h3>Peso</h3>
                 <asp:TextBox ID="TbAge" type="Number" runat="server"></asp:TextBox>
                 <asp:TextBox ID="TbWeight" type="Number" runat="server"></asp:TextBox>
             </div>
-
-   
         <section>
             <h3>Padecimientos</h3>
             <asp:TextBox ID="TbIlliness" type="Text" runat="server"></asp:TextBox>
         </section>
-        
         <section>
             <h3>Avatar</h3>
             <div id="AvatarPet" class="petAvatar">
@@ -60,9 +52,7 @@
             </div>
             <input type="hidden" id="selectedAvatar" name="selectedAvatar" />
         </section>
-
-        <asp:Button class="petButton" href="myPets.aspx" style="background-color:#fea910;" OnClick="BtnNext_OnClick" runat="server" Text="Siguiente"></asp:Button>
-
+        <asp:Button CssClass="petButton centered-text" runat="server" Text="Siguiente" OnClick="BtnNext_OnClick" />
         <script>
             var avatares = document.getElementById("AvatarPet");
             avatares.addEventListener("click", function (e) {

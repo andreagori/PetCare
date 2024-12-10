@@ -4,44 +4,49 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main class="medical">
-        <div>
-            <h1>Datos medicos extra</h1>
+        <div class="medical-Title">
+            <h1>
+                <span class="highlight-yellow">Citas</span><br>
+                <span class="highlight-blue">Médicas y Vacunas</span>
+            </h1>
         </div>
-
         <main class="medicalMain">
-            <section class="medicalList">
+            <section class="medicalListContainer">
                 <h1>Citas</h1>
-                <asp:Repeater ID="RpDates" runat="server">
-                    <ItemTemplate>         
-                        <a href="quoteDetails.aspx?Title=<%# Eval("Title") %>">
-                            <h3><strong>Título:</strong> <%# Eval("Title") %></h3>
-                            <h4><strong>Inicio:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></h4>
-                            <p><strong>descripcion:</strong><%# Eval("Description") %> </p>
-                            <h4><strong>Finalizacion:</strong><%# Eval("EndTime", "{0:yyyy/MM/dd}") %></h4>
-                        </a>
-                    </ItemTemplate>
-                </asp:Repeater>
+                <div class="medicalList">
+                    <asp:Repeater ID="RpDates" runat="server">
+                        <ItemTemplate>
+                            <div class="hItem">
+                                <p><strong>Título:</strong> <%# Eval("Title") %></p>
+                                <p><strong>Inicio:</strong> <%# Eval("StartTime", "{0:yyyy/MM/dd}") %></p>
+                                <p><strong>Descripción:</strong> <%# Eval("Description") %></p>
+                                <p><strong>Finalización:</strong> <%# Eval("EndTime", "{0:yyyy/MM/dd}") %></p>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
             </section>
-            
-            <section class="medicalList">
+
+            <section class="medicalListContainer">
                 <h1>Vacunas</h1>
-                <asp:Repeater ID="RpVaccines" runat="server">
-                    <ItemTemplate>         
-                        <a>
-                            <h3><strong>Título:</strong> <%# Eval("Name") %></h3>
-                            <h4><strong>Inicio:</strong> <%# Eval("Type") %></h4>
-                            <p><strong>descripcion:</strong><%# Eval("Description") %> </p>
-                            <h4><strong>Finalizacion:</strong><%# Eval("DateAplication", "{0:yyyy/MM/dd}") %></h4>
-                        </a>
-                    </ItemTemplate>
-                </asp:Repeater>
+                <div class="medicalList">
+                    <asp:Repeater ID="RpVaccines" runat="server">
+                        <ItemTemplate>
+                            <div class="hItem">
+                                <p><strong>Título:</strong> <%# Eval("Name") %></p>
+                                <p><strong>Tipo:</strong> <%# Eval("Type") %></p>
+                                <p><strong>Descripción:</strong> <%# Eval("Description") %></p>
+                                <p><strong>Fecha:</strong> <%# Eval("DateAplication", "{0:yyyy/MM/dd}") %></p>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
             </section>
         </main>
-
-        <a href="addQuote.aspx">Agregar cita</a>
-        <a href="addVaccine.aspx">Agregar Vacuna</a>
+        <div class="button-container">
+            <a href="addQuote.aspx" class="medicalButton">Agregar Cita</a>
+            <a href="addVaccine.aspx" class="medicalButton">Agregar Vacuna</a>
+        </div>
     </main>
-    <footer class="Footer2">
-
-    </footer>
+    <footer class="Footer2"></footer>
 </asp:Content>

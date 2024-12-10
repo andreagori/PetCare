@@ -1,55 +1,75 @@
-﻿.addPet{
+﻿.addPet {
     display: flex;
     flex-direction: column;
-    
-    height: 80vh;
-    width: 100%;
-
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
 }
 
-.addPet h1{
+/* TITULO */
+.addPet-Title {
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
-    margin: 0;
-    font-size: 42px;
+}
+
+/* TAMAÑO */
+.addPet-Title h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* COLORES DE TITULO */
+.addPet-Title .highlight-yellow {
+    color: #fea910;
+    margin-bottom: -8px;
+}
+
+.highlight-blue {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 800;
+    color: #38b6ff;
 }
 
 .addPet section{
     display: flex;
     flex-direction: column;
-
     align-items: start;
     justify-content: start;
-
     width: 30%;
+    margin-bottom: 20px;
     
 }
 
-.addPet h3{
+.addPet h3 {
     font-size: 20px;
+    font-weight: 600;
     margin: 0;
     color: #38b6ff;
 }
 
-.addPet input{
+.addPet input {
+    margin-top: 5px;
+    height: 50px;
     width: 100%;
     padding: 2%;
     padding-right: 0;
-    
     border-radius: 32px;
     border: none;
-    
     background-color: #f5f6f3;
 }
 
-.petRow{
+.petRow {
     display: grid;
-    
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
     column-gap: 5%;
     width: 30%;
+    margin-bottom: 20px;
 }
 
 .petRow h3{
@@ -58,14 +78,21 @@
 
 .petRow input{
     padding: 3%;
+    padding-left: 20px;
 }
 
-.petBirthdateRow{
+.petRow input:focus {
+    outline: none;
+    border-color: #38b6ff;
+    box-shadow: 0 0 5px rgba(56, 182, 255, 0.5);
+}
+
+.petBirthdateRow {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     column-gap: 5%;
-    
+    margin-bottom: 20px;
     width: 30%;
 }
 
@@ -77,32 +104,86 @@
     padding: 8%;
 }
 
-.petAvatar{
+/* ESTILOS PARA EL DROPDOWN LIST */
+.dropdown-list {
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    border-radius: 32px;
+    border: none;
+    padding: 0 15px;
+    background-color: #f5f6f3;
+    color: #333;
+    font-family: Quicksand, Arial, serif;
+    font-size: 18px;
+    appearance: none; /* Oculta el diseño predeterminado */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+}
+
+.dropdown-list:hover {
+    background-color: #e6e6e6;
+}
+
+.dropdown-list:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #38b6ff;
+}
+
+/* CENTRAR TEXTO EN EL BOTÓN */
+.centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.petAvatar {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
-
+    margin-top: 5px;
     width: 100%;
     background-color: #f5f6f3;
     border-radius: 32px;
+    padding: 20px;
 }   
 
 .petAvatar img{
     height: 90%;
     margin: auto;
+    cursor: pointer;
 }
 
-.petButton{    
-    max-width: 20%;
-    max-height: 10%;
+/* ESTILOS DEL BOTÓN DE EXPORTAR */
+.petButton {
+    font-family: Quicksand, Arial, serif !important;
+    width: auto !important;
+    max-width: 20% !important;
+    height: auto !important;
+    max-height: 20% !important;
+    color: white !important;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    border-radius: 24px !important;
+    border: none !important;
+    padding: 10px 30px !important;
+    margin-bottom: 20px !important;
+    cursor: pointer !important;
+    background-color: #38b6ff !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-top: 30px !important;
+    margin-bottom: 50px !important;
+}
 
+
+.petButton:hover {
+    background-color: #3891ff !important;
     color: white;
-    font-size: 22px;
-    font-weight: 600;
-    
-    border-radius: 32px;
-    border: solid 2px white;
-    
-    text-decoration: none;
-    padding: 1%;
 }
