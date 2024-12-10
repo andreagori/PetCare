@@ -31,5 +31,11 @@ namespace Negocios
         {
             ActualDate.updateDate(idPet, title, description, dateType, addedBy, startTime, endTime);
         }
+        
+        public void updateQuote(int idPet, string title, string description,
+            bool dateType, bool addedBy, DateTime startTime, DateTime endTime)
+        {
+            ActualDate.updateQuote(idPet, title, description, dateType, addedBy, startTime, endTime);
+        }
     }
 }

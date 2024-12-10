@@ -11,29 +11,30 @@
 
         <section>
             <h3>Razon de cita</h3>
-            <input type="text"/>
+            <asp:TextBox runat="server" Text="Razon" ID="razon"/>
         </section>
-    
-        <div class="quoteRow">
-            <h3>Veterinaria</h3>
-            <h3>Hora</h3>
-            <input type="text"/>
-            <input type="text"/>
-        </div>
+
     
         <div class="quoteBirthdateRow">
-            <h3>Fecha de la cita</h3>
-            <input type="number"/>
-            <input type="number"/>
-            <input type="number"/>
+            <h3>Fecha inicio</h3>
+            <asp:TextBox runat="server" Text="day" ID="day"/>
+            <asp:TextBox runat="server" Text="month" ID="month"/>
+            <asp:TextBox runat="server" Text="year" ID="year"/>
+        </div>
+        
+        <div class="quoteBirthdateRow">
+            <h3>Fecha inicio</h3>
+            <asp:TextBox runat="server" Text="day" ID="dayEnd"/>
+            <asp:TextBox runat="server" Text="month" ID="monthEnd"/>
+            <asp:TextBox runat="server" Text="year" ID="yearEnd"/>
         </div>
         
         <section>
             <h3>Descripcion</h3>
-            <input type="text"/>
+            <asp:TextBox runat="server" Text="Razon" ID="descriptionT"/>
         </section>
 
-        <a class="quoteButton" href="medicalCard.aspx" style="background-color:#fea910;">Agregar cita</a>
+        <asp:Button runat="server" onclick="sendQuote" Text="Agregar"/>
     </main>
     <footer class="Footer2">
 
