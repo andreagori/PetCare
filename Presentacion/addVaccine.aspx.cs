@@ -17,25 +17,48 @@ namespace Presentacion
         
         protected void sendVaccine(object sender, EventArgs e)
         {
-            int id = (int)Session["IdPet"];
-            
-            int idCard = new N_Card().GetCard(id);
-            string name = nameT.Text;
-            string type = typeT.Text;
-            string description = descriptionT.Text;
-
-            string sDay = day.Text;
-            string sMonth = month.Text;
-            string sYear = year.Text;
-
-
-            if (name != string.Empty)
+            if (checkData())
             {
-                string start = sYear + "-" + sMonth + "-" + sDay;
-                N_Vaccine temp = new N_Vaccine();
-                temp.insertVaccine(0,idCard,name,type,description,DateTime.Parse(start));
+                int id = (int)Session["IdPet"];
+
+                int idCard = new N_Card().GetCard(id);
+                string name = nameT.Text;
+                string type = typeT.Text;
+                string description = descriptionT.Text;
+
+                string sDay = day.Text;
+                string sMonth = month.Text;
+                string sYear = year.Text;
+
+
+                if (sDay.Length == 2 && sMonth.Length == 2 && sYear.Length == 4)
+                {
+                    string start = sYear + "-" + sMonth + "-" + sDay;
+                    N_Vaccine temp = new N_Vaccine();
+                    temp.insertVaccine(0, idCard, name, type, description, DateTime.Parse(start));
+
+                    Response.Redirect("medicalCardQuotes.aspx");
+                }
+                else
+                {
+                    lbError.Text = "Por favor, coloque la fecha en el formato indicado";
+                    lbError.Visible = true;
+                }
             }
-            Response.Redirect("medicalCardQuotes.aspx");
+            else
+            {
+                lbError.Text = "Por favor, llene todos los campos";
+                lbError.Visible = true;
+            }
+        }
+
+        protected bool checkData()
+        {
+            if (string.IsNullOrEmpty(nameT.Text) || string.IsNullOrEmpty(typeT.Text) || string.IsNullOrEmpty(descriptionT.Text) || string.IsNullOrEmpty(day.Text) || string.IsNullOrEmpty(month.Text) || string.IsNullOrEmpty(year.Text))
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

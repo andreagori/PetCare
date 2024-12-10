@@ -24,7 +24,7 @@ namespace Presentacion
                 string d = TbDay.Text.PadLeft(2,'0');
                 string m = TbMonth.Text.PadLeft(2, '0');
                 string y = TbYear.Text;
-                if (y.Length == 4 && m.Length == 2 && y.Length == 2)
+                if (y.Length == 4 && m.Length == 2 && m.Length == 2)
                 {
                     string date = d + "-" + m + "-" + y;
                     E_Illiness newIllness = new E_Illiness(0,idCard,TbIllnessName.Text,TbDescription.Text,DateTime.Parse(date),true);
