@@ -27,7 +27,7 @@ namespace Presentacion
             if (Request.QueryString["IdPet"] != null && int.TryParse(Request.QueryString["IdPet"], out int idPet))
             {
                 // Obtén los detalles de la mascota desde la capa de negocios
-                E_Pet petDetails = new N_Pets().GetPetDetails(idPet);
+                E_Pet petDetails = new N_Owner().GetPet(idPet);
 
                 // Verifica si los detalles de la mascota están disponibles
                 if (petDetails != null)
