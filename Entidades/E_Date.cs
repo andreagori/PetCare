@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,9 @@ namespace Entidades
         private DateTime _EndTime;
         private bool _State;
         private string _NamePet;
+        private string _eventType;  // Nueva propiedad para el tipo de evento
 
+        // Constructor con todos los parámetros
         public E_Date(int idDate, int idPet, string title, string description, bool dateType, bool addedBy, DateTime startTime, DateTime endTime, bool state, string namePet)
         {
             IdDate = idDate;
@@ -31,8 +34,11 @@ namespace Entidades
             EndTime = endTime;
             State = state;
             NamePet = namePet;
+            // Asignación del EventType basado en DateType
+            EventType = dateType ? "Actividad" : "Cita Médica"; // Se asigna "Actividad" o "Cita Médica" según DateType
         }
 
+        // Constructor por defecto
         public E_Date()
         {
             IdDate = 0;
@@ -45,6 +51,7 @@ namespace Entidades
             EndTime = DateTime.MinValue;
             State = false;
             NamePet = string.Empty;
+            EventType = "Desconocido"; // Valor por defecto si no se asigna
         }
 
         public int IdDate { get => _idDate; set => _idDate = value; }
@@ -56,6 +63,7 @@ namespace Entidades
         public DateTime StartTime { get => _StartTime; set => _StartTime = value; }
         public DateTime EndTime { get => _EndTime; set => _EndTime = value; }
         public bool State { get => _State; set => _State = value; }
-        public string NamePet { get => _NamePet; set => _NamePet = value; } 
+        public string NamePet { get => _NamePet; set => _NamePet = value; }
+        public string EventType { get => _eventType; set => _eventType = value; }  // Propiedad para almacenar el tipo de evento
     }
 }

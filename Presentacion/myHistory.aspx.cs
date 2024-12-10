@@ -64,7 +64,29 @@ namespace Presentacion
 
                         foreach (var item in history)
                         {
-                            section.AddParagraph($"Fecha: {item.StartTime}, {item.DateType}: {item.Title}");
+                            string dateTypeText = "";
+
+                            // Usar un switch clásico
+                            switch (item.EventType)
+                            {
+                                case "Vacuna":
+                                    dateTypeText = "Vacuna";
+                                    break;
+                                case "Enfermedad":
+                                    dateTypeText = "Enfermedad";
+                                    break;
+                                case "Cita Médica":
+                                    dateTypeText = "Cita Médica";
+                                    break;
+                                case "Actividad":
+                                    dateTypeText = "Actividad";
+                                    break;
+                                default:
+                                    dateTypeText = "Desconocido";
+                                    break;
+                            }
+
+                            section.AddParagraph($"Fecha: {item.StartTime}, {dateTypeText}: {item.Title}");
                         }
 
                         // Renderizar el documento
