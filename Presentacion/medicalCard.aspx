@@ -46,7 +46,7 @@
                 </div>
             </section>
             <section>
-                <h1>Padecimientos</h1>
+                <h1>Lista de padecimientos</h1>
                 <div class="medicalList">
                     <asp:Repeater ID="RpIllness" runat="server">
                         <ItemTemplate>         

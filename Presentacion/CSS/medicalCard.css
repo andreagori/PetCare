@@ -7,16 +7,18 @@
 .medicalCard {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 115vh;
+    min-height: 100vh;
     width: 100vw;
     margin: 0;
+    overflow-y: auto;
 }
 
 /* Título */
 .medicalCard-Title {
     text-align: center;
+    margin-top: 20px;
 }
 
 /* Título h1 */
@@ -40,15 +42,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     max-width: 600px;
     padding: 20px;
+    margin-top: -20px;
 }
 
 /* Secciones dentro del contenido */
 .mcMain section {
     width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 /* Títulos de cada sección */
@@ -67,10 +72,10 @@
     border: none;
     height: 50px;
     display: flex;
-    align-items: center; 
-    padding-left: 20px; 
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 10px;
 }
-
 
 /* Diseño del grid para Raza y Género */
 .mcMainGrid {
@@ -94,15 +99,15 @@
 /* Estilo para la lista de padecimientos */
 .medicalList {
     padding: 10px;
-    background-color: #f5f6f3;
-    border-radius: 8px;
-    height: 50px;
+    max-height: 300px;
+    overflow-y: auto;
+
 }
 
 /* Estilo de los enlaces en la lista de padecimientos */
 .medicalList a {
     display: block;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 10px;
     background-color: #ffffff;
     border-radius: 8px;
@@ -111,8 +116,7 @@
 }
 
 .medicalList a:hover {
-    background-color: #38b6ff;
-    color: #fff;
+    background-color: #ffde00;
 }
 
 /* Botón de citas médicas */

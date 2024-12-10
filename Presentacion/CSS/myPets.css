@@ -52,11 +52,11 @@
     width: 200px; /* Ancho fijo para los íconos */
     height: 220px; /* Altura fija */
     background-color: #3be800 !important; /* Color de fondo verde */
-    border-radius: 16px; 
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    cursor: pointer; 
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 /* Efecto hover de cada mascota */
@@ -67,11 +67,12 @@
 }
 
 /* IMAGEN DE LA MASCOTA */
-.myPetsItem img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
+    .myPetsItem img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        padding-top: 30px;
+    }
 
 /* TEXTO DE LA MASCOTA */
 .myPetsItem p {
