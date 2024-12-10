@@ -31,12 +31,6 @@ namespace Negocios
             }
             return message;
         }
-        // for wmyHistory section.
-        public E_Pet GetPetDetails(int idPet)
-        {
-            return ActualPet.GetPetById(idPet);
-        }
-
 
     }
 }

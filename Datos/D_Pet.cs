@@ -88,46 +88,6 @@ namespace Datos
             }
             return dates;
         }
-
-
-        public E_Pet GetPetById(int idPet)
-        {
-            E_Pet pet = null;
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Pets WHERE IdPet = @IdPet", Conexion);
-            cmd.Parameters.AddWithValue("@IdPet", idPet);
-
-            try
-            {
-                AbrirConexion();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    pet = new E_Pet
-                    {
-                        IdPet = reader["IdPet"] != DBNull.Value ? (int)reader["IdPet"] : 0,
-                        NamePet = reader["NamePet"] != DBNull.Value ? reader["NamePet"].ToString() : string.Empty,
-                        Specie = reader["Specie"] != DBNull.Value ? reader["Specie"].ToString() : string.Empty,
-                        Breed = reader["Breed"] != DBNull.Value ? reader["Breed"].ToString() : string.Empty,
-                        Age = reader["Age"] != DBNull.Value ? (int)reader["Age"] : 0,
-                        Sex = reader["Sex"] != DBNull.Value ? (bool)reader["Sex"] : false,
-                        Weight = reader["Weight"] != DBNull.Value ? (int)reader["Weight"] : 0
-                        // Asegúrate de agregar los otros campos de la misma manera
-                    };
-                }
-                reader.Close();
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error al obtener los datos de la mascota", e);
-            }
-            finally
-            {
-                CerrarConexion();
-                cmd.Dispose();
-            }
-            return pet;
-        }
-
     }
 
 }
