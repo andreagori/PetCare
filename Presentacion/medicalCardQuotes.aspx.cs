@@ -32,7 +32,8 @@ namespace Presentacion
         {
             if (Session["IdPet"] != null)
             {
-                int id = 2;
+                int idPet = (int)Session["IdPet"];
+                int id = new N_Card().GetCard(idPet);
                 List<E_Vaccine> vaccines = new N_Vaccine().GetVaccines(id);
                 RpVaccines.DataSource = vaccines;
                 RpVaccines.DataBind();
