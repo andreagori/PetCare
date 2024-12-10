@@ -55,46 +55,6 @@ namespace Datos
             }
             return dates;
         } 
-        
-        public List<E_Vaccine> GetVaccines(int idCard)
-        {
-            List<E_Vaccine> dates = new List<E_Vaccine>();
-            SqlCommand cmd = new SqlCommand("GetCardVeccines", Conexion)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            cmd.Parameters.AddWithValue("@idCard", idCard);
-            try
-            {
-                AbrirConexion();
-                SqlDataReader reader = cmd.ExecuteReader();
-                dates = new List<E_Vaccine>();
-                while (reader.Read())
-                {
-                    E_Vaccine actualVaccine = new E_Vaccine()
-                    {
-                        IdVaccine = reader.GetInt32(0),
-                        Name = reader.GetString(1),
-                        Type = reader.GetString(2),
-                        Description = reader.GetString(3),
-                        DateAplication = reader.GetDateTime(4),
-                        State = true,
-
-                    };
-                    dates.Add(actualVaccine);
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error al querer obtener los datos", e);
-            }
-            finally
-            {
-                CerrarConexion();
-                cmd.Dispose();
-            }
-            return dates;
-        }
 
         public List<E_Date> GetAllDates(int idOwner)
         {

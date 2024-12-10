@@ -73,6 +73,7 @@
     <Content Include="addPetData.aspx" />
     <Content Include="addQuote.aspx" />
     <Content Include="addToCalendar.aspx" />
+    <Content Include="addVaccine.aspx" />
     <Content Include="assets\avatares\PetCare_Avatares\av1.png" />
     <Content Include="assets\avatares\PetCare_Avatares\av2.png" />
     <Content Include="assets\avatares\PetCare_Avatares\av3.png" />
@@ -222,6 +223,13 @@
     </Compile>
     <Compile Include="addToCalendar.aspx.designer.cs">
       <DependentUpon>addToCalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addVaccine.aspx.cs">
+      <DependentUpon>addVaccine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addVaccine.aspx.designer.cs">
+      <DependentUpon>addVaccine.aspx</DependentUpon>
     </Compile>
     <Compile Include="calendar.aspx.cs">
       <DependentUpon>calendar.aspx</DependentUpon>
