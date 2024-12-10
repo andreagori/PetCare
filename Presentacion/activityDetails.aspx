@@ -11,21 +11,37 @@
     </div>
 
     <section class="description">
-        <div>
-            <asp:TextBox ID="actTitle" runat="server" Text='Titulo' />
-            <asp:TextBox ID="actDescription" runat="server" Text='Descripcion' />
+
+        <section>
+            <h4>Titulo</h4>
+            <asp:TextBox cssclass="inputDes" ID="actTitle" runat="server" Text='' />
+        </section>
+
+        <section>
+            <h4>Descripcion</h4>
+            <asp:TextBox cssclass="inputDes" ID="actDescription" runat="server" Text='' />
+        </section>
+        
+        <section class="itemGrid">
+            <h4>Dia inicial</h4>
+            <h4>Mes inicial</h4>
+            <h4>Año inicial</h4>
+            <asp:TextBox cssclass="inputDes" ID="dayStart" runat="server" Text='' class="inputDes" />
+            <asp:TextBox cssclass="inputDes" ID="monthStart" runat="server" Text='' />
+            <asp:TextBox cssclass="inputDes" ID="yearStart" runat="server" Text='' />
+        </section>
+        
+        <section class="itemGrid">
+            <h4>Dia final</h4>
+            <h4>Mes final</h4>
+            <h4>Año final</h4>
+            <asp:TextBox cssclass="inputDes" ID="dayEnd" runat="server" Text='' />
+            <asp:TextBox cssclass="inputDes" ID="monthEnd" runat="server" Text='' />
+            <asp:TextBox cssclass="inputDes" ID="yearEnd" runat="server" Text='' />
+        </section>
             
-            <asp:TextBox ID="dayStart" runat="server" Text='Dia de inicio' />
-            <asp:TextBox ID="monthStart" runat="server" Text='Mes de inicio' />
-            <asp:TextBox ID="yearStart" runat="server" Text='Año de inicio' />
-            
-            <asp:TextBox ID="dayEnd" runat="server" Text='Dia de fin' />
-            <asp:TextBox ID="monthEnd" runat="server" Text='Mes de fin' />
-            <asp:TextBox ID="yearEnd" runat="server" Text='Año de fin' />
-            
-        </div>
     </section>
-    <asp:Button runat="server" OnClick="SubirActividad" Text="Agregar" />
+    <asp:Button cssclass="descButton" runat="server" OnClick="SubirActividad" Text="Agregar" />
 
     
 </main>
