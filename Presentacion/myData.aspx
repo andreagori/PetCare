@@ -13,15 +13,15 @@
             <section id="birthdateSection">
                 <h3>Fecha de nacimiento</h3>
                 <div class="myDataRow">
-                    <input placeHolder="Dia" type="number"/>
-                    <input placeHolder="Mes" type="number"/>
-                    <input placeHolder="Año" type="number"/>
+                    <input id="dia" placeHolder="Día" type="number" min="1" max="31" required/>
+                    <input id="mes" placeHolder="Mes" type="number" min="1" max="12" required/>
+                    <input id="anio" placeHolder="Año" type="number" min="1900" max="2024" required/>
                 </div>
             </section>
             <section id="rolSection">
                 <h3>Rol</h3>
                     <asp:DropDownList ID="ddlRoles" runat="server">
-                        <asp:ListItem Text="Selecciona un rol" Value="" />
+                        <asp:ListItem Text="Selecciona un rol" Value="" Enabled="false" Selected="True" />
                         <asp:ListItem Text="Dueño" Value="Owner" />
                         <asp:ListItem Text="Cuidador" Value="Caregiver" />
                     </asp:DropDownList>
@@ -55,7 +55,10 @@
                     }
                 });
             </script>
-            <asp:Button OnClick="BtnCreateUser" style="background-color:#fea910;" Text="Crear" runat="server"></asp:Button>
+           
+        </div> 
+        <div class="boton">
+            <asp:Button ID="btnCreateUser" CssClass="custom-button" OnClick="BtnCreateUser" Text="Crear" runat="server"></asp:Button>
         </div>
     </main>
     <footer class="Footer2" />

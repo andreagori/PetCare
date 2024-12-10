@@ -16,9 +16,15 @@ namespace Presentacion
 
         }
 
-
         protected void BtnCreateUser(Object sender, EventArgs e)
         {
+            // Verifica que el usuario haya seleccionado un rol válido.
+            if (string.IsNullOrEmpty(ddlRoles.SelectedValue))
+            {
+                Response.Write("<script>alert('Por favor, selecciona un rol válido.');</script>");
+                return; 
+            }
+
             E_Owner owner = (E_Owner)Session["NewOwner"];
             owner.ImgPerfil = "Img";
             string selectedRole = ddlRoles.SelectedValue;
