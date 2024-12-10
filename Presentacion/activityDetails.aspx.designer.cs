@@ -33,21 +33,57 @@ namespace Presentacion
         protected global::System.Web.UI.WebControls.TextBox actDescription;
 
         /// <summary>
-        /// Control actStart.
+        /// Control dayStart.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox actStart;
+        protected global::System.Web.UI.WebControls.TextBox dayStart;
 
         /// <summary>
-        /// Control actEnd.
+        /// Control monthStart.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox actEnd;
+        protected global::System.Web.UI.WebControls.TextBox monthStart;
+
+        /// <summary>
+        /// Control yearStart.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox yearStart;
+
+        /// <summary>
+        /// Control dayEnd.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dayEnd;
+
+        /// <summary>
+        /// Control monthEnd.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox monthEnd;
+
+        /// <summary>
+        /// Control yearEnd.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox yearEnd;
     }
 }

@@ -138,7 +138,8 @@ namespace Datos
             }
             return dates;
         }
-        public void updateDate(int idPet, string title, string description, bool dateType, bool addedBy , string startTime, string endTime)
+        public void updateDate(int idPet, string title, string description, bool dateType, 
+            bool addedBy , DateTime startTime, DateTime endTime)
         {
             SqlCommand cmd = new SqlCommand("IDM_Dates", Conexion)
             {
@@ -150,9 +151,9 @@ namespace Datos
             cmd.Parameters.AddWithValue("@Title", title);
             cmd.Parameters.AddWithValue("@Description", description);
             cmd.Parameters.AddWithValue("@dateType", false);
-            cmd.Parameters.AddWithValue("@addedBy", false);
-            cmd.Parameters.AddWithValue("@startTime", "2024-01-01 08:00:00");
-            cmd.Parameters.AddWithValue("@endTime", "2024-01-01 17:00:00");
+            cmd.Parameters.AddWithValue("@addedBy", true);
+            cmd.Parameters.AddWithValue("@startTime", startTime);
+            cmd.Parameters.AddWithValue("@endTime", endTime);
             cmd.Parameters.AddWithValue("@State", true);
             try
             {

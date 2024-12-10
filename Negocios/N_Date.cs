@@ -27,7 +27,7 @@ namespace Negocios
             return ActualDate.GetAllDates(idOWner);
         }
         public void updateDate(int idPet, string title, string description,
-            bool dateType, bool addedBy, string startTime, string endTime)
+            bool dateType, bool addedBy, DateTime startTime, DateTime endTime)
         {
             ActualDate.updateDate(idPet, title, description, dateType, addedBy, startTime, endTime);
         }

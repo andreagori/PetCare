@@ -24,18 +24,24 @@ namespace Presentacion
             int id = (int)Session["IdPet"];
             TextBox txtTitle = actTitle;
             TextBox txtDescription = actDescription;
-            TextBox txtStart = actStart;
-            TextBox txtEnd = actEnd;
+            string txtDStart = dayStart.Text.PadLeft(2, '0'); 
+            string txtMStart = monthStart.Text.PadLeft(2,'0');
+            string txtYStart = yearStart.Text;
+            
+            string txtDEnd = dayEnd.Text.PadLeft(2, '0');
+            string txtMEnd = monthEnd.Text.PadLeft(2, '0');
+            string txtYEnd = yearEnd.Text;
+            
 
-            if (txtTitle != null && txtDescription != null && txtStart != null && txtEnd != null)
+            if (txtTitle != null && txtDescription != null && txtDStart != null && txtYEnd != null)
             {
                 string title = txtTitle.Text;
                 string description = txtDescription.Text;
-                string start = txtStart.Text;
-                string end = txtEnd.Text;
+                string start = txtYStart + "-" +txtMStart + "-" + txtDStart;
+                string end = txtYEnd + "-" + txtMEnd + "-" + txtDEnd;
 
                 N_Date date = new N_Date();
-                date.updateDate(id, title, description, false, false, start, end);
+                date.updateDate(id, title, description, false, false, DateTime.Parse(start), DateTime.Parse(end));
             }
             Response.Redirect("calendar.aspx");
         }

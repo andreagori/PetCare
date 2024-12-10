@@ -14,8 +14,15 @@
         <div>
             <asp:TextBox ID="actTitle" runat="server" Text='Titulo' />
             <asp:TextBox ID="actDescription" runat="server" Text='Descripcion' />
-            <asp:TextBox ID="actStart" runat="server" Text='Fecha de inicio' />
-            <asp:TextBox ID="actEnd" runat="server" Text='Fecha de finalización' />
+            
+            <asp:TextBox ID="dayStart" runat="server" Text='Dia de inicio' />
+            <asp:TextBox ID="monthStart" runat="server" Text='Mes de inicio' />
+            <asp:TextBox ID="yearStart" runat="server" Text='Año de inicio' />
+            
+            <asp:TextBox ID="dayEnd" runat="server" Text='Dia de fin' />
+            <asp:TextBox ID="monthEnd" runat="server" Text='Mes de fin' />
+            <asp:TextBox ID="yearEnd" runat="server" Text='Año de fin' />
+            
         </div>
     </section>
     <asp:Button runat="server" OnClick="SubirActividad" Text="Agregar" />

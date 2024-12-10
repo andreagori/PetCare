@@ -39,7 +39,6 @@ namespace Presentacion
 
             string message = new N_Owner().Insert(owner);
             Session["NewOwner"] = null;
-            //Response.Write("<script>alert('" + message + "')</script>");
             owner = new N_Owner().Login(owner.Email, owner.Password);
             Session["Owner"] = owner;
             Response.Redirect("myPets.aspx");
