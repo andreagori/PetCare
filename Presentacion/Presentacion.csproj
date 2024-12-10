@@ -247,6 +247,7 @@
     <Content Include="myPets.aspx" />
     <Content Include="quoteDetails.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="userInfo.aspx" />
     <Content Include="wantedPoster.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
@@ -392,6 +393,13 @@
     </Compile>
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userInfo.aspx.cs">
+      <DependentUpon>userInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userInfo.aspx.designer.cs">
+      <DependentUpon>userInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="wantedPoster.aspx.cs">
       <DependentUpon>wantedPoster.aspx</DependentUpon>
