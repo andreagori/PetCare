@@ -90,7 +90,44 @@ namespace Datos
             return dates;
         }
 
-        
+        public E_Pet GetPetById(int idPet)
+        {
+            E_Pet pet = null;
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Pets WHERE IdPet = @IdPet", Conexion);
+            cmd.Parameters.AddWithValue("@IdPet", idPet);
+
+            try
+            {
+                AbrirConexion();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    pet = new E_Pet
+                    {
+                        IdPet = (int)reader["IdPet"],
+                        NamePet = reader["NamePet"].ToString(),
+                        Specie = reader["Specie"].ToString(),
+                        Breed = reader["Breed"].ToString(),
+                        Age = (int)reader["Age"],
+                        Sex = (bool)reader["Sex"],
+                        Weight = (int)reader["Weight"]
+                        // Agrega otros campos necesarios aquí
+                    };
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al obtener los datos de la mascota", e);
+            }
+            finally
+            {
+                CerrarConexion();
+                cmd.Dispose();
+            }
+            return pet;
+        }
+
 
     }
 
