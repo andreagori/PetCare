@@ -30,7 +30,7 @@
                 <a href="myHistory.aspx" >Historial</a>
             </section>
             
-            <a class="TopIcon">
+            <a class="TopIcon" href="userInfo.aspx">
                 <img ID="IPerfil"  runat="server" />
             </a>
         </header>
