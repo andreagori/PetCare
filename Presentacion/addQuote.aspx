@@ -13,27 +13,27 @@
 
         <section>
             <h3>Razon de cita</h3>
-            <asp:TextBox runat="server" Text="Razon" ID="razon"/>
+            <asp:TextBox runat="server" Text="" ID="razon"/>
         </section>
 
     
         <div class="quoteBirthdateRow">
-            <h3>Fecha inicio</h3>
-            <asp:TextBox runat="server" Type="Number" Text="day" ID="day"/>
-            <asp:TextBox runat="server" Text="month" ID="month"/>
-            <asp:TextBox runat="server" Text="year" ID="year"/>
+            <h3>Fecha inicio D/M/Y</h3>
+            <asp:TextBox runat="server" Type="Number" Text="" ID="day"/>
+            <asp:TextBox runat="server" Text="" ID="month"/>
+            <asp:TextBox runat="server" Text="" ID="year"/>
         </div>
         
         <div class="quoteBirthdateRow">
-            <h3>Fecha inicio</h3>
-            <asp:TextBox runat="server" Type="Number" Text="day" ID="dayEnd"/>
-            <asp:TextBox runat="server" Type="Number" Text="month" ID="monthEnd"/>
-            <asp:TextBox runat="server" Type="Number"  Text="year" ID="yearEnd"/>
+            <h3>Fecha finalizacion D/M/Y</h3>
+            <asp:TextBox runat="server" Type="Number" Text="" ID="dayEnd"/>
+            <asp:TextBox runat="server" Type="Number" Text="" ID="monthEnd"/>
+            <asp:TextBox runat="server" Type="Number"  Text="" ID="yearEnd"/>
         </div>
         
         <section>
             <h3>Descripcion</h3>
-            <asp:TextBox runat="server" Text="Razon" ID="descriptionT"/>
+            <asp:TextBox runat="server" Text="" ID="descriptionT"/>
         </section>
 
         <asp:Button runat="server" onclick="sendQuote" Text="Agregar Cita"/>

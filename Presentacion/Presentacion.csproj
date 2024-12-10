@@ -378,12 +378,12 @@
       <DependentUpon>myPets.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="index.Master.cs">
-      <DependentUpon>index.Master</DependentUpon>
+    <Compile Include="bienvenida.Master.cs">
+      <DependentUpon>bienvenida.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.Master.designer.cs">
-      <DependentUpon>index.Master</DependentUpon>
+    <Compile Include="bienvenida.Master.designer.cs">
+      <DependentUpon>bienvenida.Master</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -427,7 +427,7 @@
     <Content Include="assets\Fuentes\TangoSans_BoldItalic.ttf" />
     <Content Include="assets\Fuentes\TangoSans_Italic.ttf" />
     <Content Include="home.Master" />
-    <Content Include="index.Master" />
+    <Content Include="bienvenida.Master" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">

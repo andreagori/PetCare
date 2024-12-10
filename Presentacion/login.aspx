@@ -1,4 +1,4 @@
-﻿<%@ Page Title="PetCare" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Presentacion.loggin" %>
+﻿<%@ Page Title="PetCare" Language="C#" MasterPageFile="~/bienvenida.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Presentacion.loggin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main class="loginMain">
@@ -17,7 +17,6 @@
                 <asp:TextBox ID="TBPassword" runat="server" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
             </section>
             <div class="loginMain-buttons">
-                <a href="index.aspx">Recuperar contraseña</a>
                 <asp:Button CssClass="custom-button" onclick="btnLogin" style="background-color:#fea910;" Text="Listo" runat="server"></asp:Button>
             </div>
         </div>
