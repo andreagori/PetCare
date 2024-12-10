@@ -15,7 +15,6 @@
                     <asp:DropDownList ID="ddlRoles" runat="server">
                         <asp:ListItem Text="Selecciona un rol" Value="" Enabled="false" Selected="True" />
                         <asp:ListItem Text="Dueño" Value="Owner" />
-                        <asp:ListItem Text="Cuidador" Value="Caregiver" />
                     </asp:DropDownList>
             </section>
             <section id="ownerAvatarSection">

@@ -27,7 +27,6 @@
             <section class="TopBar-Links">
                 <a href="myPets.aspx">Mis mascotas</a>
                 <a href="calendar.aspx">Calendario</a>
-                <a href="myHistory.aspx">Historial</a>
             </section>
             
             <a class="TopIcon" href="userInfo.aspx">
